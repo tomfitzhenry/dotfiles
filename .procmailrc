@@ -1,0 +1,95 @@
+# 'VERBOSE=on' is only used for debugging
+VERBOSE=off
+
+MAILDIR=$HOME/mail/
+DEFAULT=$MAILDIR/inbox/
+#LOGFILE=$HOME/.procmail_log
+
+################
+## Black List ##
+################
+
+################
+## White List ##
+################
+
+# Add a friends list?
+
+:0
+* ^To: tomfitzyuk@uwcs.co.uk
+* ^Subject: Website .*$
+inbox/
+
+:0
+* ^List-Id: WUGLUG.*
+list/compsoc-wuglug/
+
+:0
+* ^List-Id: .* <compsoc-announce.warwickcompsoc.co.uk>
+list/compsoc-announce/
+
+:0
+* ^List-Id: .* <compsoc-discuss.warwickcompsoc.co.uk>
+list/compsoc-discuss/
+
+:0
+* ^List-Id: Open Rights Group
+list/openrightsgroup/
+
+:0
+* ^List-Id: .* <theora.xiph.org>
+list/theora/
+
+:0
+* ^List-Id: .* <developers-public.lists.mysociety.org>
+list/mysociety-developers/
+
+:0
+* ^List-Id: "mySociety public, general purpose discussion list"
+list/mysociety-developers/
+
+:0
+* ^To: backstage@lists.bbc.co.uk
+list/bbc-backstage/
+
+:0
+* ^List-Id: XMPP Security <security.xmpp.org>
+list/xmpp-security/
+
+:0
+* ^List-Id: XMPP Jingle <jingle.xmpp.org>
+list/xmpp-jingle/
+
+:0
+* ^From: .* <.*@slackware.com>
+inbox/
+
+####################
+## Spam Filtering ##
+####################
+:0:
+* ^X-Spam-Flag: YES
+spam/
+
+#:0 fw
+#| sb_filter.py
+
+:0:
+* ^X-SpamBayes-Classification: spam
+spam/
+
+:0:
+* ^X-SpamBayes-Classification: unsure
+unsure/
+
+#########################
+## Post-Spam Filtering ##
+#########################
+
+# This has to be here so it is checked by SpamBayes first.
+# The other compsoc mailing lists don't have to be
+#   checked because they require registration and hence
+#   receive fewer, if any, spam messages.
+:0
+* ^List-Id: .* <compsoc-techteam.warwickcompsoc.co.uk>
+list/compsoc-techteam/

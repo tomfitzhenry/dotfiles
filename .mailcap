@@ -1,0 +1,4 @@
+application/msword;   antiword %s;                 copiousoutput
+#application/pdf;      pdftotext -layout %s -;      copiousoutput
+image/*;              feh %s;
+text/html;            elinks -dump %s;             copiousoutput

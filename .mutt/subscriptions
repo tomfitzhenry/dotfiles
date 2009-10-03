@@ -1,0 +1,14 @@
+subscribe announce@warwickcompsoc.co.uk
+subscribe compsoc-announce@warwickcompsoc.co.uk
+subscribe compsoc-announce@uwcs.co.uk
+subscribe members@uwcs.co.uk
+subscribe members@warwickcompsoc.co.uk
+
+subscribe org-discuss@lists.openrightsgroup.org
+subscribe backstage@bbc.co.uk
+
+subscribe theora@xiph.org
+subscribe security@xmpp.org
+subscribe jingle@xmpp.org
+
+# vim:filetype=muttrc

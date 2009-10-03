@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -eu
+
+current_dir=$(pwd)
+
+cd ~
+
+cp -r \
+  .bash* .caffrc .certs/ .gitconfig \
+  .htoprc .mailcap .mutt/ \
+  .procmailrc .reportbugrc  .screenrc  .signature .vimrc \
+  .xbindkeysrc  .Xdefaults  .xinitrc \
+  $current_dir
+
+cd $current_dir

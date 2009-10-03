@@ -1,0 +1,25 @@
+unset beep                # No annoying beeps please
+set charset=utf-8         # Enable Display of UTF-8 Characters
+set delete=ask-no         # Purge deleted messages without asking
+set fast_reply
+set folder_format="%2C %t %N %f"
+unset help
+set include=yes
+set index_format="%2C %Z %{%d/%m} %-26.26n %s"
+set implicit_autoview=no  # Search for mailcap entries for copiousoutput
+set mark_old=no           # Don't mark unread messages as old
+set markers=no            # Display a + on wrapped lines
+set move=no	              # Don't ask about moving messages, just do it
+set pager_index_lines=4	  # How many index lines to show in the pager
+set pager_context=1       # How many lines to show from previous screen
+set pager_stop            # Don't move to the next message on next-page
+set reply_self            # Makes replying to self from my other accounts work
+set reply_to=yes
+set reverse_alias         # Attempt to look up my names for people
+set reverse_name          # Use my address as it appears in the message I'm replying to
+set sort=threads          # Primary sorting method
+set tilde                 # Virtual lines to pad blank lines in the pager
+set timeout=15            # How often to check for new email
+set use_domain=yes        # Fill in @host with $hostname if @host is empty
+
+# vim: filetype=muttrc
