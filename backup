@@ -7,7 +7,7 @@ current_dir=$(pwd)
 cd ~
 
 cp -r \
-  .bash* .caffrc .certs/ .gitconfig \
+  .bashrc .bash_profile .bash_logout .caffrc .certs/ .gitconfig \
   .htoprc .mailcap .msmtprc .mutt/ .offlineimaprc \
   .procmailrc .reportbugrc  .screenrc  .signature .vimrc \
   .xbindkeysrc  .Xdefaults  .xinitrc \
