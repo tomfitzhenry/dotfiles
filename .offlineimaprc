@@ -1,0 +1,111 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# suit to get started fast.
+
+[general]
+accounts = googleapps, gmail-tomfitzyuk, gmail-tomfitzy, gmail-thomasfitzhenry, uwcs, warwick, lightstar
+
+# tomfitzyuk@gmail.com
+[Account gmail-tomfitzyuk]
+localrepository = gmail-tomfitzyuk-local
+remoterepository = gmail-tomfitzyuk-remote
+
+[Repository gmail-tomfitzyuk-local]
+type = Maildir
+localfolders = ~/mail5/tomfitzyuk@gmail.com/
+
+[Repository gmail-tomfitzyuk-remote]
+type = IMAP
+ssl = yes
+remotehost = imap.gmail.com
+remoteuser = tomfitzyuk
+
+
+# T.Fitzhenry@warwick.ac.uk
+[Account warwick]
+localrepository = warwick-local
+remoterepository = warwick-remote
+
+[Repository warwick-local]
+type = Maildir
+localfolders = ~/mail5/T.Fitzhenry@warwick.ac.uk/
+
+[Repository warwick-remote]
+type = IMAP
+ssl = yes
+remotehost = smail.warwick.ac.uk
+remoteuser = maughq
+
+# thomasfitzhenry@googlemail.com
+[Account gmail-thomasfitzhenry]
+localrepository = gmail-thomasfitzhenry-local
+remoterepository = gmail-thomasfitzhenry-remote
+
+[Repository gmail-thomasfitzhenry-local]
+type = Maildir
+localfolders = ~/mail5/thomasfitzhenry@googlemail.com/
+
+[Repository gmail-thomasfitzhenry-remote]
+type = IMAP
+ssl = yes
+remotehost = imap.gmail.com
+remoteuser = thomasfitzhenry@googlemail.com
+
+# tom@tom-fitzhenry.me.uk
+[Account googleapps]
+localrepository = googleapps-local
+remoterepository = googleapps-remote
+
+[Repository googleapps-local]
+type = Maildir
+localfolders = ~/mail5/tom@tom-fitzhenry.me.uk/
+
+[Repository googleapps-remote]
+type = IMAP
+ssl = yes
+remotehost = imap.gmail.com
+remoteuser = tom@tom-fitzhenry.me.uk
+
+# tomfitzy@gmail.com
+[Account gmail-tomfitzy]
+localrepository = gmail-tomfitzy-local
+remoterepository = gmail-tomfitzy-remote
+
+[Repository gmail-tomfitzy-local]
+type = Maildir
+localfolders = ~/mail5/tomfitzy@gmail.com
+
+[Repository gmail-tomfitzy-remote]
+type = IMAP
+ssl = yes
+remotehost = imap.gmail.com
+remoteuser = tomfitzy@gmail.com
+
+# tomfitzyuk@uwcs.co.uk
+[Account uwcs]
+localrepository = uwcs-local
+remoterepository = uwcs-remote
+
+[Repository uwcs-local]
+type = Maildir
+localfolders = ~/mail5/tomfitzy@uwcs.co.uk
+
+[Repository uwcs-remote]
+type = IMAP
+ssl = yes
+remotehost = mail.uwcs.co.uk
+remoteuser = tomfitzyuk
+
+# lightstar
+[Account lightstar]
+localrepository = lightstar-local
+remoterepository = lightstar-remote
+
+[Repository lightstar-local]
+type = Maildir
+localfolders = ~/mail5/lightstar
+
+[Repository lightstar-remote]
+type = IMAP
+ssl = yes
+remotehost = tom-fitzhenry.me.uk
+remoteuser = tom
