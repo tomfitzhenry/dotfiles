@@ -5,12 +5,6 @@ function mkcd() {
 
 . ~/.environment
 
-COLOR1="\[\033[0;36m\]" # Cyan
-COLOR2="\[\033[0;32m\]" # Light Green
-COLOR3="\[\033[0;36m\]" # Cyan
-COLOR4="\[\033[0;31m\]" # Red
-COLOR5="\[\033[0m\]"    # White
-
 unset HISTFILE
 export HISTCONTROL=ignoreboth
 
