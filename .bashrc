@@ -3,34 +3,16 @@ function mkcd() {
     cd "$1"
 }
 
+. ~/.environment
 
 COLOR1="\[\033[0;36m\]" # Cyan
 COLOR2="\[\033[0;32m\]" # Light Green
 COLOR3="\[\033[0;36m\]" # Cyan
 COLOR4="\[\033[0;31m\]" # Red
 COLOR5="\[\033[0m\]"    # White
-export PS1="$COLOR1\u$COLOR2\h$COLOR1\w$COLOR4 :: $COLOR5"
-
-export PATH=$HOME/bin:$HOME/usr/bin/:$HOME/usr/local/bin/:/usr/lib/postgresql/8.3/bin:$PATH:/opt/WorldOfGoo/
-export LANG=en_GB.utf-8
-
-export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-
-export NNTPSERVER=news.virginmedia.com
 
 unset HISTFILE
 export HISTCONTROL=ignoreboth
-
-# Stops 'less' from writing to '~/.lesshst"
-export LESSHISTFILE="-"
-
-# On systems that supported ipv6, some mpd clients wouldn't work
-# because they look at 'localhost' by default and they looked for
-# ipv6 localhost. Explicately putting 127.0.0.1 (i.e. ipv4 localhost)
-# worked. MPD runs on ipv4 localhost.
-export MPD_HOST=127.0.0.1
 
 #alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias sx="exec startx -- -nolisten tcp"
