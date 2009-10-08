@@ -1,8 +1,3 @@
-function mkcd() {
-  mkdir -p "$1"
-    cd "$1"
-}
-
 . ~/.environment
 
 #alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
@@ -16,13 +11,6 @@ alias irc='ssh -t codd screen -x'
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
-
-upload_to_music_server() {
-    while [ -n "$1" ];
-    do
-        curl -F upload=@"$1" http://music.compsoc.lan/; shift
-    done
-}
 
 # gpg-agent
 if test -f $HOME/.gpg-agent-info && \
