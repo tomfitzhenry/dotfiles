@@ -9,8 +9,8 @@ ui text
 # offline setting - comment out to be online
 #offline
 # name and email setting (if non-default)
-realname "Tom Fitzhenry"
-email "tom@tom-fitzhenry.me.uk"
+#realname "Tom Fitzhenry"
+#email "tom@tom-fitzhenry.me.uk"
 # Send all outgoing mail via the following host
 smtphost "tom-fitzhenry.me.uk"
 smtpuser "tom"
