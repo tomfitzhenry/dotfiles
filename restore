@@ -4,5 +4,5 @@ set -eu
 
 for file in `cat files.txt`;
 do
-	cp -r ~/$file .
+	cp -r $file ~
 done
