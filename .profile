@@ -22,4 +22,4 @@ else
     echo $GPG_AGENT_INFO >$HOME/.gpg-agent-info
 fi
 
-. ~/.profile-private
+[ -f ~/.profile-private ] && . ~/.profile-private
