@@ -8,7 +8,6 @@
 .mailcap
 .msmtprc
 .mutt/
-.offlineimaprc
 .profile
 .procmailrc
 .reportbugrc
