@@ -11,7 +11,7 @@ export PS1="$COLOR1\u$COLOR2\h$COLOR1\w$COLOR4 :: $COLOR5"
 export PATH=$HOME/bin:$HOME/usr/bin/:$HOME/usr/local/bin/:/usr/lib/postgresql/8.3/bin:$PATH:/opt/WorldOfGoo/
 export LANG=en_GB.utf-8
 
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/chromium-browser
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
@@ -36,3 +36,6 @@ export GIT_AUTHOR_NAME="$NAME"
 export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_NAME="$NAME"
 export GIT_COMMITTER_EMAIL=$EMAIL
+
+. ~/.config/user-dirs.dirs
+export MUSIC_STORE_DIR="/files/public/music/"
