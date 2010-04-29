@@ -3,6 +3,9 @@
 .bash_logout
 .caffrc
 .certs/
+.config/awesome
+.config/user-dirs.dirs
+.config/user-dirs.locale
 .environment
 .gitconfig
 .htoprc
