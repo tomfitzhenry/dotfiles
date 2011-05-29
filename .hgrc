@@ -1,0 +1,12 @@
+[ui]
+username = Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
+
+[alias]
+HEAD = up -r 'parents(min(outgoing()))'
+
+[extensions]
+hgext.graphlog = 
+hgext.convert = 
+hgext.record =
+hgext.bookmarks =
+hgext.mq =
