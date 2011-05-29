@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-for file in `cat files.txt`;
-do
-    mkdir -p $(dirname $file)
-    cp -r $file ~/$(dirname $file)
-done

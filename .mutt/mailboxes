@@ -1,3 +1,0 @@
-mailboxes `find ~/mail -type d | egrep -v '(/new|/tmp|/cur)' | sort | xargs`
-
-# vim: filetype=muttrc
