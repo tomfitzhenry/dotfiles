@@ -388,9 +388,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("gnome-power-manager")
-awful.util.spawn_with_shell("mpd")
-awful.util.spawn_with_shell("mpdscribble")
-awful.util.spawn_with_shell("transmission")
-awful.util.spawn_with_shell("gpodder")
-awful.util.spawn_with_shell("empathy")
 awful.util.spawn_with_shell("chromium-browser")

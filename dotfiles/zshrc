@@ -1,0 +1,28 @@
+zstyle :compinstall filename ~/.zshrc
+
+source ~/.profile
+
+# Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
+export TERM=linux
+
+autoload colors && colors
+
+setopt appendhistory autocd extendedglob nomatch notify interactivecomments
+
+autoload -Uz compinit
+compinit
+
+unsetopt beep
+
+[ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS)
+export ZLSCOLORS="${LS_COLORS}"
+
+if [ $UID -eq 0 ]; then
+	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
+else
+	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}%# "
+fi
+
+if [ -f ~/.zshrc.local ]; then
+    . ~/.zshrc.local
+fi
