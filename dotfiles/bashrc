@@ -1,16 +1,12 @@
 source ~/.profile
 
-function mkcd() {
-  mkdir -p "$1"
-    cd "$1"
-}
+COLOR1="\[\033[0;36m\]" # Cyan
+COLOR2="\[\033[0;32m\]" # Light Green
+COLOR3="\[\033[0;36m\]" # Cyan
+COLOR4="\[\033[0;31m\]" # Red
+COLOR5="\[\033[0m\]"    # White
 
-upload_to_music_server() {
-    while [ -n "$1" ];
-    do
-        curl -F upload=@"$1" http://music.compsoc.lan/; shift
-    done
-}
+export PS1="$COLOR1\u$COLOR2\h$COLOR1\w$COLOR4 :: $COLOR5"
 
 # Bash completion
 if [ -z "$BASH_COMPLETION" ] && [ -f /etc/bash_completion ]; then

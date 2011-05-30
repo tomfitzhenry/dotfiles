@@ -1,5 +1,17 @@
 . ~/.environment
 
+#function mkcd() {
+#  mkdir -p "$1"
+#    cd "$1"
+#}
+
+#upload_to_music_server() {
+#    while [ -n "$1" ];
+#    do
+#        curl -F upload=@"$1" http://music.compsoc.lan/; shift
+#    done
+#}
+
 #alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
@@ -25,6 +37,10 @@ else
     fi
 fi
 
-if [ -f $HOME/.profile-private ]; then
-    . ~/.profile-private
+if [ -f $HOME/.profile.private ]; then
+    . ~/.profile.private
+fi
+
+if [ -f $HOME/.profile.local ]; then
+    . ~/.profile.local
 fi

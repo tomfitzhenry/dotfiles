@@ -1,13 +1,5 @@
 #!/bin/sh
 
-COLOR1="\[\033[0;36m\]" # Cyan
-COLOR2="\[\033[0;32m\]" # Light Green
-COLOR3="\[\033[0;36m\]" # Cyan
-COLOR4="\[\033[0;31m\]" # Red
-COLOR5="\[\033[0m\]"    # White
-
-export PS1="$COLOR1\u$COLOR2\h$COLOR1\w$COLOR4 :: $COLOR5"
-
 export PATH=$HOME/bin:$HOME/usr/bin/:$HOME/usr/local/bin/:/usr/lib/postgresql/8.3/bin:$PATH:/opt/WorldOfGoo/
 export LANG=en_GB.utf-8
 
