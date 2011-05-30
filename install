@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -eu
+
+Install_symlink () {
+	SOURCE="${1}"
+	TARGET_PREFIX="${2}"
+	
+	ln -sfv ${SOURCE} ${TARGET_PREFIX}$(basename ${SOURCE})
+}
+
+# Install dotfiles
+for ENTRY in "$(pwd)"/dotfiles/*
+do
+	if [ -d "${ENTRY}" ]
+	then
+		NAME="$(basename ${ENTRY})"
+
+		mkdir -p ~/.${NAME}
+
+		for FILE in ${ENTRY}/*
+		do
+			Install_symlink ${FILE} ~/.${NAME}/
+		done
+	else
+		Install_symlink ${ENTRY} ~/.
+	fi
+done
+
+# Install files into XDG's ~/config
+for FILE in "$(pwd)"/xdg/*
+do
+	NAME="$(basename "${FILE}")"
+
+	mkdir -p ~/.config
+	ln -sfv -t ~/.config "${FILE}" 
+done
+
+# Install files into ~/bin
+for FILE in "$(pwd)"/bin/*
+do
+	NAME="$(basename "${FILE}")"
+
+	mkdir -p ~/bin
+	ln -sfv -t ~/bin "${FILE}" 
+done
