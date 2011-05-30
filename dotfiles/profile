@@ -17,6 +17,8 @@ alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
 alias c="clear"
 
+alias s="screen -x"
+
 # Convenience
 alias irc='ssh -t uwcs screen -x'
 
