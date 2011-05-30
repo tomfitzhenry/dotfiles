@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Rsync's my Vorbis collection to my USB stick.
+
+SOURCE=$XDG_MUSIC_DIR//vorbis_q3/
+
+DEST=/media/disk/music/
+
+rsync -vurt --delete $SOURCE $DEST

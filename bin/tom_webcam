@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DIR=${4-"/tmp/webcam"}
+DATE_FORMAT="%Y%m%d-%H%M%S"
+
+OUTPUT="$DIR/`date +${DATE_FORMAT}`.ogv"
+
+WIDTH=${1-"640"}
+HEIGHT=${2-"480"}
+THEORA_QUALITY=${3-"25"}
+
+mkdir -p $DIR
+gst-launch-0.10 v4l2src ! video/x-raw-yuv,width=$WIDTH,height=$HEIGHT ! theoraenc quality=$THEORA_QUALITY ! oggmux ! filesink location=$OUTPUT
+
+echo $OUTPUT

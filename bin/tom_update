@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+
+# When run, if the current directory has, say, .git, then it will `git pull`.
+# If the current directory has no suitable version control directories then it
+# will check for .git (and .svn etc.) in every directory in ~/dev/
+
+import os
+
+devDir = "/home/tom/src"
+
+# Directories to ignore
+ignore = ["private"
+]
+
+# Source control managers
+scms = {".git"  :"git pull",
+        ".svn"  :"svn update",
+        ".hg"   :"hg pull -u",
+        ".bzr"  :"bzr pull",
+        "CVS"   :"cvs -q update",
+}
+
+def searchDirectoriesInDirectory(originalDir):
+    dirs = os.listdir(originalDir)
+    os.chdir("%s" % (originalDir))
+
+    # Remove items which appear in 'ignore'
+    dirs = filter(lambda dir:dir not in ignore, dirs)
+
+    # Remove items which aren't directories
+    dirs = filter(lambda dir:os.path.isdir(dir), dirs)
+
+    for dir in dirs:
+        os.chdir("%s/%s" % (originalDir, dir))
+        for scm in scms.keys():
+            if os.path.isdir(scm):
+                print "Executing `%s` in %s" % (scms[scm], dir)
+                os.system(scms[scm])
+
+if __name__ == "__main__":
+    dirs = filter(lambda scm: os.path.isdir(scm), scms.keys())
+
+    if dirs != []:
+        for scm in dirs:
+            print "Executing `%s`" % (scms[scm])
+            os.system(scms[scm])
+    else:
+        searchDirectoriesInDirectory(devDir)

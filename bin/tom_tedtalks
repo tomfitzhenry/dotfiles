@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+
+import sys
+#import sys.stderr
+import os
+import os.path
+import xml.dom.minidom
+
+import urlgrabber
+import urlgrabber.grabber
+import urlgrabber.progress
+
+def tedtalks(feedUrl):
+    try:
+        feed = urlgrabber.urlread(feedUrl)
+    except urlgrabber.grabber.URLGrabError, e:
+        print e
+        sys.exit(1)
+    except KeyboardInterrupt:
+        sys.exit(1)
+
+    dom = xml.dom.minidom.parseString(feed)
+
+    for node in dom.getElementsByTagName('item'):
+        url = node.getElementsByTagName('media:content')[0].getAttribute('url')
+        title = node.getElementsByTagName('title')[0].childNodes[0].data
+        #try:
+        #    filesize = int(node.getAttribute('fileSize'))
+        #except ValueError:
+        #    sys.stderr.write("\"%s\" is not a valid size.\n" % node.getAttribute('fileSize'))
+        #    sys.exit(1)
+
+        filename = os.path.basename(url)
+
+                                         # I can't use this because the reported
+                                         # sizes differ from the actual sizes
+
+        if not os.path.exists(filename): #or filesize != os.stat(filename).st_size:
+            print title
+
+            prog = urlgrabber.progress.text_progress_meter()
+            try:
+                urlgrabber.urlgrab(url, progress_obj=prog)
+            except urlgrabber.grabber.URLGrabError, e:
+                print e
+            except KeyboardInterrupt:
+                sys.exit(1)
+
+
+
+feeds = [
+    ("TEDTalks",    "videos", lambda : tedtalks("http://www.ted.com/talks/rss")),
+    ("TEDTalks HD", "hd",     lambda : tedtalks("http://feeds.feedburner.com/TedtalksHD")),
+]
+
+if __name__ == "__main__":
+    baseDir = "/files/public/video/other/ted"
+
+    for feed in feeds:
+        dir = "%s/%s" % (baseDir, feed[1])
+        if os.path.isdir(dir):
+            os.chdir(dir)
+            print "Updating: %s" % feed[0]
+            feed[2]()

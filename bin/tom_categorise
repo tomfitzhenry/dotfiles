@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -ue
+
+cd $1
+
+for i in `/bin/ls $2`;
+do
+  $3 $i
+  read -p "Enter category: " category
+  mkdir -p $category
+  mv $i $category
+done

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Converts a single FLAC file with associated cue file into multiple FLAC
+# files.
+#
+# Requires:
+#     - cuetools
+#     - shntool
+#
+# Example usage: tom_flacAlbumToFiles foo.flac foo.cue
+
+set -e
+
+cuebreakpoints "$2" | shnsplit -o flac "$1"

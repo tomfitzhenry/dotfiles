@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eu
+
+INFILE=$1
+#epic nasty
+BASENAME=`echo $INFILE | rev | cut -d"." -f 1 --complement | rev`
+OUTFILE=`echo "${BASENAME}.mkv"`
+
+mkvmerge -o "$OUTFILE" "$INFILE" && rm "$INFILE" || rm "$OUTFILE"

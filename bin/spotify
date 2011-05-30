@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -eu
+
+cd ~/.wine/drive_c/Program\ Files/Spotify
+wine spotify.exe

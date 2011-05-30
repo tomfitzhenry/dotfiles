@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -eu
+
+BACKUPNAME=tom-$(date +%Y%m%d)
+
+mkdir -p ~/tmp2
+
+TMPDIR=$(mktemp -d --tmpdir=$HOME/tmp2)
+BACKUPDIR=$TMPDIR/$BACKUPNAME
+
+ARCHIVE_LOCATION=$TMPDIR/$BACKUPNAME.tar
+
+mkdir $TMPDIR/$BACKUPNAME
+
+cd $HOME
+cp -r accounts doc img mail src tmp \
+      $BACKUPDIR/
+
+cd $TMPDIR
+tar -c $BACKUPDIR/ > $ARCHIVE_LOCATION
+rm -rf $TMPDIR/$BACKUPNAME
+echo $ARCHIVE_LOCATION
