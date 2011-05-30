@@ -1,5 +1,7 @@
 zstyle :compinstall filename ~/.zshrc
 
+source ~/.profile
+
 # Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
 export TERM=linux
 
