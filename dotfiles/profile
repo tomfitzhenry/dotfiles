@@ -25,4 +25,6 @@ else
     fi
 fi
 
-. ~/.profile-private
+if [ -f $HOME/.profile-private ]; then
+    . ~/.profile-private
+fi
