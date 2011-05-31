@@ -10,3 +10,8 @@ hgext.convert =
 hgext.record =
 hgext.bookmarks =
 hgext.mq =
+hgext.purge=
+hgext.patchbomb =
+
+[email]
+method = /usr/bin/msmtp
