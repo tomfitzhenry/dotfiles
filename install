@@ -23,7 +23,19 @@ do
 			Install_symlink ${FILE} ~/.${NAME}/
 		done
 	else
-		Install_symlink ${ENTRY} ~/.
+        NAME="$(basename ${ENTRY})"
+        if [ -e ~/.${NAME} -a ! -h ~/.${NAME} ]; then
+            diff -Naur ${ENTRY} ~/.${NAME} || true
+            printf "WARNING: ~/.${NAME} already exists. Overwrite (Y/n)? "
+            read response
+            if [ "$response" = "y" -o "$response" = "Y" -o "$response" = "" ]; then
+                cp ~/.${NAME} ~/.${NAME}-$(date +"%Y%m%dT%H%M%S")
+                rm ~/.${NAME}
+		        Install_symlink ${ENTRY} ~/.
+            fi
+        else
+		    Install_symlink ${ENTRY} ~/.
+        fi
 	fi
 done
 
