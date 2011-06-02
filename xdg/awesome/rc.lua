@@ -81,6 +81,10 @@ netwidget = widget({ type = "textbox" })
 vicious.register(netwidget, vicious.widgets.net,
                  '<span color="white">NET</span> ${wlan0 down_kb}/${wlan0 up_kb}', 3)
 
+batterywidget = widget({ type = "textbox" })
+vicious.register(batterywidget, vicious.widgets.bat,
+                  '<span color="white">BATTERY</span> $1 $2% $3', 61, "BAT1")
+
 mpdtext = widget({ type = "textbox" })
 vicious.register(mpdtext, vicious.widgets.mpd,
     function (widget, args)
@@ -189,7 +193,7 @@ for s = 1, screen.count() do
         mytextclock,
         netwidget,
         memwidget,
-        mpdtext,
+        batterywidget,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
@@ -389,5 +393,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("gnome-power-manager")
 awful.util.spawn_with_shell("chromium-browser")
