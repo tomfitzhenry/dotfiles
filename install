@@ -56,3 +56,8 @@ do
 	mkdir -p ~/bin
 	ln -sfv -t ~/bin "${FILE}" 
 done
+
+if [ -f "$(pwd)"/miscConfig ]; then
+    echo "Running $(pwd)/miscConfig"
+    "$(pwd)"/miscConfig
+fi
