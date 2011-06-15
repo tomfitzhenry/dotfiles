@@ -15,6 +15,7 @@ mkdir -p $ARCHIVE_DIRECTORY
 
 (
 # This is required so that whitespace is preserved
+# (see <http://tldp.org/LDP/abs/html/internalvariables.html#IFSREF> )
 IFS='\n'
 while read stdin; do
    echo "$stdin" >> $ARCHIVE_DIRECTORY/$DATE-$NOTE_NAME
