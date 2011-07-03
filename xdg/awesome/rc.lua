@@ -77,9 +77,26 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
+function os.capture(cmd, raw)
+  local f = assert(io.popen(cmd, 'r'))
+  local s = assert(f:read('*a'))
+  f:close()
+  if raw then return s end
+  s = string.gsub(s, '^%s+', '')
+  s = string.gsub(s, '%s+$', '')
+  s = string.gsub(s, '[\n\r]+', ' ')
+  return s
+end
+
+function getTheNetworkInterfaceThatIsProbablyBeingUsed()
+    return os.capture("cat /proc/net/if_inet6  | awk '{print $6}' | grep -v lo | head -n 1", false)
+end
+
+interface = getTheNetworkInterfaceThatIsProbablyBeingUsed()
+
 netwidget = widget({ type = "textbox" })
 vicious.register(netwidget, vicious.widgets.net,
-                 '<span color="white">NET</span> ${wlan0 down_kb}/${wlan0 up_kb}', 3)
+                 '<span color="white">NET</span> ${' .. interface .. ' down_kb}/${' .. interface .. ' up_kb}', 3)
 
 batterywidget = widget({ type = "textbox" })
 vicious.register(batterywidget, vicious.widgets.bat,
@@ -95,6 +112,8 @@ vicious.register(mpdtext, vicious.widgets.mpd,
              args["{Artist}"]..' - '.. args["{Title}"]
       end
     end, 5)
+
+
 
 memwidget = widget({ type = "textbox" })
 vicious.cache(vicious.widgets.mem)
