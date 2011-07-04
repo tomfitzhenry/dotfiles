@@ -92,11 +92,18 @@ function getTheNetworkInterfaceThatIsProbablyBeingUsed()
     return os.capture("cat /proc/net/if_inet6  | awk '{print $6}' | grep -v lo | head -n 1", false)
 end
 
-interface = getTheNetworkInterfaceThatIsProbablyBeingUsed()
-
 netwidget = widget({ type = "textbox" })
 vicious.register(netwidget, vicious.widgets.net,
-                 '<span color="white">NET</span> ${' .. interface .. ' down_kb}/${' .. interface .. ' up_kb}', 3)
+    function (widget, args)
+        local interface = getTheNetworkInterfaceThatIsProbablyBeingUsed()
+        if interface == nil or interface == "" then
+            return ''
+        else
+            return '<span color="white">NET</span> ' ..
+            args["{" .. interface .. " down_kb}"] .. "/" ..
+            args["{" .. interface .. " up_kb}"]
+        end
+    end, 3)
 
 batterywidget = widget({ type = "textbox" })
 vicious.register(batterywidget, vicious.widgets.bat,
