@@ -19,7 +19,7 @@ def is_word(string):
 
 def check_is_word(string):
     if not is_word(string):
-        raise Exception("String %s is not alphanumeric" % string)
+        raise Exception("String %s is not a valid word" % string)
     return string
 
 if __name__ == "__main__":
