@@ -291,7 +291,8 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
 
-    awful.key({ modkey, "Shift"   }, "v",     function () awful.util.spawn_with_shell("xlock -mode blank") end)
+    awful.key({ }, "Pause",     function () awful.util.spawn_with_shell("xlock -mode blank") end),
+    awful.key({ modkey, "Shift"   }, "c",     function () awful.util.spawn_with_shell("ws_currentlyInCIT | zenity --text-info") end)
 )
 
 clientkeys = awful.util.table.join(
