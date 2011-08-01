@@ -1,5 +1,6 @@
 [ui]
 username = Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
+ignore = ~/.hgignore.global
 
 [alias]
 HEAD = up -r 'parents(min(outgoing()))'
