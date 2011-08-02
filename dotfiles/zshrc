@@ -2,6 +2,14 @@ zstyle :compinstall filename ~/.zshrc
 
 source ~/.profile
 
+# Set the keybindings to emacs bindings, so when I press "Up", the cursor
+# is positioned at the end of the previous line, rather than the start of the
+# previous line. There's probably a less draonic solution, involving rebinding
+# "Up", but this solution will do.
+# http://www.zshwiki.org/home/zle/bindkeys
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=383737 (?)
+bindkey -e
+
 # Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
 export TERM=linux
 
