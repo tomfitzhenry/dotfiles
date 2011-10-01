@@ -12,7 +12,7 @@ export NNTPSERVER=news.virginmedia.com
 # Stops 'less' from writing to '~/.lesshst"
 export LESSHISTFILE="-"
 
-export GREP_OPTIONS='--color=auto --extended-regexp'
+export GREP_OPTIONS='--color=auto'
 
 # On systems that supported ipv6, some mpd clients wouldn't work
 # because they look at 'localhost' by default and they looked for
