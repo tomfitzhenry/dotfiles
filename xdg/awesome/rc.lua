@@ -126,6 +126,10 @@ memwidget = widget({ type = "textbox" })
 vicious.cache(vicious.widgets.mem)
 vicious.register(memwidget, vicious.widgets.mem, '<span color="white">MEM</span> $1 ($2/$3)', 13)
 
+loadwidget = widget({ type = "textbox" })
+vicious.cache(vicious.widgets.uptime)
+vicious.register(loadwidget, vicious.widgets.uptime, '<span color="white">LOAD</span> $4 $5 $6', 13)
+
 --cpuwidget = awful.widget.graph()
 --cpuwidget:set_width(50)
 --cpuwidget:set_background_color("#494B4F")
@@ -220,6 +224,7 @@ for s = 1, screen.count() do
         netwidget,
         memwidget,
         batterywidget,
+        loadwidget,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
