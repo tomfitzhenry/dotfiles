@@ -15,3 +15,11 @@ gconftool-2 --set "/apps/gnome-terminal/profiles/Default/default_show_menubar" \
 
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/scrollbar_position" \
             --type string "hidden"
+
+# Mercurial fails if hgrc includes a file that doesn't exist (e.g. ~/.hgrc.local )
+# This has been fixed in Mercurial 1.9:
+#    "config: ignore include errors for nonexistent files" 
+#      -- http://mercurial.selenic.com/wiki/UpgradeNotes
+#
+# Until Mercurial 1.9 is available in Ubuntu, let's just ensure that file exists.
+touch ~/.hgrc.local
