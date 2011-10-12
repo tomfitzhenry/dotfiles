@@ -27,6 +27,14 @@ alias -g 'L'='| less'
 [ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS)
 export ZLSCOLORS="${LS_COLORS}"
 
+# Cache completion, to speed up apt-related completions
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Tab completion for `kill`
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always
+
 if [ $UID -eq 0 ]; then
 	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
 else
