@@ -30,7 +30,7 @@ export ZLSCOLORS="${LS_COLORS}"
 if [ $UID -eq 0 ]; then
 	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
 else
-	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}%# "
+	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}$ "
 fi
 
 if [ -f ~/.zshrc.local ]; then
