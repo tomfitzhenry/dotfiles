@@ -79,3 +79,9 @@ set nospell
 set dictionary=/usr/share/dict/words
 set complete+=k/usr/share/dict/words
 autocmd BufNewFile,BufRead *.txt set spell
+
+" ctags "
+"""""""""
+" Look in the current directory for "tags", and work up the tree
+" towards / until one is found.
+set tags+=tags;/
