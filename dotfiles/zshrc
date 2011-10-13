@@ -16,6 +16,7 @@ export TERM=linux
 autoload colors && colors
 
 setopt appendhistory autocd extendedglob nomatch notify interactivecomments
+setopt hist_ignore_dups
 
 autoload -Uz compinit
 compinit
