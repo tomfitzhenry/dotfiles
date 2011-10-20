@@ -13,7 +13,12 @@ Install_symlink() {
     local SOURCE="${1}"
     local TARGET_PREFIX="${2}"
 
-	ln --symbolic --force --verbose ${SOURCE} ${TARGET_PREFIX}$(basename ${SOURCE})
+    local TARGET=${TARGET_PREFIX}$(basename ${SOURCE})
+
+    if [ ! "$(readlink ${TARGET})" = "${SOURCE}" ]; then
+	    ln --symbolic --verbose ${SOURCE} ${TARGET}
+    fi
+
 }
 
 Install_file() {
