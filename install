@@ -2,60 +2,90 @@
 
 set -eu
 
-Install_symlink () {
-	SOURCE="${1}"
-	TARGET_PREFIX="${2}"
-	
-	ln -sfv ${SOURCE} ${TARGET_PREFIX}$(basename ${SOURCE})
+fail() {
+    echo "****"
+    echo "FAILURE: $1"
+    echo "****"
+    exit 1
 }
 
-# Install dotfiles
-for ENTRY in "$(pwd)"/dotfiles/*
-do
-	if [ -d "${ENTRY}" ]
-	then
-		NAME="$(basename ${ENTRY})"
+Install_symlink() {
+    local SOURCE="${1}"
+    local TARGET_PREFIX="${2}"
 
-		mkdir -p ~/.${NAME}
+	ln --symbolic --force --verbose ${SOURCE} ${TARGET_PREFIX}$(basename ${SOURCE})
+}
 
-		for FILE in ${ENTRY}/*
-		do
-			Install_symlink ${FILE} ~/.${NAME}/
-		done
-	else
-        NAME="$(basename ${ENTRY})"
-        if [ -e ~/.${NAME} -a ! -h ~/.${NAME} ]; then
-            diff -Naur ${ENTRY} ~/.${NAME} || true
-            printf "WARNING: ~/.${NAME} already exists. Overwrite (Y/n)? "
-            read response
-            if [ "$response" = "y" -o "$response" = "Y" -o "$response" = "" ]; then
-                cp ~/.${NAME} ~/.${NAME}-$(date +"%Y%m%dT%H%M%S")
-                rm ~/.${NAME}
-		        Install_symlink ${ENTRY} ~/.
-            fi
-        else
-		    Install_symlink ${ENTRY} ~/.
+Install_file() {
+    local FILE="${1}"
+    local TARGET_PREFIX="${2}"
+
+    if [ -f $FILE ]; then
+        Install_regular_file $FILE $TARGET_PREFIX
+    elif [ -d $FILE ]; then
+        Install_directory $FILE $TARGET_PREFIX
+    else
+        fail "Expected file or directory. Actual: ${FILE}"
+    fi
+}
+
+Install_regular_file() {
+    local SOURCE="${1}"
+    local TARGET_PREFIX="${2}"
+
+    if [ ! -f $SOURCE ]; then
+        fail "Expected file. Actual: ${SOURCE}"
+    fi
+
+    local TARGET=$TARGET_PREFIX$(basename $SOURCE)
+
+    if [ -e $TARGET -a ! -h $TARGET ]; then
+        diff -Naur $SOURCE $TARGET || true
+        printf "WARNING: $TARGET already exists. Overwrite (Y/n)? "
+        read response
+        if [ "$response" = "y" -o "$response" = "Y" -o "$response" = "" ]; then
+            cp $TARGET $TARGET-$(date +"%Y%m%dT%H%M%S")
+            rm $TARGET
+            Install_symlink $SOURCE $TARGET_PREFIX
         fi
-	fi
-done
+    else
+        Install_symlink $SOURCE $TARGET_PREFIX
+    fi
+}
 
-# Install files into XDG's ~/config
-for FILE in "$(pwd)"/xdg/*
+
+Install_directory() {
+    local SOURCE_DIRECTORY="${1}"
+    local TARGET_PREFIX="${2}"
+
+    if [ ! -d $SOURCE_DIRECTORY ]; then
+        fail "Expected directory. Actual: ${SOURCE_DIRECTORY}"
+    fi
+
+    local TARGET="${TARGET_PREFIX}$(basename ${SOURCE_DIRECTORY})"
+
+    mkdir -p $TARGET
+    
+    for SOURCE in $(ls ${SOURCE_DIRECTORY});
+    do
+        Install_file ${SOURCE_DIRECTORY}/$SOURCE $TARGET/
+    done
+}
+
+for FILE in "$(pwd)"/dotfiles/*;
 do
-	NAME="$(basename "${FILE}")"
-
-	mkdir -p ~/.config
-	ln -sfv -t ~/.config "${FILE}" 
+    Install_file $FILE $HOME/.
 done
 
-# Install files into ~/bin
-for FILE in "$(pwd)"/bin/*
+for FILE in "$(pwd)"/xdg/*;
 do
-	NAME="$(basename "${FILE}")"
-
-	mkdir -p ~/bin
-	ln -sfv -t ~/bin "${FILE}" 
+    Install_file $FILE $HOME/.config/
 done
+
+#for FILE in "$(pwd)"/bin/*;
+#do
+#    Install_file $FILE $HOME/bin/
+#done
 
 if [ -f "$(pwd)"/miscConfig ]; then
     echo "Running $(pwd)/miscConfig"
