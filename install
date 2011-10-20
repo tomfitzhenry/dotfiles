@@ -84,10 +84,10 @@ do
     Install_file $FILE $HOME/.config/
 done
 
-#for FILE in "$(pwd)"/bin/*;
-#do
-#    Install_file $FILE $HOME/bin/
-#done
+for FILE in "$(pwd)"/bin/*;
+do
+    Install_file $FILE $HOME/bin/
+done
 
 if [ -f "$(pwd)"/miscConfig ]; then
     echo "Running $(pwd)/miscConfig"
