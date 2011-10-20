@@ -24,6 +24,8 @@ Install_file() {
         Install_regular_file $FILE $TARGET_PREFIX
     elif [ -d $FILE ]; then
         Install_directory $FILE $TARGET_PREFIX
+    elif [ -h $FILE ]; then
+        Install_symlink $FILE $TARGET_PREFIX
     else
         fail "Expected file or directory. Actual: ${FILE}"
     fi
