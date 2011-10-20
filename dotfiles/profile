@@ -23,6 +23,7 @@ alias s="screen -x"
 alias irc='ssh -t uwcs screen -x'
 
 alias grep=egrep
+alias ack=ack-grep
 
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
