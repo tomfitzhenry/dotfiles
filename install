@@ -20,12 +20,12 @@ Install_file() {
     local FILE="${1}"
     local TARGET_PREFIX="${2}"
 
-    if [ -f $FILE ]; then
-        Install_regular_file $FILE $TARGET_PREFIX
-    elif [ -d $FILE ]; then
-        Install_directory $FILE $TARGET_PREFIX
-    elif [ -h $FILE ]; then
-        Install_symlink $FILE $TARGET_PREFIX
+    if [ -f ${FILE} ]; then
+        Install_regular_file ${FILE} ${TARGET_PREFIX}
+    elif [ -d ${FILE} ]; then
+        Install_directory ${FILE} ${TARGET_PREFIX}
+    elif [ -h ${FILE} ]; then
+        Install_symlink ${FILE} ${TARGET_PREFIX}
     else
         fail "Expected file or directory. Actual: ${FILE}"
     fi
@@ -35,23 +35,23 @@ Install_regular_file() {
     local SOURCE="${1}"
     local TARGET_PREFIX="${2}"
 
-    if [ ! -f $SOURCE ]; then
+    if [ ! -f ${SOURCE} ]; then
         fail "Expected file. Actual: ${SOURCE}"
     fi
 
-    local TARGET=$TARGET_PREFIX$(basename $SOURCE)
+    local TARGET=${TARGET_PREFIX}$(basename ${SOURCE})
 
-    if [ -e $TARGET -a ! -h $TARGET ]; then
-        diff -Naur $SOURCE $TARGET || true
-        printf "WARNING: $TARGET already exists. Overwrite (Y/n)? "
+    if [ -e ${TARGET} -a ! -h ${TARGET} ]; then
+        diff -Naur ${SOURCE} ${TARGET} || true
+        printf "WARNING: ${TARGET} already exists. Overwrite (Y/n)? "
         read response
-        if [ "$response" = "y" -o "$response" = "Y" -o "$response" = "" ]; then
-            cp $TARGET $TARGET-$(date +"%Y%m%dT%H%M%S")
-            rm $TARGET
-            Install_symlink $SOURCE $TARGET_PREFIX
+        if [ "${response}" = "y" -o "${response}" = "Y" -o "${response}" = "" ]; then
+            cp ${TARGET} ${TARGET}-$(date +"%Y%m%dT%H%M%S")
+            rm ${TARGET}
+            Install_symlink ${SOURCE} ${TARGET_PREFIX}
         fi
     else
-        Install_symlink $SOURCE $TARGET_PREFIX
+        Install_symlink ${SOURCE} ${TARGET_PREFIX}
     fi
 }
 
@@ -60,33 +60,33 @@ Install_directory() {
     local SOURCE_DIRECTORY="${1}"
     local TARGET_PREFIX="${2}"
 
-    if [ ! -d $SOURCE_DIRECTORY ]; then
+    if [ ! -d ${SOURCE_DIRECTORY} ]; then
         fail "Expected directory. Actual: ${SOURCE_DIRECTORY}"
     fi
 
     local TARGET="${TARGET_PREFIX}$(basename ${SOURCE_DIRECTORY})"
 
-    mkdir -p $TARGET
+    mkdir -p ${TARGET}
     
     for SOURCE in $(ls ${SOURCE_DIRECTORY});
     do
-        Install_file ${SOURCE_DIRECTORY}/$SOURCE $TARGET/
+        Install_file ${SOURCE_DIRECTORY}/${SOURCE} ${TARGET}/
     done
 }
 
 for FILE in "$(pwd)"/dotfiles/*;
 do
-    Install_file $FILE $HOME/.
+    Install_file ${FILE} ${HOME}/.
 done
 
 for FILE in "$(pwd)"/xdg/*;
 do
-    Install_file $FILE $HOME/.config/
+    Install_file ${FILE} ${HOME}/.config/
 done
 
 for FILE in "$(pwd)"/bin/*;
 do
-    Install_file $FILE $HOME/bin/
+    Install_file ${FILE} ${HOME}/bin/
 done
 
 if [ -f "$(pwd)"/miscConfig ]; then
