@@ -24,6 +24,7 @@ compinit
 unsetopt beep
 
 alias -g 'L'='| less'
+alias -g 'G'='| grep'
 
 [ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS)
 export ZLSCOLORS="${LS_COLORS}"
