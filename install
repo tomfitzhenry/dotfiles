@@ -84,11 +84,13 @@ do
     Install_file ${FILE} ${HOME}/.
 done
 
+mkdir ${HOME}/.config
 for FILE in "$(pwd)"/xdg/*;
 do
     Install_file ${FILE} ${HOME}/.config/
 done
 
+mkdir ${HOME}/bin
 for FILE in "$(pwd)"/bin/*;
 do
     Install_file ${FILE} ${HOME}/bin/
