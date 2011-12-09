@@ -193,6 +193,10 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
 };
 
+hilights = (
+  { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
+);
+
 keyboard = (
   # http://wouter.coekaerts.be/irssi/window_switcher
   { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; }
