@@ -1,9 +1,9 @@
 servers = (
   {
-      address = "irc.freenode.org";
-      chatnet = "Freenode";
-      port = "6667";
-      autoconnect = "Yes";
+    address = "irc.freenode.org";
+    chatnet = "Freenode";
+    port = "6667";
+    autoconnect = "Yes";
   }
 );
 
@@ -14,15 +14,11 @@ chatnets = {
     max_msgs = "5";
     max_whois = "4";
     max_query_chans = "5";
-  }
+  };
 };
 
 channels = (
-  { 
-    name = "##java";
-    chatnet = "Freenode";
-    autojoin = "Yes";
-  }
+  { name = "##java"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -191,13 +187,16 @@ statusbar = {
 settings = {
   core = { real_name = "Unknown"; user_name = "tom"; nick = "tom"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    autolog = "yes";
+    autolog_path = "~/.irclogs/%Y/$tag/$0.%m-%d.log";
+  };
 };
-
-hilights = (
-  { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
-);
 
 keyboard = (
   # http://wouter.coekaerts.be/irssi/window_switcher
   { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; }
+);
+hilights = (
+  { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
 );
