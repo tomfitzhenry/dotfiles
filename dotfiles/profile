@@ -20,7 +20,7 @@ alias c="clear"
 alias s="screen -x"
 
 # Convenience
-alias irc='ssh -t uwcs screen -x'
+alias irc='ssh -t server screen -x'
 
 alias grep=egrep
 alias ack=ack-grep
