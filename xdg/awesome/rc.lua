@@ -299,6 +299,7 @@ globalkeys = awful.util.table.join(
               end),
 
     awful.key({ }, "Pause",     function () awful.util.spawn_with_shell("xlock -mode blank") end),
+    awful.key({ }, "Print",     function () awful.util.spawn("scrot -e 'mv $f ~'") end),
     awful.key({ modkey, "Shift"   }, "t",     function () awful.util.spawn_with_shell("ws_currentlyInCIT | zenity --text-info") end)
 )
 
