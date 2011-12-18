@@ -430,3 +430,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("chromium-browser")
 awful.util.spawn_with_shell("keynav")
+awful.util.spawn_with_shell("dropbox start")
