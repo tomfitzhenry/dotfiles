@@ -37,7 +37,7 @@ set showbreak=>>
 
 " Highlight merge markers
 highlight MergeMarker guibg=red ctermbg=red
-match MergeMarker /^[<=>]\{7\}/
+match MergeMarker /^[<=>]\{7\}.*$/
 
 " Indentation "
 """""""""""""""
