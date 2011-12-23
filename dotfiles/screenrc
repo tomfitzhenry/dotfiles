@@ -20,3 +20,7 @@ hardstatus lastline
 # Nice transparent status string
 hardstatus string '%{= 9b}%-Lw%{= 9W}%50> %n%f* %t%{= 9b}%+Lw%<%=%Y/%m/%d %c'
 caption string '%?%F%{= bk}%:%{= kb}%?%t'
+
+# Remove the default of "s" to "xoff", which suspends output, and is incredibly frustrating.
+# http://en.gentoo-wiki.com/wiki/Screen#Problems_with_screens_being_.22frozen.22.3F
+bind s
