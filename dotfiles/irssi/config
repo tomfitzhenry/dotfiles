@@ -201,4 +201,5 @@ keyboard = (
 hilights = (
   { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
 );
+logs = { };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
