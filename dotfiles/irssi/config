@@ -190,7 +190,8 @@ settings = {
   "fe-common/core" = {
     autolog = "yes";
     autolog_path = "~/.irclogs/%Y/$tag/$0.%m-%d.log";
-    autoclose_query = "360";
+    # 6hrs = 21600s
+    autoclose_query = "21600";
   };
 };
 
