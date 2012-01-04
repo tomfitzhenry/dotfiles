@@ -203,4 +203,7 @@ hilights = (
   { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
 );
 logs = { };
-ignores = ( { level = "JOINS PARTS QUITS"; } );
+ignores = (
+  { level = "JOINS PARTS QUITS"; },
+  { level = "ALL"; pattern = "Hello, .*: \".*\"$"; regexp = "yes"; }
+);
