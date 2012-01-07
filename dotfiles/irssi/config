@@ -204,6 +204,6 @@ hilights = (
 );
 logs = { };
 ignores = (
-  { level = "JOINS PARTS QUITS"; },
+  { level = "JOINS PARTS QUITS MODES"; },
   { level = "ALL"; pattern = "Hello, .*: \".*\"$"; regexp = "yes"; }
 );
