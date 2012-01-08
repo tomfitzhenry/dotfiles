@@ -100,10 +100,6 @@ vicious.register(netwidget, vicious.widgets.net,
         end
     end, 3)
 
-batterywidget = widget({ type = "textbox" })
-vicious.register(batterywidget, vicious.widgets.bat,
-                  '<span color="white">BATTERY</span> $1 $2% $3', 61, "BAT1")
-
 mpdtext = widget({ type = "textbox" })
 vicious.register(mpdtext, vicious.widgets.mpd,
     function (widget, args)
@@ -426,3 +422,4 @@ awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("chromium-browser")
 awful.util.spawn_with_shell("keynav")
 awful.util.spawn_with_shell("dropbox start")
+awful.util.spawn_with_shell("gnome-settings-daemon")
