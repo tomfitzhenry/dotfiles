@@ -1,5 +1,5 @@
 # Write your default config options here!
 
 # Use to increase volume of quiet videos
-softvol
-softvol-max 1200
+softvol=1
+softvol-max=1200
