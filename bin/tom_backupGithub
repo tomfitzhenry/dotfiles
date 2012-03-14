@@ -2,7 +2,7 @@
 
 set -eu
 
-BACKUP_DIR=~/Private/github
+BACKUP_DIR=~/Private/tarsnap/github
 
 mkdir -p $BACKUP_DIR
 cd $BACKUP_DIR
