@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+for i in ~/Private/Dropbox ~/Private/tarsnap;
+do
+    duplicity --allow-source-mismatch --encrypt-key 5A52E7A1 $i file:///media/windows2/private/duplicity-stuffs/$(basename $i)
+done

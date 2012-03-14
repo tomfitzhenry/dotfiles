@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+echo "Backing up the clouds..."
+tom_backupFromClouds
+
+echo "Backing up to Tarsnap..."
+tom_backupToTarsnap
+
+echo "Backing up to windows2 drive"
+tom_backupToDuplicity
+
+echo "Mirroring windows2 drive to backup drive"
+rdiff-backup --verbosity 5 /media/windows2 /media/backup/rdiff-backup-stuffs/windows2
