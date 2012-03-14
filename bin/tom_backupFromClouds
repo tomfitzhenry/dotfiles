@@ -5,10 +5,10 @@ set -eu
 offlineimap
 
 tom_backupGithub
+tom_backupBitbucket
 
 #rsync -avz --backup -e ssh server:".irclogs/*" ~/Private/tarsnap/irclogs
 
 # Google Docs?
 # Google Contacts?
 # Google Calendar?
-# Bitbucket?
