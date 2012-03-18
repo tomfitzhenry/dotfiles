@@ -7,7 +7,7 @@ offlineimap
 tom_backupGithub
 tom_backupBitbucket
 
-#rsync -avz --backup -e ssh server:".irclogs/*" ~/Private/tarsnap/irclogs
+rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.irclogs" server:".irclogs/*" ~/Private/tarsnap/irclogs
 
 # Google Docs?
 # Google Contacts?
