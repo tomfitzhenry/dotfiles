@@ -6,6 +6,7 @@ offlineimap
 
 tom_backupGithub
 tom_backupBitbucket
+tom_backupGitolite
 
 rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.irclogs" server:".irclogs/*" ~/Private/tarsnap/irclogs
 
