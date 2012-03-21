@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+BACKUP_DIR=~/Private/tarsnap/gitolite
+
+mkdir -p $BACKUP_DIR
+cd $BACKUP_DIR
+
+for i in $(ssh gitolite info | tail -n+3 | awk '{print $2}' | dos2unix --);
+do
+    if [ ! -d "${i}" ]; then
+        git clone ssh://gitolite/$i;
+    else
+        cd $i;
+        git pull;
+        cd ..;
+    fi
+done
