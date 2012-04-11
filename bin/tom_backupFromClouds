@@ -8,6 +8,7 @@ tom_backupGithub
 tom_backupGitolite
 
 rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.irclogs" server:".irclogs/*" ~/Private/tarsnap/irclogs
+rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.public_files" server:"public_html/files/" ~/Private/tarsnap/public_files
 
 # Google Docs?
 # Google Contacts?

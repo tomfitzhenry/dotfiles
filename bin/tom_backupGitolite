@@ -16,4 +16,5 @@ do
         git pull;
         cd ..;
     fi
+    sleep 2s;
 done
