@@ -291,7 +291,8 @@ globalkeys = awful.util.table.join(
 
     awful.key({ }, "Pause",     function () awful.util.spawn_with_shell("xlock -mode blank") end),
     awful.key({ }, "Print",     function () awful.util.spawn("scrot -e 'mv $f ~'") end),
-    awful.key({ modkey, "Shift"   }, "t",     function () awful.util.spawn_with_shell("ws_currentlyInCIT | zenity --text-info") end)
+    awful.key({ modkey, "Shift"   }, "t",     function () awful.util.spawn_with_shell("ws_currentlyInCIT | zenity --text-info") end),
+    awful.key({ modkey }, "w" , function() awful.util.spawn("x-www-browser") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -419,7 +420,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("chromium-browser")
+awful.util.spawn_with_shell("x-www-browser")
 awful.util.spawn_with_shell("keynav")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("gnome-settings-daemon")
