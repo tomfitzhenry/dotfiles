@@ -9,7 +9,8 @@ rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.irclogs" server:".irclogs/*" ~/
 rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.public_files" server:"public_html/files/" ~/Private/tarsnap/public_files
 rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.mail" server:"Maildir/" ~/Private/tarsnap/mail/server
 
-# Google Docs?
+tom_backupGoogleDocs
+
 # Google Contacts?
-#https://www.google.com/calendar/exporticalzip
 # Google Calendar?
+#https://www.google.com/calendar/exporticalzip
