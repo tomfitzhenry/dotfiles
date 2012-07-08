@@ -9,11 +9,12 @@ cd $BACKUP_DIR
 
 JSON=$(curl --silent --fail https://api.github.com/users/tomfitzhenry/repos)
 
-echo "${JSON}" | /bin/grep -Po '"git_url":.*?[^\\]",' | awk -F\" '{print $4}' | while read i
+echo "${JSON}" | /bin/grep -Po '"git_url":.*?[^\\]",' | awk -F\" '{print $4}' | while read repo
 do
-    LOCAL_DIR_NAME=$(basename $i | sed 's/\.git$//')
+    LOCAL_DIR_NAME=$(basename $repo | sed 's/\.git$//')
+    printf "$LOCAL_DIR_NAME \n\t"
     if [ ! -d $LOCAL_DIR_NAME ]; then
-        git clone $i;
+        git clone $repo;
     else
         cd $LOCAL_DIR_NAME
         git pull;
