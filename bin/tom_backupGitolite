@@ -9,6 +9,8 @@ cd $BACKUP_DIR
 
 for i in $(ssh gitolite info | tail -n+3 | awk '{print $2}' | dos2unix --);
 do
+    echo $i
+
     if [ ! -d "${i}" ]; then
         git clone ssh://gitolite/$i;
     else
@@ -16,5 +18,5 @@ do
         git pull;
         cd ..;
     fi
-    sleep 2s;
+    sleep 1s;
 done
