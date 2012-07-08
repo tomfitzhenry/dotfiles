@@ -7,12 +7,15 @@ BACKUP_DIR=~/Private/tarsnap/github
 mkdir -p $BACKUP_DIR
 cd $BACKUP_DIR
 
-for i in $(curl --silent http://github.com/api/v2/json/repos/show/tomfitzhenry | /bin/grep -Po '"url":.*?[^\\]",' | awk -F\" '{print $4}');
+JSON=$(curl --silent --fail https://api.github.com/users/tomfitzhenry/repos)
+
+echo "${JSON}" | /bin/grep -Po '"git_url":.*?[^\\]",' | awk -F\" '{print $4}' | while read i
 do
-    if [ ! -d $(basename $i) ]; then
+    LOCAL_DIR_NAME=$(basename $i | sed 's/\.git$//')
+    if [ ! -d $LOCAL_DIR_NAME ]; then
         git clone $i;
     else
-        cd $(basename $i);
+        cd $LOCAL_DIR_NAME
         git pull;
         cd ..;
     fi
