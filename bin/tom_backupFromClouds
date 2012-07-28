@@ -10,7 +10,8 @@ rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.public_files" server:"public_ht
 rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.mail" server:"Maildir/" ~/Private/tarsnap/mail/server
 
 tom_backupGoogleDocs
+google-contacts-feed --username=$GOOGLE_USERNAME --password-file=$GOOGLE_AUTH_FILE > ~/Private/tarsnap/misc/google-contacts.xml
 
-# Google Contacts?
+
 # Google Calendar?
 #https://www.google.com/calendar/exporticalzip
