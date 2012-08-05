@@ -424,3 +424,6 @@ awful.util.spawn_with_shell("x-www-browser")
 awful.util.spawn_with_shell("keynav")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("gnome-settings-daemon")
+
+-- set screen blanking timeout to 7200s = 2hr
+awful.util.spawn("xset s 7200")
