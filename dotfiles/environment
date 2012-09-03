@@ -32,6 +32,8 @@ export GIT_COMMITTER_EMAIL=$EMAIL
 . ~/.config/user-dirs.dirs
 export MUSIC_STORE_DIR="/files/public/music/"
 
+export GOPATH=$HOME/src/go
+
 if [ -f ~/.environment.local ]; then
     . ~/.environment.local
 fi
