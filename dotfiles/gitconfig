@@ -1,0 +1,58 @@
+[user]
+    name = Tom Fitzhenry
+    email = git@tom-fitzhenry.me.uk
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    co = checkout
+    fa = fetch --all
+    fe = fetch
+    rc = rebase --continue
+    rs = rebase --skip
+    ri = rebase --interactive
+    ra = rebase --abort
+    sl = stash list
+    st = status
+    d = diff
+    di = diff
+    aa = add -A
+    a = add
+    ci = commit
+    rh = reset --hard
+    rp = repack -adf
+    pur = pull --rebase
+    cam = commit -am
+    fixup = commit --amend -CHEAD
+    #mergeback = "!f() { git update-ref refs/heads/master -m \"Force-merging master with current branch $(git symbolic-ref HEAD)\" $(echo \"$1\" | git commit-tree \"HEAD^{tree}\" -p refs/heads/master -p HEAD); git lg master HEAD -4 | cat; }; f"
+    #resetother = "!f(){ git update-ref refs/heads/$1 $2; git lg -4 $1 | cat; }; f"
+    po = push origin
+    cm = commit -m
+    bf = branch -f
+    bv = branch -vv
+    cp = cherry-pick
+    #desc = "!f() { if [ $# = 0 ]; then S=HEAD; else S=\"$1\"; fi; git describe --contains $S 2> /dev/null || git describe --tags $S; }; f"
+    #pokeolite = !git ls-remote origin | grep -w refs/heads/poke && git push origin :poke || git push origin master:poke
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[help]
+    format = web
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    insteadOf = "github:"
+    insteadOf = "git://github.com/"
+    insteadOf = "https://github.com/"
+
+[url "git@github.com:tomfitzhenry/"]
+    insteadOf = "ght:"
+
+[push]
+    default = tracking
+
+[core "include"]
+    path = ~/.gitconfig.local
