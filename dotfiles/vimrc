@@ -16,7 +16,7 @@ set backspace=2 "mean that you can always backspace
 " Tweak VIM's search "
 """"""""""""""""""""""
 set showmatch "highlight match as you type
-"set hlsearch  "show matches from last search
+set hlsearch  "show matches from last search
 set ignorecase
 set smartcase
 set incsearch "search as you type!
