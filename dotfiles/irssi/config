@@ -185,7 +185,12 @@ statusbar = {
 };
 
 settings = {
-  core = { real_name = "Unknown"; user_name = "tom"; nick = "tom"; };
+  core = {
+    real_name = "Unknown";
+    user_name = "tom";
+    nick = "tom";
+    resolve_prefer_ipv6 = "yes";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     autolog = "yes";
