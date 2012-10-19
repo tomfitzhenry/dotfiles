@@ -11,7 +11,7 @@ source ~/.profile
 bindkey -e
 
 # Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
-export TERM=linux
+#export TERM=linux
 
 autoload colors && colors
 
