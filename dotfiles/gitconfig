@@ -46,7 +46,6 @@
 [url "git@github.com:"]
     insteadOf = "gh:"
     insteadOf = "github:"
-    insteadOf = "git://github.com/"
 
 [url "git@github.com:tomfitzhenry/"]
     insteadOf = "ght:"
