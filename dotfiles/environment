@@ -8,6 +8,7 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
 export NNTPSERVER=news.virginmedia.com
+export NNTPSERVER=news.gmane.org
 
 # Stops 'less' from writing to '~/.lesshst"
 export LESSHISTFILE="-"
