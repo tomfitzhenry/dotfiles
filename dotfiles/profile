@@ -17,7 +17,7 @@ alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
 alias c="clear"
 
-alias s="screen -x"
+alias s="tmux attach-session -t main"
 
 # Convenience
 alias irc='ssh -t server screen -x'
