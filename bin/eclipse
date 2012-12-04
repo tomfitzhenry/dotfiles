@@ -2,6 +2,6 @@
 
 set -eu
 
-ECLIPSE_HOME=~/opt/eclipse
+ECLIPSE_HOME=/media/fast-storage/opt/eclipse
 
 $ECLIPSE_HOME/eclipse
