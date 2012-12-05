@@ -1,0 +1,21 @@
+[submodule "dotfiles/vim/bundle/template.vim"]
+	path = dotfiles/vim/bundle/template.vim
+	url = git://github.com/vim-scripts/template.vim
+[submodule "dotfiles/vim/bundle/vimproc"]
+	path = dotfiles/vim/bundle/vimproc
+	url = git://github.com/Shougo/vimproc
+[submodule "dotfiles/vim/bundle/ghcmod-vim"]
+	path = dotfiles/vim/bundle/ghcmod-vim
+	url = git://github.com/eagletmt/ghcmod-vim
+[submodule "dotfiles/vim/bundle/vim-hoogle"]
+	path = dotfiles/vim/bundle/vim-hoogle
+	url = git://github.com/Twinside/vim-hoogle
+[submodule "dotfiles/vim/bundle/haskell.vim"]
+	path = dotfiles/vim/bundle/haskell.vim
+	url = git://github.com/vim-scripts/haskell.vim
+[submodule "dotfiles/vim/bundle/vim-puppet"]
+	path = dotfiles/vim/bundle/vim-puppet
+	url = git://github.com/rodjek/vim-puppet
+[submodule "dotfiles/vim/bundle/vim-fugitive"]
+	path = dotfiles/vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive
