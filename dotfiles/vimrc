@@ -20,7 +20,6 @@ colorscheme elflord
 if has("syntax")
 	syntax on
 endif
-filetype indent on
 set showcmd
 set listchars=tab:`\ ,trail:.
 set list "list mode displays all your special characters, define them above
@@ -31,22 +30,11 @@ set showbreak=>>
 highlight MergeMarker guibg=red ctermbg=red
 match MergeMarker /^[<=>]\{7\}.*$/
 
-" Indentation "
-"""""""""""""""
-set tabstop=4
-set st=4
-set shiftwidth=4 "when using << and >> to indent, this value is used
-set autoindent
-set smartindent "can't remember whether you need both of these. I think yes. :)
-
 " Stuff that was in my vimrc, whose purpose I can't remember "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 filetype on
 set modeline
-set expandtab
-set smarttab
-set softtabstop=4
 
 for f in split(glob('~/.vim/rc/*.vim'), '\n')
     exe 'source' f
