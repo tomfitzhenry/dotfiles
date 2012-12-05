@@ -17,4 +17,6 @@ Bundle 'eagletmt/ghcmod-vim'
 Bundle 'Twinside/vim-hoogle'
 Bundle 'vim-scripts/haskell.vim'
 
+Bundle 'rodjek/vim-puppet'
+
 filetype plugin indent on
