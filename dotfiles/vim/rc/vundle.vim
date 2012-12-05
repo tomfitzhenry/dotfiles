@@ -21,4 +21,6 @@ Bundle 'vim-scripts/haskell.vim'
 
 Bundle 'rodjek/vim-puppet'
 
+Bundle 'tpope/vim-fugitive.git'
+
 filetype plugin indent on
