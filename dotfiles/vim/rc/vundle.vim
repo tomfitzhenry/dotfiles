@@ -11,6 +11,8 @@ call vundle#rc()
 "Required
 Bundle 'gmarik/vundle'
 
+Bundle 'vim-scripts/template.vim'
+
 Bundle 'Shougo/vimproc'
 
 Bundle 'eagletmt/ghcmod-vim'
