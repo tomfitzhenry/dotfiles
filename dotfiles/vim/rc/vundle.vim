@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/vimproc'
 
+Bundle 'eagletmt/ghcmod-vim'
 Bundle 'Twinside/vim-hoogle'
 Bundle 'vim-scripts/haskell.vim'
 
