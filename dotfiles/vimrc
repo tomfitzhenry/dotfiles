@@ -76,30 +76,7 @@ set expandtab
 set smarttab
 set softtabstop=4
 
-" Spelling "
-""""""""""""
-set spell spelllang=en_gb
-set nospell
-set dictionary=/usr/share/dict/words
-set complete+=k/usr/share/dict/words
-autocmd BufNewFile,BufRead *.txt set spell
-
-" Plugin management "
-"""""""""""""""""""""
+source $HOME/.vim/rc/spelling.vim
 source $HOME/.vim/rc/vundle.vim
-
-
-" ctags "
-"""""""""
-" Look in the current directory for "tags", and work up the tree
-" towards / until one is found.
-set tags+=tags;/
-
-" template "
-""""""""""""
-" After loading a template, move the cursor to <+CURSOR+>:
-autocmd User plugin-template-loaded
-    \    if search('<+CURSOR+>')
-    \  |   execute 'normal! "_da>'
-    \  | endif
-
+source $HOME/.vim/rc/ctags.vim
+source $HOME/.vim/rc/template.vim
