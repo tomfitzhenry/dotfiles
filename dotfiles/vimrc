@@ -68,8 +68,6 @@ set expandtab
 set smarttab
 set softtabstop=4
 
-source $HOME/.vim/rc/search.vim
-source $HOME/.vim/rc/spelling.vim
-source $HOME/.vim/rc/vundle.vim
-source $HOME/.vim/rc/ctags.vim
-source $HOME/.vim/rc/template.vim
+for f in split(glob('~/.vim/rc/*.vim'), '\n')
+    exe 'source' f
+endfor
