@@ -19,3 +19,6 @@
 [submodule "dotfiles/vim/bundle/vim-fugitive"]
 	path = dotfiles/vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive
+[submodule "dotfiles/vim/bundle/vim-pathogen"]
+	path = dotfiles/vim/bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git

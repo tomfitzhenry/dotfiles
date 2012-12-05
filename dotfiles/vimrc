@@ -2,6 +2,7 @@
 
 set nocompatible
 
+source /home/tom/src/dotfiles/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 if &term =~ "screen"
