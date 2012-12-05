@@ -13,4 +13,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/vimproc'
 
+Bundle 'Twinside/vim-hoogle'
+Bundle 'vim-scripts/haskell.vim'
+
 filetype plugin indent on
