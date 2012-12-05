@@ -39,26 +39,6 @@ set shiftwidth=4 "when using << and >> to indent, this value is used
 set autoindent
 set smartindent "can't remember whether you need both of these. I think yes. :)
 
-
-" Turn on Mouse "
-"""""""""""""""""
-"set mouse=a
-
-" Tab shortcuts "
-"""""""""""""""""
-""irssi like tab changing - can't get this working in PuTTY :\
-nmap <A-Right> :tabnext<cr>
-nmap <A-Left> :tabprevious<cr>
-
-nmap <C-t> :tabnew<cr>
-imap <C-t> <ESC>:tabnew<cr>
-
-" Expand tabs in .py files "
-""""""""""""""""""""""""""""
-augroup pygroup
-	autocmd BufRead *.py set et
-augroup END
-
 " Stuff that was in my vimrc, whose purpose I can't remember "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
