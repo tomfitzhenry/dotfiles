@@ -13,14 +13,6 @@ set showcmd
 set wildmenu " shows tab completion menu during a command
 set backspace=2 "mean that you can always backspace
 
-" Tweak VIM's search "
-""""""""""""""""""""""
-set showmatch "highlight match as you type
-set hlsearch  "show matches from last search
-set ignorecase
-set smartcase
-set incsearch "search as you type!
-
 " Appearance "
 """"""""""""""
 set nu " line numbers
@@ -76,6 +68,7 @@ set expandtab
 set smarttab
 set softtabstop=4
 
+source $HOME/.vim/rc/search.vim
 source $HOME/.vim/rc/spelling.vim
 source $HOME/.vim/rc/vundle.vim
 source $HOME/.vim/rc/ctags.vim
