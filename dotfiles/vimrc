@@ -1,20 +1,15 @@
-" ~/.vimrc
-" Configuration put together by Tim Monks, after reading a few other .rcs ^_^
+" Originally copied from Tim Monks
 
-" Use Vim extensions and fix screen issues "
-""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible "compatible mode == emulate vi's problems
+set nocompatible
 if &term =~ "screen"
 	set term=xterm
 endif
-set history=50 "keep 50 lines of command line history
-set autowrite " Automatically save before commands like :next and :make
+set history=50
+set autowrite
 set showcmd
 set wildmenu " shows tab completion menu during a command
 set backspace=2 "mean that you can always backspace
 
-" Stuff that was in my vimrc, whose purpose I can't remember "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 filetype on
 set modeline
