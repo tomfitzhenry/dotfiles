@@ -84,6 +84,11 @@ set dictionary=/usr/share/dict/words
 set complete+=k/usr/share/dict/words
 autocmd BufNewFile,BufRead *.txt set spell
 
+" Plugin management "
+"""""""""""""""""""""
+source $HOME/.vim/rc/vundle.vim
+
+
 " ctags "
 """""""""
 " Look in the current directory for "tags", and work up the tree
@@ -97,3 +102,4 @@ autocmd User plugin-template-loaded
     \    if search('<+CURSOR+>')
     \  |   execute 'normal! "_da>'
     \  | endif
+
