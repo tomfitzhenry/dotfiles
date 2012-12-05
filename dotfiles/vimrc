@@ -12,7 +12,3 @@ set backspace=2 "mean that you can always backspace
 
 filetype plugin on
 filetype on
-
-for f in split(glob('~/.vim/rc/*.vim'), '\n')
-    exe 'source' f
-endfor
