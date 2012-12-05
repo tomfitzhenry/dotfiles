@@ -16,7 +16,7 @@ Install_symlink() {
     local TARGET=${TARGET_PREFIX}$(basename ${SOURCE})
 
     if [ ! "$(readlink ${TARGET})" = "${SOURCE}" ]; then
-	    ln --symbolic --verbose ${SOURCE} ${TARGET}
+	    ln -s -v ${SOURCE} ${TARGET}
     fi
 
 }
