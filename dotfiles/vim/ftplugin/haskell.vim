@@ -1,3 +1,5 @@
+NeoComplCacheEnable
+
 autocmd BufWritePost * GhcModCheckAndLintAsync
 
 map hc :GhcModCheck<CR> :GhcModLint<CR>
