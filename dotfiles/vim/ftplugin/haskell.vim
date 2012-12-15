@@ -1,7 +1,7 @@
-map hc :GhcModCheck<CR> :GhcModLint<CR>
+map Hc :GhcModCheck<CR> :GhcModLint<CR>
 
-map ht :GhcModType<CR>
-map hi :GhcModTypeInsert<CR>
-map hx :GhcModTypeClear<CR>
+map Ht :GhcModType<CR>
+map Hi :GhcModTypeInsert<CR>
+map Hx :GhcModTypeClear<CR>
 
-map hr :!runhaskell %<CR>
+map Hr :!runhaskell %<CR>
