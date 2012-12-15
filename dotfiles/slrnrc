@@ -1,0 +1,5 @@
+set check_new_groups 0
+set unsubscribe_new_groups 1 % why is this disbled by default? /o\
+
+set hide_pgpsignature 1
+set hide_signature 1
