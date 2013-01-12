@@ -20,7 +20,7 @@ alias c="clear"
 alias s="tmux attach-session -t main"
 
 # Convenience
-alias irc='ssh -t server screen -x'
+alias irc='ssh -t server tmux attach-session -t main'
 
 alias grep=egrep
 alias ack=ack-grep
