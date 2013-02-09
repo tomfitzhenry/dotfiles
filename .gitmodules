@@ -49,3 +49,6 @@
 [submodule "dotfiles/vim/bundle/vim-sensible"]
 	path = dotfiles/vim/bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "dotfiles/vim/bundle/nerdtree"]
+	path = dotfiles/vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
