@@ -1,6 +1,5 @@
 colorscheme elflord
 
-set number
 set list
 set linebreak
 set showbreak=>>
