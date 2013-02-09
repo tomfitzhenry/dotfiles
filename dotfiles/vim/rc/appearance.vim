@@ -1,8 +1,7 @@
 colorscheme elflord
 
 set number
-set listchars=tab:`\ ,trail:.
-set list "list mode displays all your special characters, define them above
+set list
 set linebreak
 set showbreak=>>
 
