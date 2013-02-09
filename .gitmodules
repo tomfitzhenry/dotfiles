@@ -37,3 +37,6 @@
 [submodule "dotfiles/vim/bundle/xptemplate"]
 	path = dotfiles/vim/bundle/xptemplate
 	url = git://github.com/drmingdrmer/xptemplate.git
+[submodule "dotfiles/vim/bundle/easymotion"]
+	path = dotfiles/vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
