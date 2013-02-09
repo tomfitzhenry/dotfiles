@@ -5,3 +5,5 @@ map Hi :GhcModTypeInsert<CR>
 map Hx :GhcModTypeClear<CR>
 
 map Hr :!runhaskell %<CR>
+
+set wildignore+=cabal-dev,dist
