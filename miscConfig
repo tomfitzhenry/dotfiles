@@ -23,7 +23,3 @@ gconftool-2 --set "/apps/gnome-terminal/profiles/Default/scrollbar_position" \
 #
 # Until Mercurial 1.9 is available in Ubuntu, let's just ensure that file exists.
 touch ~/.hgrc.local
-
-# Redirect to /dev/null to prevent "Info: ignoring 'taglist' which is neither removed nor broken"
-# from being printed when taglist has already been installed.
-vim-addons install taglist > /dev/null
