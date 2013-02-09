@@ -1,3 +1,3 @@
-set hlsearch  "show matches from last search
+set hlsearch
 set ignorecase
 set smartcase
