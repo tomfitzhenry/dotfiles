@@ -1,20 +1,11 @@
 " Originally copied from Tim Monks
 
-set nocompatible
-
 source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 if &term =~ "screen"
 	set term=xterm
 endif
-
-set history=50
-set autowrite
-set backspace=2 "mean that you can always backspace
-
-filetype plugin on
-filetype on
 
 for f in split(glob('~/.vim/rc/*.vim'), '\n')
     exe 'source' f
