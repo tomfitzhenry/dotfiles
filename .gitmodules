@@ -40,3 +40,6 @@
 [submodule "dotfiles/vim/bundle/easymotion"]
 	path = dotfiles/vim/bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "dotfiles/vim/bundle/command-t"]
+	path = dotfiles/vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
