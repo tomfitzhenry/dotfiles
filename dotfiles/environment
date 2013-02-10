@@ -2,6 +2,7 @@
 
 export PATH=$HOME/bin:$HOME/usr/bin/:$HOME/usr/local/bin/:/var/lib/gems/1.8/bin:/usr/lib/postgresql/8.3/bin:$PATH:/opt/WorldOfGoo/
 export PATH=$HOME/.cabal/bin/:$PATH
+export PATH=$PATH:/usr/local/share/npm/bin/
 export LANG=en_GB.utf-8
 
 export BROWSER=/usr/bin/chromium-browser
