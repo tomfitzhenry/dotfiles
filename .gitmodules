@@ -64,3 +64,6 @@
 [submodule "dotfiles/vim/bundle/ctrlp.vim"]
 	path = dotfiles/vim/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "dotfiles/vim/bundle/bufexplorer"]
+	path = dotfiles/vim/bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
