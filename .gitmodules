@@ -67,3 +67,6 @@
 [submodule "dotfiles/vim/bundle/bufexplorer"]
 	path = dotfiles/vim/bundle/bufexplorer
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "dotfiles/vim/bundle/syntastic"]
+	path = dotfiles/vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
