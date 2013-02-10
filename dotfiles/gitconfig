@@ -57,3 +57,5 @@
     path = ~/.gitconfig.local
 [core]
 	excludesfile = /home/tom/.gitignore.global
+[github]
+	user = tomfitzhenry

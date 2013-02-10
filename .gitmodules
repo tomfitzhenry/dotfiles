@@ -55,3 +55,9 @@
 [submodule "dotfiles/vim/bundle/vim-eunuch"]
 	path = dotfiles/vim/bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
+[submodule "dotfiles/vim/bundle/Gist.vim"]
+	path = dotfiles/vim/bundle/Gist.vim
+	url = git://github.com/vim-scripts/Gist.vim.git
+[submodule "dotfiles/vim/bundle/webapi-vim"]
+	path = dotfiles/vim/bundle/webapi-vim
+	url = git://github.com/mattn/webapi-vim.git
