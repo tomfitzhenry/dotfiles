@@ -7,3 +7,6 @@ map Hx :GhcModTypeClear<CR>
 map Hr :!runhaskell %<CR>
 
 set wildignore+=cabal-dev,dist
+
+map Hu :PromptVimTmuxCommand<CR>cabal-dev install --enable-test<CR>
+map Hs :PromptVimTmuxCommand<CR>cabal-dev ghci<CR>
