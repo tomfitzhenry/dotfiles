@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+
+rdiff-backup --tempdir /media/backup/rdiff-backup-tempdir --verbosity 5 /media/windows2 /media/backup/rdiff-backup-stuffs/windows2

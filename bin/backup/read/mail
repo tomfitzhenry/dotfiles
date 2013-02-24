@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -avz --backup -e "ssh -i $HOME/.ssh/id_rsa.mail" server:"Maildir/" ~/Private/tarsnap/mail/server
