@@ -29,6 +29,26 @@ alias ack=ack-grep
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
 
+function create_temp_dir() {
+    local ROOTTEMPDIR=~/tmp/
+    mkdir -p $ROOTTEMPDIR
+
+    local PREFIX=$1
+
+    if [ -z $PREFIX ];
+    then
+        local PATTERN="tmp.XXXXXX"
+    else
+        local PATTERN="$1.XXXXXX"
+    fi
+
+    local TEMPDIR=$(mktemp -d --tmpdir=$ROOTTEMPDIR $PATTERN)
+
+    pushd $TEMPDIR
+}
+
+alias t="create_temp_dir"
+
 # gpg-agent
 if [ -f $HOME/.gpg-agent-info ]; then
     if kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
