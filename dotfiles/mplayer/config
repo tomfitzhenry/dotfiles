@@ -7,3 +7,5 @@ softvol-max=1200
 # Normalise volume, so explosions are the same volume as conversations
 # http://www.oneweb.co.uk/mythtv/2009/03/normalise-movie-volume/
 af=volnorm
+
+fs=yes # default to fullscreen
