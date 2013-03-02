@@ -73,3 +73,6 @@
 [submodule "dotfiles/vim/bundle/typescript-vim"]
 	path = dotfiles/vim/bundle/typescript-vim
 	url = git://github.com/leafgarland/typescript-vim.git
+[submodule "dotfiles/zsh/plugins/zsh-syntax-highlighting"]
+	path = dotfiles/zsh/plugins/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

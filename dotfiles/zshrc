@@ -52,6 +52,8 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 if [ -f ~/.zshrc.local ]; then
     . ~/.zshrc.local
 fi
