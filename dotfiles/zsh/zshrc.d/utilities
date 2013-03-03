@@ -1,0 +1,19 @@
+function create_temp_dir() {
+    local ROOTTEMPDIR=~/tmp/
+    mkdir -p $ROOTTEMPDIR
+
+    local PREFIX=$1
+
+    if [ -z $PREFIX ];
+    then
+        local PATTERN="tmp.XXXXXX"
+    else
+        local PATTERN="$1.XXXXXX"
+    fi
+
+    local TEMPDIR=$(mktemp -d --tmpdir=$ROOTTEMPDIR $PATTERN)
+
+    pushd $TEMPDIR
+}
+
+alias t="create_temp_dir"
