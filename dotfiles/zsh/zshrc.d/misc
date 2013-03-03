@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Set the keybindings to emacs bindings, so when I press "Up", the cursor
+# is positioned at the end of the previous line, rather than the start of the
+# previous line. There's probably a less draonic solution, involving rebinding
+# "Up", but this solution will do.
+# http://www.zshwiki.org/home/zle/bindkeys
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=383737 (?)
+bindkey -e
+
+# Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
+#export TERM=linux
+
+setopt autocd extendedglob nomatch notify interactivecomments
+
+unsetopt beep
+
+alias -g 'L'='| less'
+alias -g 'G'='| grep'
+
+alias zshhelp=run-help
+
+if [ $UID -eq 0 ]; then
+	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
+else
+	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}$ "
+fi
+
+# http://nuclearsquid.com/writings/edit-long-commands/
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line

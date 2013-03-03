@@ -1,59 +1,11 @@
-zstyle :compinstall filename ~/.zshrc
-
 source ~/.profile
-
-# Set the keybindings to emacs bindings, so when I press "Up", the cursor
-# is positioned at the end of the previous line, rather than the start of the
-# previous line. There's probably a less draonic solution, involving rebinding
-# "Up", but this solution will do.
-# http://www.zshwiki.org/home/zle/bindkeys
-# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=383737 (?)
-bindkey -e
-
-# Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
-#export TERM=linux
-
-autoload colors && colors
-
-setopt appendhistory autocd extendedglob nomatch notify interactivecomments
-setopt hist_ignore_dups
-
-autoload -Uz compinit
-compinit
-
-unsetopt beep
-
-alias -g 'L'='| less'
-alias -g 'G'='| grep'
-
-alias zshhelp=run-help
-
-[ -f /etc/DIR_COLORS ] && eval $(dircolors -b /etc/DIR_COLORS)
-export ZLSCOLORS="${LS_COLORS}"
-
-# Cache completion, to speed up apt-related completions
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-
-# Tab completion for `kill`
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always
-
-if [ $UID -eq 0 ]; then
-	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
-else
-	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}$ "
-fi
-
-# http://nuclearsquid.com/writings/edit-long-commands/
-autoload -U edit-command-line
-# Emacs style
-zle -N edit-command-line
-bindkey '^xe' edit-command-line
-bindkey '^x^e' edit-command-line
 
 for plugin (~/.zsh/plugins/*); do
     source $plugin/$(basename $plugin).plugin.zsh
+done
+
+for zshrc (~/.zsh/zshrc.d/*); do
+    source $zshrc
 done
 
 if [ -f ~/.zshrc.local ]; then

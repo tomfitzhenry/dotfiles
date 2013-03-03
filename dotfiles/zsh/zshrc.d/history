@@ -1,0 +1,6 @@
+setopt appendhistory
+setopt hist_ignore_dups
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.history
