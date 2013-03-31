@@ -6,3 +6,5 @@ set hide_signature 1
 
 header_display_format 0 "%F %D %t %70s"
 set overview_date_format "%Y-%m-%d %H:%M"
+
+server "news.gwene.org" ".jnewsrc-gwene"
