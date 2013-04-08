@@ -56,6 +56,6 @@
 [core "include"]
     path = ~/.gitconfig.local
 [core]
-	excludesfile = /home/tom/.gitignore.global
+	excludesfile = ~/.gitignore.global
 [github]
 	user = tomfitzhenry
