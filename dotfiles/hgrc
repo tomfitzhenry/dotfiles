@@ -14,6 +14,7 @@ hgext.mq =
 hgext.purge=
 hgext.patchbomb =
 eol=
+rebase = 
 
 [email]
 method = /usr/bin/msmtp
