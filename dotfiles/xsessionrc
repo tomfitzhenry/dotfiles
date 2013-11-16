@@ -1,6 +1,8 @@
+gnome-settings-daemon & # Have to wait for this to finish
+sleep 3
+xrandr --output DFP2 --auto --right-of CRT1 --auto
+
+fluxgui &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 10 --transparent true --tint 0x191970 --height 15 --monitor 1 &
-
+       --expand true --width 10 --transparent true --tint 0x191970 --height 15 --monitor 1 &
 nm-applet &
-
-xrandr --output DFP2 --auto --right-of CRT1 --auto &
