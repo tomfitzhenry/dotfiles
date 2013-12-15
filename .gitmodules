@@ -82,3 +82,6 @@
 [submodule "bin/backup/read/trello-backup"]
 	path = bin/backup/read/trello-backup
 	url = https://github.com/tomfitzhenry/trello-backup.git
+[submodule "dotfiles/vim/bundle/vim-airline"]
+	path = dotfiles/vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
