@@ -4,9 +4,6 @@
 [submodule "dotfiles/vim/bundle/vimproc"]
 	path = dotfiles/vim/bundle/vimproc
 	url = git://github.com/Shougo/vimproc
-[submodule "dotfiles/vim/bundle/ghcmod-vim"]
-	path = dotfiles/vim/bundle/ghcmod-vim
-	url = git://github.com/eagletmt/ghcmod-vim
 [submodule "dotfiles/vim/bundle/vim-hoogle"]
 	path = dotfiles/vim/bundle/vim-hoogle
 	url = git://github.com/Twinside/vim-hoogle
