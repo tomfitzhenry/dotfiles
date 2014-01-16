@@ -59,3 +59,5 @@
 	excludesfile = ~/.gitignore.global
 [github]
 	user = tomfitzhenry
+[branch]
+	autosetuprebase = always
