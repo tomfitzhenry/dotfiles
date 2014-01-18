@@ -34,8 +34,9 @@ main = do
         ]
 
 myXPConfig :: XPConfig
-myXPConfig = defaultXPConfig
+myXPConfig = greenXPConfig
     { autoComplete = Nothing
+    , font = "-misc-fixed-*-*-*-*-20-*-*-*-*-*-*-*"
     , searchPredicate = orderIndepdentSubstringMatcher
     }
 
