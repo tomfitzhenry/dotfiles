@@ -35,7 +35,7 @@ main = do
 
 myXPConfig :: XPConfig
 myXPConfig = defaultXPConfig
-    { autoComplete = Just 750000
+    { autoComplete = Nothing
     , searchPredicate = orderIndepdentSubstringMatcher
     }
 
