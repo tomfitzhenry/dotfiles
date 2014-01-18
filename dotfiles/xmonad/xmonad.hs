@@ -4,6 +4,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Layout.MouseResizableTile
 import XMonad.Prompt
 import XMonad.Prompt.Window
+import XMonad.Prompt.RunOrRaise
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
@@ -31,6 +32,7 @@ main = do
         `additionalKeys`
         [ ((myModMask .|. shiftMask, xK_g), windowPromptGoto myXPConfig)
         , ((myModMask .|. shiftMask, xK_b), windowPromptBring myXPConfig)
+        , ((myModMask .|. shiftMask, xK_x), runOrRaisePrompt myXPConfig)
         ]
 
 myXPConfig :: XPConfig

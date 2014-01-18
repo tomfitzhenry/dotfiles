@@ -12,3 +12,6 @@ let mapleader = ","
 for f in split(glob('~/.vim/rc/*.vim'), '\n')
     exe 'source' f
 endfor
+
+map <C-n> :NERDTreeToggle<CR>
+let g:airline#extensions#tabline#enabled = 1
