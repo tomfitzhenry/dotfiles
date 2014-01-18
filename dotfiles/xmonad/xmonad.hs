@@ -16,11 +16,25 @@ import Data.List.Split (splitOn)
 myModMask :: KeyMask
 myModMask = mod4Mask
 
+ws_web = "1:web"
+ws_mail = "2:mail"
+ws_music = "4:music"
+ws_dl = "5:dl"
+myWorkspaces = [ws_web,ws_mail,"3:term",ws_music,ws_dl] ++ map show [6..9]
+
+-- `xprop | grep WM_CLASS` then click on window, to find an application's class/name
+myManageHook = composeAll
+    [ className =? "Firefox" --> doShift ws_web
+    , className =? "Thunderbird" --> doShift ws_mail
+    , className =? "Spotify" --> doShift ws_music
+    , title =? "Transmission" --> doShift ws_dl
+    ]
+
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/tom/.xmobarrc"
 
     xmonad $ defaultConfig
-        { manageHook = manageDocks <+> manageHook defaultConfig
+        { manageHook = manageDocks <+> myManageHook
         , terminal   = "emacsclient -c --eval '(eshell \"foo\")'"
         , layoutHook = avoidStruts $ (mouseResizableTile ||| layoutHook defaultConfig)
         , logHook = dynamicLogWithPP xmobarPP
@@ -28,6 +42,7 @@ main = do
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , modMask = myModMask
+        , workspaces = myWorkspaces
         }
         `additionalKeys`
         [ ((myModMask .|. shiftMask, xK_g), windowPromptGoto myXPConfig)
