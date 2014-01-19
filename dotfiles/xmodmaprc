@@ -1,0 +1,7 @@
+! Set caps lock button to be ctrl
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+
+! Disable ctrl button, to force me to not press it
+remove Control = Control_L

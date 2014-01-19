@@ -1,3 +1,4 @@
+xmodmap ~/.xmodmaprc
 gnome-settings-daemon & # Have to wait for this to finish
 sleep 3
 xrandr --output DFP2 --auto --right-of CRT1 --auto
