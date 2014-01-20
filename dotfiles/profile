@@ -49,3 +49,5 @@ fi
 if [ -f $HOME/.profile.local ]; then
     . ~/.profile.local
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
