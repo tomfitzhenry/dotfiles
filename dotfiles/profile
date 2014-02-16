@@ -15,7 +15,6 @@
 #alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
-alias c="clear"
 
 alias s="tmux attach-session -t main"
 
@@ -25,9 +24,18 @@ alias irc='ssh -t server tmux attach-session -t main'
 alias grep=egrep
 alias ack=ack-grep
 
+alias c=cd
+alias l=ls
+alias d=docker
+alias s=sudo
+alias ss="sudo !!"
+alias g=git
+alias v=vim
+
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
+alias acs="apt-cache search"
 
 # gpg-agent
 if [ -f $HOME/.gpg-agent-info ]; then
