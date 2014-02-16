@@ -40,3 +40,4 @@ export GOPATH=$HOME/src/go
 if [ -f ~/.environment.local ]; then
     . ~/.environment.local
 fi
+export URBIT_HOME=/home/tom/tmp/urbit.oZg8RF/urbit/urb
