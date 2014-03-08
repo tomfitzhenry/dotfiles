@@ -1,1 +1,1 @@
-../nickcolor.pl
+/usr/share/irssi/scripts/nickcolor.pl

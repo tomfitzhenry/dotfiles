@@ -69,6 +69,8 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  dnd = "/set chanact_filter 3";
+  avail = "/set chanact_filter 2";
 };
 
 statusbar = {
@@ -125,12 +127,11 @@ statusbar = {
       # list of items in statusbar in the display order
       items = {
         barstart = { priority = "100"; };
-        time = { };
         user = { };
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
+        chanact = { };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
         window_switcher = { };
@@ -161,8 +162,6 @@ statusbar = {
       position = "100";
       visible = "always";
       items = {
-        prompt = { priority = "-1"; };
-        prompt_empty = { priority = "-1"; };
         # treated specially, this is the real input line.
         input = { priority = "10"; };
       };
@@ -180,6 +179,7 @@ statusbar = {
         topic_empty = { };
         topicbarend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
     };
   };
 };
@@ -198,17 +198,29 @@ settings = {
     # 6hrs = 21600s
     autoclose_query = "21600";
   };
+  "perl/core/scripts" = {
+    chanact_filter = "2";
+    chanact_header = "";
+    chanact_filter_windowlist_level = "0";
+  };
 };
 
 keyboard = (
   # http://wouter.coekaerts.be/irssi/window_switcher
-  { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; }
+  { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; },
+  { key = "meta-h"; id = "change_window"; data = "h:co/#hippies"; }
 );
 hilights = (
   { text = "tom"; nick = "yes"; word = "yes"; fullword = "yes"; }
 );
 logs = { };
 ignores = (
-  { level = "JOINS PARTS QUITS MODES"; },
-  { level = "ALL"; pattern = "Hello, .*: \".*\"$"; regexp = "yes"; }
+  { level = "JOINS PARTS QUITS KICKS MODES NICKS"; },
+  { level = "PUBLICS"; pattern = "Hello, .*"; regexp = "yes"; },
+  { level = "NOTICES"; channels = ( "#coreos" ); },
+  { 
+    mask = "dockerbot";
+    level = "PUBLICS";
+    channels = ( "#docker-dev" );
+  }
 );
