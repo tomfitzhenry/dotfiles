@@ -16,7 +16,7 @@
 alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
 
-alias s="tmux attach-session -t main"
+alias sr="tmux attach-session -t main"
 
 # Convenience
 alias irc='ssh -t server tmux attach-session -t main'
