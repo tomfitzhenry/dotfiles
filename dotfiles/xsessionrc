@@ -5,6 +5,7 @@ xmodmap ~/.xmodmaprc
 ssh-agent &
 
 emacs -daemon &
+btsync &
 
 fluxgui &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
