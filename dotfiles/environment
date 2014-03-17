@@ -5,7 +5,7 @@ export PATH=$HOME/.cabal/bin/:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin/
 export LANG=en_GB.utf-8
 
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/chromium-browser
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
