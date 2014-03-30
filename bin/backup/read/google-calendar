@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# Google Calendar?
-echo "https://www.google.com/calendar/exporticalzip"

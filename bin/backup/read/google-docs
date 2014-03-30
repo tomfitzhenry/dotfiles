@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-gcp.py --update --overwrite --doc-id --create-user-dir --password-file="${GOOGLE_AUTH_FILE}" ${GOOGLE_USERNAME}:/ ~/Private/tarsnap/docs-gdatacopier

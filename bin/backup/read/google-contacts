@@ -1,3 +1,0 @@
-#!/bin/sh
-
-google-contacts-feed --username=$GOOGLE_USERNAME --password-file=$GOOGLE_AUTH_FILE > ~/Private/tarsnap/misc/google-contacts.xml

@@ -1,5 +1,0 @@
-#!/bin/sh
-set -eu
-
-# http://blog.feedly.com/2013/06/29/opml-export/
-curl --silent http://feedly.com/v3/opml?feedlyToken=$FEEDLY_API_TOKEN > ~/Private/tarsnap/feedly/feeds.opml
