@@ -5,5 +5,5 @@ TARSNAP_DIR=$HOME/Private/tarsnap
 
 for i in $TARSNAP_DIR/*;
 do
-    tarsnap --humanize-numbers -v -c -f $(basename $i)-$(date +"%Y%m%dT%H%M%S") $i
+    tarsnap --humanize-numbers -c -f $(basename $i)-$(date +"%Y%m%dT%H%M%S") $i
 done
