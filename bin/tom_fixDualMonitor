@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+
+xrandr --output DFP2 --mode 1680x1050 --right-of CRT1
