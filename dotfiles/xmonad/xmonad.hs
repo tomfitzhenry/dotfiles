@@ -35,7 +35,7 @@ main = do
 
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> myManageHook
-        , terminal   = "emacsclient -c --eval '(eshell \"foo\")'"
+        , terminal   = "gnome-terminal"
         , layoutHook = avoidStruts $ (mouseResizableTile ||| layoutHook defaultConfig)
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
