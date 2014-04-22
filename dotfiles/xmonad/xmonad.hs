@@ -48,6 +48,7 @@ main = do
         [ ((myModMask .|. shiftMask, xK_g), windowPromptGoto myXPConfig)
         , ((myModMask .|. shiftMask, xK_b), windowPromptBring myXPConfig)
         , ((myModMask .|. shiftMask, xK_x), runOrRaisePrompt myXPConfig)
+        , ((myModMask .|. shiftMask, xK_l), spawn "gnome-screensaver-command --lock")
         ]
 
 myXPConfig :: XPConfig
