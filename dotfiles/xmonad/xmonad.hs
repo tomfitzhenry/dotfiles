@@ -35,7 +35,7 @@ main = do
 
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> myManageHook
-        , terminal   = "gnome-terminal"
+        , terminal   = "/usr/bin/gnome-terminal"
         , layoutHook = avoidStruts $ (mouseResizableTile ||| layoutHook defaultConfig)
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
