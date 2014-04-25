@@ -19,7 +19,7 @@ alias ls="ls -F --color"
 alias sr="tmux attach-session -t main"
 
 # Convenience
-alias irc='ssh -t server tmux attach-session -t main'
+alias irc='ssh -t server tmux attach-session -d -t main'
 
 alias grep=egrep
 alias ack=ack-grep
