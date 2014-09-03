@@ -6,8 +6,8 @@ export PATH=$PATH:/usr/local/share/npm/bin/
 export LANG=en_GB.utf-8
 
 export BROWSER=/usr/bin/chromium-browser
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+export EDITOR=vim
+export VISUAL=vim
 
 export NNTPSERVER=news.virginmedia.com
 export NNTPSERVER=news.gmane.org
