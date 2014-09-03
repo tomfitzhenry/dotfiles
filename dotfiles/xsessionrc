@@ -4,7 +4,6 @@ xrandr --output DFP2 --auto --right-of CRT1 --auto
 xmodmap ~/.xmodmaprc
 ssh-agent &
 wmname LG3D &
-workrave &
 
 emacs -daemon &
 btsync &
