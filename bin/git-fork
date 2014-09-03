@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+module Git
+def self.show_usage
+puts "Usage: git fork add <fork name> [github username]"
+puts "\nIf github username is blank, it will default to being the same as the fork name"
+Kernel.exit(1)
+end
+ 
+def self.origin
+`git remote show -n origin | grep Fetch | awk '{print $3}'`
+end
+ 
+def self.add_remote(name, url)
+Kernel.exec("git remote add #{name} #{url}")
+end
+end
+ 
+Git.show_usage unless ARGV[0] == "add" && !ARGV[1].nil?
+ 
+fork_name = ARGV[1]
+github_username = ARGV[2] || ARGV[1]
+ 
+remote = Git.origin
+remote.sub!(/(\.com.)[^\/]+/, '\1' + github_username)
+ 
+Git.add_remote(fork_name, remote)
