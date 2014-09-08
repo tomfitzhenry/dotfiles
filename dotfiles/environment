@@ -1,16 +1,11 @@
 #!/bin/sh
 
-export PATH=$HOME/bin:$HOME/usr/bin/:$HOME/usr/local/bin/:/var/lib/gems/1.8/bin:/usr/lib/postgresql/8.3/bin:$PATH:/opt/WorldOfGoo/
-export PATH=$HOME/.cabal/bin/:$PATH
-export PATH=$PATH:/usr/local/share/npm/bin/
+export PATH=$HOME/bin:$PATH
 export LANG=en_GB.utf-8
 
 export BROWSER=/usr/bin/chromium-browser
 export EDITOR=vim
 export VISUAL=vim
-
-export NNTPSERVER=news.virginmedia.com
-export NNTPSERVER=news.gmane.org
 
 # Stops 'less' from writing to '~/.lesshst"
 export LESSHISTFILE="-"
@@ -35,9 +30,6 @@ export GIT_COMMITTER_EMAIL=$EMAIL
 . ~/.config/user-dirs.dirs
 export MUSIC_STORE_DIR="/files/public/music/"
 
-export GOPATH=$HOME/src/go
-
 if [ -f ~/.environment.local ]; then
     . ~/.environment.local
 fi
-export URBIT_HOME=/home/tom/tmp/urbit.oZg8RF/urbit/urb

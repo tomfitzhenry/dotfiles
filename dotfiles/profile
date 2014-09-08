@@ -1,28 +1,10 @@
 . ~/.environment
 
-#function mkcd() {
-#  mkdir -p "$1"
-#    cd "$1"
-#}
-
-#upload_to_music_server() {
-#    while [ -n "$1" ];
-#    do
-#        curl -F upload=@"$1" http://music.compsoc.lan/; shift
-#    done
-#}
-
-#alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
-alias sx="exec startx -- -nolisten tcp"
 alias ls="ls -F --color"
 
 alias sr="tmux attach-session -d -t main"
 
-# Convenience
-alias irc='ssh -t server tmux attach-session -d -t main'
-
 alias grep=egrep
-alias ack=ack-grep
 
 alias c=cd
 alias l=ls
@@ -35,7 +17,6 @@ alias v=vim
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
-alias acs="apt-cache search"
 
 # gpg-agent
 if [ -f $HOME/.gpg-agent-info ]; then
@@ -50,6 +31,8 @@ else
     fi
 fi
 
+if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
+
 if [ -f $HOME/.profile.private ]; then
     . ~/.profile.private
 fi
@@ -58,7 +41,3 @@ if [ -f $HOME/.profile.local ]; then
     . ~/.profile.local
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
