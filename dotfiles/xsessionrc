@@ -14,6 +14,7 @@ dropbox start &
 
 emacs -daemon &
 btsync &
+dropbox start &
 
 fluxgui &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
