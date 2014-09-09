@@ -12,7 +12,6 @@ ssh-agent &
 wmname LG3D &
 dropbox start &
 
-emacs -daemon &
 btsync &
 dropbox start &
 
