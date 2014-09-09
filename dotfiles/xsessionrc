@@ -3,7 +3,7 @@ sleep 3
 
 if [ "$(hostname)" = "tom-MS-7599" ]; then
     xrandr --output DFP2 --auto --right-of CRT1 --auto
-elif [ "$(hostname)" = "macbook" ]; then
+elif [ "$(hostname)" = "tom-MacBookPro" ]; then
     xrandr --output DP-2 --off
 fi
 
