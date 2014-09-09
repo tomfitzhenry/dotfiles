@@ -13,7 +13,6 @@ wmname LG3D &
 dropbox start &
 
 btsync &
-dropbox start &
 
 fluxgui &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
