@@ -10,8 +10,8 @@ set -e
 if [ ! $1 = "" ];
 then
     # This one includes hidden files
-    du --all --max-depth 1 | sort -n | cut -f 2 | xargs -d'\n' du -h --max-depth 0 --all
+    du --all -h --max-depth 1 | sort -h
 else
     # This one ignores hidden files
-    du --all --max-depth 0 * | sort -n | cut -f 2 | xargs -d'\n' du -h --max-depth 0 --all
+    du --all -h --max-depth 0 * | sort -h
 fi
