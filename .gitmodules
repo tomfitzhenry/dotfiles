@@ -82,3 +82,6 @@
 [submodule "dotfiles/vim/bundle/vim-vagrant"]
 	path = dotfiles/vim/bundle/vim-vagrant
 	url = git://github.com/markcornick/vim-vagrant.git
+[submodule "dotfiles/vim/bundle/vim-yaml"]
+	path = dotfiles/vim/bundle/vim-yaml
+	url = https://github.com/stephpy/vim-yaml.git
