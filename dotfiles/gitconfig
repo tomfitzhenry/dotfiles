@@ -8,12 +8,6 @@
     st = status
     d = diff
 
-[color]
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-
 [help]
     format = web
 
