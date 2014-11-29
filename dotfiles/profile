@@ -4,15 +4,8 @@ alias ls="ls -F --color"
 
 alias sr="tmux attach-session -d -t main"
 
-alias grep=egrep
-
 alias c=cd
-alias l=ls
-alias d=docker
-alias s=sudo
-alias ss="sudo !!"
 alias g=git
-alias v=vim
 
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
