@@ -1,6 +1,8 @@
 #!/bin/sh
 
-export PATH=$HOME/bin:$PATH
+export GOROOT=$HOME/opt/go/
+
+export PATH=$HOME/bin:$GOROOT/bin:$PATH
 export LANG=en_GB.utf-8
 
 export BROWSER=/usr/bin/chromium-browser
@@ -27,6 +29,8 @@ export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_NAME="$NAME"
 export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
+
+export GOPATH=$HOME/src/go/
 
 . ~/.config/user-dirs.dirs
 export MUSIC_STORE_DIR="/files/public/music/"
