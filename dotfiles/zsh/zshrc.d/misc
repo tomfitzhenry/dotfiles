@@ -11,15 +11,12 @@ bindkey -e
 # Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
 #export TERM=linux
 
-setopt autocd extendedglob nomatch notify interactivecomments
+setopt extendedglob nomatch notify interactivecomments
 
 unsetopt beep
 
 alias -g 'L'='| less'
 alias -g 'G'='| grep'
-alias -g 'X'='| xmllint --format -'
-
-alias zshhelp=run-help
 
 if [ $UID -eq 0 ]; then
 	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
