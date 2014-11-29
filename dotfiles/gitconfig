@@ -8,9 +8,6 @@
     st = status
     d = diff
 
-[help]
-    format = web
-
 [url "git@github.com:"]
     insteadOf = "gh:"
     insteadOf = "github:"
