@@ -26,10 +26,6 @@ fi
 
 if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
 
-if [ -f $HOME/.profile.private ]; then
-    . ~/.profile.private
-fi
-
 if [ -f $HOME/.profile.local ]; then
     . ~/.profile.local
 fi
