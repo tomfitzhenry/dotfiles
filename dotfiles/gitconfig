@@ -8,13 +8,6 @@
     st = status
     d = diff
 
-[url "git@github.com:"]
-    insteadOf = "gh:"
-    insteadOf = "github:"
-
-[url "git@github.com:tomfitzhenry/"]
-    insteadOf = "ght:"
-
 [push]
     default = simple
 
