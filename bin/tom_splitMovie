@@ -1,5 +1,0 @@
-#!/bin/sh
-
-FILENAME=$1
-
-mplayer $1 -vo yuv4mpeg:file=stream.y4m -ao pcm:file=stream.wav

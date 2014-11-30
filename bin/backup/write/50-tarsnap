@@ -1,9 +1,0 @@
-#!/bin/sh
-set -eu
-
-TARSNAP_DIR=$HOME/Private/tarsnap
-
-for i in $TARSNAP_DIR/*;
-do
-    tarsnap --humanize-numbers -c -f $(basename $i)-$(date +"%Y%m%dT%H%M%S") $i
-done

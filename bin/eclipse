@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-ECLIPSE_HOME=~/opt/eclipse
-
-$ECLIPSE_HOME/eclipse
