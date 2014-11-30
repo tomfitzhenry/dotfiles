@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-x-www-browser http://www.uwcs.co.uk:8023/rpc/Link.LastLink
