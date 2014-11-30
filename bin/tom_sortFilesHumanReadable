@@ -1,17 +1,3 @@
 #!/bin/sh
-
-# A script to calculate disk usages for the current directory
-# listing them in size-order in human-readable form.
-
-# Give it /any/ argument to show hidden files
-
-set -e
-
-if [ ! $1 = "" ];
-then
-    # This one includes hidden files
-    du --all -h --max-depth 1 | sort -h
-else
-    # This one ignores hidden files
-    du --all -h --max-depth 0 * | sort -h
-fi
+echo 'Use `ncdu` instead.'
+exit 1
