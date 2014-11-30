@@ -24,10 +24,6 @@ export NAME='Tom Fitzhenry'
 export EMAIL='tom@tom-fitzhenry.me.uk'
 export DEBEMAIL=$EMAIL
 export DEBFULLNAME="$NAME"
-export GIT_AUTHOR_NAME="$NAME"
-export GIT_AUTHOR_EMAIL=$EMAIL
-export GIT_COMMITTER_NAME="$NAME"
-export GIT_COMMITTER_EMAIL=$EMAIL
 export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
 
 export GOPATH=$HOME/src/go/
