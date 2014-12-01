@@ -17,3 +17,9 @@
 	excludesfile = ~/.gitignore.global
 [github]
 	user = tomfitzhenry
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
