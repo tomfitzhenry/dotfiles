@@ -1,5 +1,3 @@
-. ~/.environment
-
 alias ls="ls -F --color"
 
 alias sr="tmux attach-session -d -t main"
@@ -25,6 +23,7 @@ else
 fi
 
 if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
+. ~/.environment
 
 if [ -f $HOME/.profile.local ]; then
     . ~/.profile.local
