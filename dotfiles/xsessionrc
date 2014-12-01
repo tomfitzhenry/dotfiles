@@ -1,9 +1,11 @@
-gnome-settings-daemon & # Have to wait for this to finish
-sleep 3
 
 if [ "$(hostname)" = "tom-MS-7599" ]; then
+    unity-settings-daemon &
+    sleep 3
     xrandr --output DFP2 --auto --right-of CRT1 --auto
 elif [ "$(hostname)" = "tom-MacBookPro" ]; then
+    gnome-settings-daemon &
+    sleep 3
     xrandr --output DP-2 --off
 fi
 
