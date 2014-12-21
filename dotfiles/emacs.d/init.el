@@ -50,13 +50,24 @@
 
 (use-package helm
   :config
-  (helm-mode))
+  (helm-mode)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (setq helm-buffers-fuzzy-matching t
+	helm-recentf-fuzzy-match    t)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+  )
 
 (use-package magit)
 
 (use-package projectile)
 
-(use-package helm-projectile)
+(use-package helm-projectile
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'helm)
+  (helm-projectile-on)
+  (setq projectile-switch-project-action 'projectile-vc))
 
 (use-package ace-jump-mode)
 
