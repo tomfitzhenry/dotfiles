@@ -1,22 +1,14 @@
-(require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (require 'use-package)
-
-(global-linum-mode 1)
 
 (use-package ido
   :config
   (ido-mode 1)
   (setq ido-enable-flex-matching t
         ido-everywhere t))
-
-(setq inhibit-startup-message t
-      inhibit-startup-echo-message t)
 
 (use-package no-easy-keys
   :config
@@ -28,6 +20,10 @@
   (define-key global-map "\C-ca" 'org-agenda)
   (setq org-log-done t))
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+(setq inhibit-startup-message t
+      inhibit-startup-echo-message t)
+(global-linum-mode 1)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
@@ -49,14 +45,11 @@
 
 (use-package irfc
   :config
-  (setq irfc-directory "~/.cache/emacs/rfcs/")
-  (setq irfc-assoc-mode t))
+  (setq irfc-directory "~/.cache/emacs/rfcs/"
+        irfc-assoc-mode t))
 
 (use-package god-mode
   :config
   (global-set-key (kbd "<escape>") 'god-local-mode))
 
 (use-package uniquify)
-
-(defalias 'yes-or-no-p 'y-or-n-p)
-
