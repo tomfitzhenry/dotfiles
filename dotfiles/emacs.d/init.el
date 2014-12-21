@@ -4,12 +4,6 @@
 
 (require 'use-package)
 
-(use-package ido
-  :config
-  (ido-mode 1)
-  (setq ido-enable-flex-matching t
-        ido-everywhere t))
-
 (use-package no-easy-keys
   :config
   (no-easy-keys 1))
@@ -53,3 +47,15 @@
   (global-set-key (kbd "<escape>") 'god-local-mode))
 
 (use-package uniquify)
+
+(use-package helm
+  :config
+  (helm-mode))
+
+(use-package magit)
+
+(use-package projectile)
+
+(use-package helm-projectile)
+
+(use-package ace-jump-mode)
