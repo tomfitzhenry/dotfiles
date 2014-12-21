@@ -22,6 +22,7 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(setq backup-directory-alist `(("." . "~/.saves")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
