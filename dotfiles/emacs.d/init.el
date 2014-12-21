@@ -59,3 +59,7 @@
 (use-package helm-projectile)
 
 (use-package ace-jump-mode)
+
+(use-package gnus
+  :config
+  (setq gnus-select-method '(nntp "news.gmane.org")))
