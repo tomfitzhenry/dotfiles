@@ -33,14 +33,6 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(defun make-shell (name)
-  "Create a shell buffer named NAME."
-  (interactive "sName: ")
-  (setq name (concat "$" name))
-  (eshell)
-  (rename-buffer name))
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,6 +60,3 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; execute-extended-command is M-x
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-c\C-m" 'execute-extended-command)
