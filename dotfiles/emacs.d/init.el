@@ -1,13 +1,3 @@
-(global-linum-mode 1)
-
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-
-(setq inhibit-startup-message t
-      inhibit-startup-echo-message t)
-
-
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -15,14 +5,28 @@
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 
+(require 'use-package)
 
-(require 'no-easy-keys)
-(no-easy-keys 1)
+(global-linum-mode 1)
 
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+(use-package ido
+  :config
+  (ido-mode 1)
+  (setq ido-enable-flex-matching t
+        ido-everywhere t))
+
+(setq inhibit-startup-message t
+      inhibit-startup-echo-message t)
+
+(use-package no-easy-keys
+  :config
+  (no-easy-keys 1))
+
+(use-package org
+  :config
+  (define-key global-map "\C-cl" 'org-store-link)
+  (define-key global-map "\C-ca" 'org-agenda)
+  (setq org-log-done t))
 
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
@@ -51,14 +55,16 @@
  ;; If there is more than one, they won't work right.
  )
 
-(require 'irfc)
-(setq irfc-directory "~/.cache/emacs/rfcs/")
-(setq irfc-assoc-mode t)
+(use-package irfc
+  :config
+  (setq irfc-directory "~/.cache/emacs/rfcs/")
+  (setq irfc-assoc-mode t))
 
-(require 'god-mode)
-(global-set-key (kbd "<escape>") 'god-local-mode)
+(use-package god-mode
+  :config
+  (global-set-key (kbd "<escape>") 'god-local-mode))
 
-(require 'uniquify)
+(use-package uniquify)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
