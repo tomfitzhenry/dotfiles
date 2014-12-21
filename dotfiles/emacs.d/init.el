@@ -70,7 +70,9 @@
   (helm-projectile-on)
   (setq projectile-switch-project-action 'projectile-vc))
 
-(use-package ace-jump-mode)
+(use-package ace-jump-mode
+  :config
+  (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
 
 (use-package gnus
   :config
