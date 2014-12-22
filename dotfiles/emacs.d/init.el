@@ -87,3 +87,7 @@
         gnus-sum-thread-tree-root ""
         gnus-sum-thread-tree-single-leaf "╰► "
         gnus-sum-thread-tree-vertical "│"))
+
+(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "<f1>") 'shell)
+(global-set-key (kbd "<f10>") 'magit-status)
