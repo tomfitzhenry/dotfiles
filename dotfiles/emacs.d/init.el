@@ -12,6 +12,7 @@
   :config
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda)
+  (setq org-startup-indented t)
   (setq org-log-done t))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
