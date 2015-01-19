@@ -1,14 +1,23 @@
-(package-initialize)
+(require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 (require 'use-package)
 
 (use-package no-easy-keys
+  :ensure t
   :config
   (no-easy-keys 1))
 
 (use-package org
+  :ensure t
   :config
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda)
@@ -40,17 +49,18 @@
  )
 
 (use-package irfc
+  :ensure t
   :config
   (setq irfc-directory "~/.cache/emacs/rfcs/"
         irfc-assoc-mode t))
 
 (use-package god-mode
+  :ensure t
   :config
   (global-set-key (kbd "<escape>") 'god-local-mode))
 
-(use-package uniquify)
-
 (use-package helm
+  :ensure t
   :config
   (helm-mode)
   (global-set-key (kbd "M-x") 'helm-M-x)
@@ -60,11 +70,14 @@
   (global-set-key (kbd "C-x C-f") 'helm-find-files)
   )
 
-(use-package magit)
+(use-package magit
+  :ensure t)
 
-(use-package projectile)
+(use-package projectile
+  :ensure t)
 
 (use-package helm-projectile
+  :ensure t
   :config
   (projectile-global-mode)
   (setq projectile-completion-system 'helm)
@@ -72,10 +85,12 @@
   (setq projectile-switch-project-action 'projectile-vc))
 
 (use-package ace-jump-mode
+  :ensure t
   :config
   (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
 
 (use-package gnus
+  :ensure t
   :config
   (setq gnus-select-method '(nntp "news.gmane.org")
         gnus-summary-line-format "%U%R %&user-date;   %-20,20n   %B%-80,80S\n"
@@ -89,8 +104,10 @@
         gnus-sum-thread-tree-single-leaf "╰► "
         gnus-sum-thread-tree-vertical "│"))
 
-(use-package markdown-mode)
+(use-package markdown-mode
+  :ensure t)
 (use-package pandoc-mode
+  :ensure t
   :config
   (add-hook 'markdown-mode-hook 'pandoc-mode))
 
