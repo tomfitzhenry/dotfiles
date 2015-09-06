@@ -1,5 +1,7 @@
-alias ls="ls -F --color"
+alias ls="ls -F"
 
+export CLICOLOR=1
+ls --color=auto &> /dev/null && alias ls='ls -F --color=auto'
 
 # Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
