@@ -1,26 +1,14 @@
 #!/bin/sh
 
-export GOROOT=$HOME/opt/go/
-
-export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=~/.cabal/bin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$HOME/.cabal/bin":$PATH
 
 export LANG=en_GB.utf-8
 
-export BROWSER=/usr/bin/chromium-browser
 export EDITOR=vim
 export VISUAL=vim
 
 export NAME='Tom Fitzhenry'
 export EMAIL='tom@tom-fitzhenry.me.uk'
-export DEBEMAIL=$EMAIL
-export DEBFULLNAME="$NAME"
-export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
-
-export GOPATH=$HOME/src/go/
 
 if [ -f ~/.environment.local ]; then
     . ~/.environment.local
