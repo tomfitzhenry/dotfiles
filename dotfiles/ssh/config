@@ -1,0 +1,14 @@
+Host bitbucket.org
+    User git
+
+Host alioth
+    User tomfitzhenry-guest
+    Hostname alioth.debian.org
+
+Host server005
+    Hostname server005.tom-fitzhenry.me.uk
+    User tom
+
+Host uwcs
+    Hostname uwcs.co.uk
+    User tomfitzyuk
