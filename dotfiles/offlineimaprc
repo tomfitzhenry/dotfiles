@@ -1,0 +1,19 @@
+[general]
+accounts = zoho
+pythonfile=~/.offlineimap.py
+
+[Account zoho]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/backups/zoho/
+
+[Repository Remote]
+type = IMAP
+ssl = yes
+remotehost = imap.zoho.com
+remoteuser = tom@tom-fitzhenry.me.uk
+remotepasseval = keyring.get_password("mail.zoho.com","tom@tom-fitzhenry.me.uk")
+cert_fingerprint = f8fa861afd7e65634037400757beacb6111217f4
