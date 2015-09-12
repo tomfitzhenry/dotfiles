@@ -2,25 +2,9 @@
 username = Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
 ignore = ~/.hgignore.global
 
-[alias]
-HEAD = up -r 'parents(min(outgoing()))'
-
 [extensions]
-hgext.graphlog = 
-hgext.convert = 
-hgext.record =
-hgext.bookmarks =
-hgext.mq =
-hgext.purge=
-hgext.patchbomb =
-eol=
+purge=
 rebase = 
-
-[email]
-method = /usr/bin/msmtp
-
-[hooks]
-pretxncommit.maven = [ ! -f pom.xml ] || /usr/bin/mvn verify
 
 [hostfingerprints]
 bitbucket.org=97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
