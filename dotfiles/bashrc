@@ -1,8 +1,0 @@
-source ~/.profile
-
-unset HISTFILE
-export HISTCONTROL=ignoreboth
-
-if [ -f $HOME/.bashrc.local ]; then
-    . $HOME/.bashrc.local
-fi
