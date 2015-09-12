@@ -95,8 +95,3 @@ for FILE in "$(pwd)"/bin/*;
 do
     Install_file ${FILE} ${HOME}/bin/
 done
-
-if [ -f "$(pwd)"/miscConfig ]; then
-    echo "Running $(pwd)/miscConfig"
-    "$(pwd)"/miscConfig
-fi
