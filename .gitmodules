@@ -85,6 +85,12 @@
 [submodule "dotfiles/vim/bundle/vim-yaml"]
 	path = dotfiles/vim/bundle/vim-yaml
 	url = https://github.com/stephpy/vim-yaml.git
-[submodule "dotfiles/tmux/plugins/tpm"]
-	path = dotfiles/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+[submodule "dotfiles/tmux/plugins/tmux-sensible"]
+	path = dotfiles/tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "dotfiles/tmux/plugins/tmux-pain-control"]
+	path = dotfiles/tmux/plugins/tmux-pain-control
+	url = https://github.com/tmux-plugins/tmux-pain-control
+[submodule "dotfiles/tmux/plugins/tmux-fpp"]
+	path = dotfiles/tmux/plugins/tmux-fpp
+	url = https://github.com/tmux-plugins/tmux-fpp
