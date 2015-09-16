@@ -85,3 +85,6 @@
 [submodule "dotfiles/vim/bundle/vim-yaml"]
 	path = dotfiles/vim/bundle/vim-yaml
 	url = https://github.com/stephpy/vim-yaml.git
+[submodule "dotfiles/tmux/plugins/tpm"]
+	path = dotfiles/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
