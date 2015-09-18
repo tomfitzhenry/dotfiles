@@ -6,12 +6,12 @@ function create_temp_dir() {
 
     if [ -z $PREFIX ];
     then
-        local PATTERN="tmp.XXXXXX"
+        local PATTERN="tmp"
     else
-        local PATTERN="$1.XXXXXX"
+        local PATTERN="$1"
     fi
 
-    local TEMPDIR=$(mktemp -d --tmpdir=$ROOTTEMPDIR $PATTERN)
+    local TEMPDIR=$(TMPDIR=$ROOTTEMPDIR mktemp -d -t $PATTERN)
 
     pushd $TEMPDIR
 }
