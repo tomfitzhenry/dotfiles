@@ -2,16 +2,9 @@ function create_temp_dir() {
     local ROOTTEMPDIR=~/tmp/
     mkdir -p $ROOTTEMPDIR
 
-    local PREFIX=$1
+    local PREFIX=${1:-"tmp"}
 
-    if [ -z $PREFIX ];
-    then
-        local PATTERN="tmp"
-    else
-        local PATTERN="$1"
-    fi
-
-    local TEMPDIR=$(TMPDIR=$ROOTTEMPDIR mktemp -d -t $PATTERN)
+    local TEMPDIR=$(TMPDIR=$ROOTTEMPDIR mktemp -d -t $PREFIX)
 
     pushd $TEMPDIR
 }
