@@ -2,4 +2,3 @@
 
 autoload colors && colors
 
-export LSCOLORS=GxFxCxDxBxegedabagaced
