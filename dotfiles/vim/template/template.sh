@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 set -eu
+set -o pipefail
 
 <+CURSOR+>
