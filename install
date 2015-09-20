@@ -84,12 +84,6 @@ do
     Install_file ${FILE} ${HOME}/.
 done
 
-mkdir -p ${HOME}/.config
-for FILE in "$(pwd)"/xdg/*;
-do
-    Install_file ${FILE} ${HOME}/.config/
-done
-
 mkdir -p ${HOME}/bin
 for FILE in "$(pwd)"/bin/*;
 do
