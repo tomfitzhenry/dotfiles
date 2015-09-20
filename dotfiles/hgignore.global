@@ -1,5 +1,0 @@
-syntax: glob
-
-*id_rsa
-*id_dsa
-*secring.gpg

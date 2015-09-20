@@ -1,12 +1,2 @@
 [ui]
-username = Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
-ignore = ~/.hgignore.global
-
-[extensions]
-purge=
-rebase = 
-
-[hostfingerprints]
-bitbucket.org=97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
-
-%include ~/.hgrc.local
+username = $NAME <$EMAIL>
