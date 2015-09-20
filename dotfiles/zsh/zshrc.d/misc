@@ -8,9 +8,6 @@
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=383737 (?)
 bindkey -e
 
-# Temporary fix for https://bugs.launchpad.net/ubuntu/+source/terminator/+bug/621632
-#export TERM=linux
-
 setopt extendedglob nomatch notify interactivecomments
 
 unsetopt beep
@@ -26,7 +23,5 @@ fi
 
 # http://nuclearsquid.com/writings/edit-long-commands/
 autoload -U edit-command-line
-# Emacs style
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
-bindkey '^x^e' edit-command-line
