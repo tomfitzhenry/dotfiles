@@ -84,8 +84,4 @@ do
     Install_file ${FILE} ${HOME}/.
 done
 
-mkdir -p ${HOME}/bin
-for FILE in "$(pwd)"/bin/*;
-do
-    Install_file ${FILE} ${HOME}/bin/
-done
+Install_file $PWD/bin ${HOME}/
