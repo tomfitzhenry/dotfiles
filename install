@@ -12,7 +12,6 @@ fail() {
 Install_symlink() {
     local SOURCE="${1}"
     local TARGET_PREFIX="${2}"
-
     local TARGET="${TARGET_PREFIX}$(basename ${SOURCE})"
 
     if [ ! "$(readlink ${TARGET})" = "${SOURCE}" ]; then
@@ -39,11 +38,6 @@ Install_file() {
 Install_regular_file() {
     local SOURCE="${1}"
     local TARGET_PREFIX="${2}"
-
-    if [ ! -f "${SOURCE}" ]; then
-        fail "Expected file. Actual: ${SOURCE}"
-    fi
-
     local TARGET="${TARGET_PREFIX}$(basename "${SOURCE}")"
 
     if [ -e "${TARGET}" -a ! -h "${TARGET}" ]; then
@@ -64,11 +58,6 @@ Install_regular_file() {
 Install_directory() {
     local SOURCE_DIRECTORY="${1}"
     local TARGET_PREFIX="${2}"
-
-    if [ ! -d ${SOURCE_DIRECTORY} ]; then
-        fail "Expected directory. Actual: ${SOURCE_DIRECTORY}"
-    fi
-
     local TARGET="${TARGET_PREFIX}$(basename ${SOURCE_DIRECTORY})"
 
     mkdir -p ${TARGET}
