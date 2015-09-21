@@ -2,27 +2,8 @@ export CLICOLOR=1
 ls --color=auto &> /dev/null && alias ls='ls --color=auto'
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# Debian stuff
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
 
-# gpg-agent
-if [ -f $HOME/.gpg-agent-info ]; then
-    if kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
-        GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info`
-        export GPG_AGENT_INFO
-    fi
-else
-    if [ -x /usr/bin/gpg-agent ]; then
-        eval `gpg-agent --daemon`
-        echo $GPG_AGENT_INFO > $HOME/.gpg-agent-info
-    fi
-fi
-
 if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
 . ~/.environment
-
-if [ -f $HOME/.profile.local ]; then
-    . ~/.profile.local
-fi
-
