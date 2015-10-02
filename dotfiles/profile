@@ -5,5 +5,5 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 alias sau="sudo sh -c 'aptitude update && aptitude safe-upgrade'"
 alias sai="sudo aptitude install"
 
-if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
 . ~/.environment
