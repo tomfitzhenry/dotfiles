@@ -11,8 +11,3 @@ for f in split(glob('~/.vim/rc/*.vim'), '\n')
     exe 'source' f
 endfor
 
-let g:airline#extensions#tabline#enabled = 1
-
-" remove scrollbar from macvim
-set guioptions-=r
-set guioptions-=L
