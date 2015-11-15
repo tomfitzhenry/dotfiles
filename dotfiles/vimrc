@@ -1,10 +1,6 @@
 source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-if &term =~ "screen"
-	set term=xterm
-endif
-
 let g:airline#extensions#tabline#enabled = 1
 
 map <C-w>\| :vsplit <CR>
