@@ -49,3 +49,6 @@
 [submodule "dotfiles/vim/bundle/conflict-marker.vim.git"]
 	path = dotfiles/vim/bundle/conflict-marker.vim.git
 	url = https://github.com/rhysd/conflict-marker.vim.git
+[submodule "dotfiles/vim/bundle/vim-polyglot.git"]
+	path = dotfiles/vim/bundle/vim-polyglot.git
+	url = https://github.com/sheerun/vim-polyglot.git
