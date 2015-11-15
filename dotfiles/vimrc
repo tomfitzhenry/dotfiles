@@ -7,8 +7,6 @@ if &term =~ "screen"
 	set term=xterm
 endif
 
-let mapleader = ","
-
 for f in split(glob('~/.vim/rc/*.vim'), '\n')
     exe 'source' f
 endfor
