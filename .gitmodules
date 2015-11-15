@@ -46,3 +46,6 @@
 [submodule "dotfiles/tmux/plugins/tmux-fpp"]
 	path = dotfiles/tmux/plugins/tmux-fpp
 	url = https://github.com/tmux-plugins/tmux-fpp
+[submodule "dotfiles/vim/bundle/conflict-marker.vim.git"]
+	path = dotfiles/vim/bundle/conflict-marker.vim.git
+	url = https://github.com/rhysd/conflict-marker.vim.git
