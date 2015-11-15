@@ -13,9 +13,6 @@
 [submodule "dotfiles/vim/bundle/neco-ghc"]
 	path = dotfiles/vim/bundle/neco-ghc
 	url = https://github.com/ujihisa/neco-ghc.git
-[submodule "dotfiles/vim/bundle/easymotion"]
-	path = dotfiles/vim/bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "dotfiles/vim/bundle/vim-unimpaired"]
 	path = dotfiles/vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
@@ -28,9 +25,6 @@
 [submodule "dotfiles/vim/bundle/ctrlp.vim"]
 	path = dotfiles/vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "dotfiles/vim/bundle/bufexplorer"]
-	path = dotfiles/vim/bundle/bufexplorer
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "dotfiles/vim/bundle/syntastic"]
 	path = dotfiles/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
