@@ -1,5 +1,3 @@
-EclipseKeys.withSource := true
-
 // Unfortunate workaround:
 //   * Linux filenames have a limit of 256 characters.
 //   * Consequently, I expect max-classfile-name is set to 255, or some such.
