@@ -7,7 +7,19 @@ if &term =~ "screen"
 	set term=xterm
 endif
 
-for f in split(glob('~/.vim/rc/*.vim'), '\n')
-    exe 'source' f
-endfor
+let g:airline#extensions#tabline#enabled = 1
 
+map <C-w>\| :vsplit <CR>
+map <C-w>-  :split <CR>
+
+set hlsearch
+set ignorecase
+set smartcase
+
+set spelllang=en_gb
+
+" After loading a template, move the cursor to <+CURSOR+>:
+autocmd User plugin-template-loaded
+    \    if search('<+CURSOR+>')
+    \  |   execute 'normal! "_da>'
+    \  | endif
