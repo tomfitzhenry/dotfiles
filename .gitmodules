@@ -25,9 +25,6 @@
 [submodule "dotfiles/vim/bundle/ack.vim"]
 	path = dotfiles/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "dotfiles/vim/bundle/Gist.vim"]
-	path = dotfiles/vim/bundle/Gist.vim
-	url = https://github.com/vim-scripts/Gist.vim.git
 [submodule "dotfiles/vim/bundle/ctrlp.vim"]
 	path = dotfiles/vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
