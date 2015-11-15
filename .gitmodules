@@ -7,21 +7,12 @@
 [submodule "dotfiles/vim/bundle/haskell.vim"]
 	path = dotfiles/vim/bundle/haskell.vim
 	url = https://github.com/vim-scripts/haskell.vim
-[submodule "dotfiles/vim/bundle/vim-puppet"]
-	path = dotfiles/vim/bundle/vim-puppet
-	url = https://github.com/rodjek/vim-puppet
-[submodule "dotfiles/vim/bundle/vim-fugitive"]
-	path = dotfiles/vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "dotfiles/vim/bundle/vim-pathogen"]
 	path = dotfiles/vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "dotfiles/vim/bundle/neco-ghc"]
 	path = dotfiles/vim/bundle/neco-ghc
 	url = https://github.com/ujihisa/neco-ghc.git
-[submodule "dotfiles/vim/bundle/delimitMate"]
-	path = dotfiles/vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "dotfiles/vim/bundle/easymotion"]
 	path = dotfiles/vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
@@ -34,9 +25,6 @@
 [submodule "dotfiles/vim/bundle/ack.vim"]
 	path = dotfiles/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "dotfiles/vim/bundle/vim-eunuch"]
-	path = dotfiles/vim/bundle/vim-eunuch
-	url = https://github.com/tpope/vim-eunuch.git
 [submodule "dotfiles/vim/bundle/Gist.vim"]
 	path = dotfiles/vim/bundle/Gist.vim
 	url = https://github.com/vim-scripts/Gist.vim.git
@@ -49,9 +37,6 @@
 [submodule "dotfiles/vim/bundle/syntastic"]
 	path = dotfiles/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "dotfiles/vim/bundle/typescript-vim"]
-	path = dotfiles/vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "dotfiles/zsh/plugins/zsh-syntax-highlighting"]
 	path = dotfiles/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
@@ -61,12 +46,6 @@
 [submodule "dotfiles/vim/bundle/vim-signify"]
 	path = dotfiles/vim/bundle/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
-[submodule "dotfiles/vim/bundle/vim-vagrant"]
-	path = dotfiles/vim/bundle/vim-vagrant
-	url = https://github.com/markcornick/vim-vagrant.git
-[submodule "dotfiles/vim/bundle/vim-yaml"]
-	path = dotfiles/vim/bundle/vim-yaml
-	url = https://github.com/stephpy/vim-yaml.git
 [submodule "dotfiles/tmux/plugins/tmux-sensible"]
 	path = dotfiles/tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
