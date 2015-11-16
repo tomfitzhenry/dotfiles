@@ -55,3 +55,6 @@
 [submodule "dotfiles/zsh/plugins/k.git"]
 	path = dotfiles/zsh/plugins/k
 	url = https://github.com/rimraf/k.git
+[submodule "dotfiles/zsh/plugins/zaw"]
+	path = dotfiles/zsh/plugins/zaw
+	url = https://github.com/zsh-users/zaw.git
