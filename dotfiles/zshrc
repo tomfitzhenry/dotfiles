@@ -1,9 +1,10 @@
 source ~/.profile
 
-for plugin (~/.zsh/plugins/*); do
-    source $plugin/$(basename $plugin).plugin.zsh
-done
 
 for zshrc (~/.zsh/zshrc.d/*); do
     source $zshrc
+done
+
+for plugin (~/.zsh/plugins/*); do
+    source $plugin/$(basename $plugin).plugin.zsh
 done
