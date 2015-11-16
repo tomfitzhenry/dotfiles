@@ -53,5 +53,5 @@
 	path = dotfiles/vim/bundle/vim-polyglot.git
 	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "dotfiles/zsh/plugins/k.git"]
-	path = dotfiles/zsh/plugins/k.git
+	path = dotfiles/zsh/plugins/k
 	url = https://github.com/rimraf/k.git
