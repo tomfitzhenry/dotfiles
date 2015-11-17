@@ -1,6 +1,5 @@
 source ~/.profile
 
-
 for zshrc (~/.zsh/zshrc.d/*); do
     source $zshrc
 done
