@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Put /usr/local/bin (Homebrew) before /usr/bin
+# I could modify /etc/paths to put /usr/local/bin before /usr/bin
+# but that might screw over system processes.
+export PATH=/usr/local/bin:$PATH
+
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
