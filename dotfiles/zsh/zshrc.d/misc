@@ -15,6 +15,8 @@ unsetopt beep
 alias -g 'L'='| less'
 alias -g 'G'='| grep'
 
+export FZF_DEFAULT_OPTS="--multi"
+
 if [ $UID -eq 0 ]; then
 	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
 else
