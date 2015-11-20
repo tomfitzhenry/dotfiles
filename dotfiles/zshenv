@@ -3,7 +3,6 @@
 # but that might screw over system processes.
 export PATH=/usr/local/bin:$PATH
 
-export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 export EDITOR=vim
