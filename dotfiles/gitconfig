@@ -4,8 +4,6 @@
     st = status
     d = diff
 
-[core]
-	excludesfile = ~/.gitignore.global
 [github]
 	user = tomfitzhenry
 [merge]
