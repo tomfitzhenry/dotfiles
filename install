@@ -74,5 +74,3 @@ for FILE in "$(pwd)"/dotfiles/*;
 do
     Install_file ${FILE} ${HOME}/.
 done
-
-Install_file $PWD/bin ${HOME}/.local/
