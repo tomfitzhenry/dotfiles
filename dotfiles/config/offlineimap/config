@@ -1,6 +1,6 @@
 [general]
 accounts = zoho
-pythonfile=~/.offlineimap.py
+pythonfile=~/.config/offlineimap/config.py
 
 [Account zoho]
 localrepository = Local
