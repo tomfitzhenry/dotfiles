@@ -68,6 +68,8 @@ Install_directory() {
     done
 }
 
+git submodule update --init
+
 for FILE in "$(pwd)"/dotfiles/*;
 do
     Install_file ${FILE} ${HOME}/.
