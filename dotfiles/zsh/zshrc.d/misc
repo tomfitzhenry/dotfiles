@@ -1,5 +1,7 @@
 #!/bin/sh
 
+alias g='git'
+
 # Set the keybindings to emacs bindings, so when I press "Up", the cursor
 # is positioned at the end of the previous line, rather than the start of the
 # previous line. There's probably a less draonic solution, involving rebinding
