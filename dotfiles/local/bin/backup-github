@@ -5,19 +5,19 @@ set -o pipefail
 USERNAME=$1
 BACKUP_DIR=$2
 
-mkdir -p $BACKUP_DIR
-cd $BACKUP_DIR
+mkdir -p "$BACKUP_DIR"
+cd "$BACKUP_DIR"
 
 curl \
     --silent --fail \
-    https://api.github.com/users/$USERNAME/repos?per_page=100 \
-    | jq -r 'map(.git_url) | join("\n")' | while read repo
+    https://api.github.com/users/"$USERNAME"/repos?per_page=100 \
+    | jq -r 'map(.git_url) | join("\n")' | while read -r repo
 do
     REPO_URL=$repo
-    DIR=$(basename $REPO_URL)
-    if [ ! -d $DIR ]; then
-        git clone --mirror --quiet $REPO_URL
+    DIR=$(basename "$REPO_URL")
+    if [ ! -d "$DIR" ]; then
+        git clone --mirror --quiet "$REPO_URL"
     else
-        git -C $DIR remote update > /dev/null
+        git -C "$DIR" remote update > /dev/null
     fi
 done

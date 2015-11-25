@@ -5,10 +5,10 @@ set -o pipefail
 BACKUP_DIR=~/backups
 
 for DIR in $BACKUP_DIR/*; do
-    ARCHIVE_NAME=20150831.$(basename $DIR).$(date -u +"%Y%m%dT%H%M%S")
-    echo $ARCHIVE_NAME
+    ARCHIVE_NAME=20150831.$(basename "$DIR")."$(date -u +"%Y%m%dT%H%M%S")"
+    echo "$ARCHIVE_NAME"
     (
-        cd $DIR
-        tarsnap -c -v -f $ARCHIVE_NAME *
+        cd "$DIR"
+        tarsnap -c -v -f "$ARCHIVE_NAME" ./*
     )
 done
