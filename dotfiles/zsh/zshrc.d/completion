@@ -1,10 +1,4 @@
 #!/bin/sh
 
-zstyle :compinstall filename ~/.zshrc
-
 autoload -Uz compinit
 compinit
-
-# Cache completion, to speed up apt-related completions
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
