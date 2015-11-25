@@ -2,7 +2,7 @@
 
 alias g='git'
 
-setopt extendedglob nomatch notify interactivecomments
+setopt extendedglob nomatch notify
 
 unsetopt beep
 
