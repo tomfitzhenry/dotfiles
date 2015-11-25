@@ -1,11 +1,26 @@
 #!/bin/sh
 
-alias g='git'
+export CLICOLOR=1
+ls --color=auto &> /dev/null && alias ls='ls --color=auto'
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+autoload -Uz compinit
+compinit
+
+eval "$(fasd --init auto)"
+
+setopt INC_APPEND_HISTORY
+setopt hist_ignore_dups
+setopt HIST_IGNORE_SPACE
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.history
 
 setopt extendedglob nomatch
 
 unsetopt beep
 
+alias g='git'
 alias -g 'L'='| less'
 alias -g 'G'='| grep'
 

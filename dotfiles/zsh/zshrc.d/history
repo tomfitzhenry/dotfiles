@@ -1,7 +1,0 @@
-setopt INC_APPEND_HISTORY
-setopt hist_ignore_dups
-setopt HIST_IGNORE_SPACE
-
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.history
