@@ -19,12 +19,6 @@ alias -g 'G'='| grep'
 
 export FZF_DEFAULT_OPTS="--multi"
 
-if [ $UID -eq 0 ]; then
-	PROMPT="%{$reset_color$fg_bold[red]%}%n@%B%m%b:%~%# "
-else
-	PROMPT="%{$fg_bold[blue]%}%n@%m%{$reset_color%}:%{$fg[red]%}%~%{$reset_color%}$ "
-fi
-
 # http://nuclearsquid.com/writings/edit-long-commands/
 autoload -U edit-command-line
 zle -N edit-command-line

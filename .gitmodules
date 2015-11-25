@@ -58,3 +58,6 @@
 [submodule "dotfiles/zsh/plugins/zaw"]
 	path = dotfiles/zsh/plugins/zaw
 	url = https://github.com/zsh-users/zaw.git
+[submodule "dotfiles/zsh/plugins/lean"]
+	path = dotfiles/zsh/plugins/lean
+	url = https://github.com/tomfitzhenry/lean.git
