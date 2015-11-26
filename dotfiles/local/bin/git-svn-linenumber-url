@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+
+#########################################################################
+# Prints a shareable URL to a line of a file at a specific SVN revision #
+#########################################################################
+
+FILENAME=$1
+LINENUMBER=$2
+
+REVISION=$(git svn info | sed -n 's/Revision: \([0-9]*\)$/\1/p')
+URL_BASE=$(git svn info | sed -n 's/URL: \(.*\)$/\1/p')
+URL=$URL_BASE/$FILENAME
+
+CMD='svn cat '$URL'@'$REVISION' | sed -n '$LINENUMBER'p'
+
+echo '$' "$CMD"
+eval "$CMD"
