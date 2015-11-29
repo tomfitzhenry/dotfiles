@@ -19,5 +19,3 @@ HISTFILE=~/.history
 setopt extendedglob nomatch
 
 unsetopt beep
-
-export FZF_DEFAULT_OPTS="--multi"
