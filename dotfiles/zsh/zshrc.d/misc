@@ -20,8 +20,4 @@ setopt extendedglob nomatch
 
 unsetopt beep
 
-alias g='git'
-alias -g 'L'='| less'
-alias -g 'G'='| grep'
-
 export FZF_DEFAULT_OPTS="--multi"
