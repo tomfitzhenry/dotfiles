@@ -25,9 +25,6 @@
 [submodule "dotfiles/vim/bundle/syntastic"]
 	path = dotfiles/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "dotfiles/zsh/plugins/zsh-syntax-highlighting"]
-	path = dotfiles/zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "dotfiles/vim/bundle/vim-airline"]
 	path = dotfiles/vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -49,12 +46,3 @@
 [submodule "dotfiles/vim/bundle/vim-polyglot.git"]
 	path = dotfiles/vim/bundle/vim-polyglot.git
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "dotfiles/zsh/plugins/k.git"]
-	path = dotfiles/zsh/plugins/k
-	url = https://github.com/rimraf/k.git
-[submodule "dotfiles/zsh/plugins/zaw"]
-	path = dotfiles/zsh/plugins/zaw
-	url = https://github.com/zsh-users/zaw.git
-[submodule "dotfiles/zsh/plugins/lean"]
-	path = dotfiles/zsh/plugins/lean
-	url = https://github.com/tomfitzhenry/lean.git
