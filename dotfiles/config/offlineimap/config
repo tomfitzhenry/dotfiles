@@ -1,5 +1,5 @@
 [general]
-accounts = zoho
+accounts = zoho,gmail
 pythonfile=~/.config/offlineimap/config.py
 
 [Account zoho]
@@ -17,3 +17,19 @@ remotehost = imap.zoho.com
 remoteuser = tom@tom-fitzhenry.me.uk
 remotepasseval = keyring.get_password("mail.zoho.com","tom@tom-fitzhenry.me.uk")
 cert_fingerprint = f8fa861afd7e65634037400757beacb6111217f4
+
+[Account gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/backups/gmail-thomasfitzhenry
+
+[Repository Gmail-Remote]
+type = IMAP
+ssl = yes
+remotehost = imap.gmail.com
+remoteuser = thomasfitzhenry@gmail.com
+remotepasseval = keyring.get_password("imap.gmail.com","thomasfitzhenry@gmail.com")
+cert_fingerprint = A27E722B2654911B06B86A37011E34222A36B825
