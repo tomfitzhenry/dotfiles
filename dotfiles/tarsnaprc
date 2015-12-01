@@ -1,8 +1,0 @@
-# See tarsnap.conf.sample for recommended settings
-# See tarsnap(1) and tarsnap.conf(5) for what settings do
-
-cachedir ~/.tarsnap-cache/
-keyfile ~/.tarsnap-write.key
-print-stats
-checkpoint-bytes 1G
-humanize-numbers

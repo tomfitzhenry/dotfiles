@@ -9,6 +9,14 @@ for DIR in $BACKUP_DIR/*; do
     echo "$ARCHIVE_NAME"
     (
         cd "$DIR"
-        tarsnap -c -v -f "$ARCHIVE_NAME" ./*
+        tarsnap -c \
+		-v \
+		-f "$ARCHIVE_NAME" \
+		--cachedir ~/.tarsnap-cache \
+		--keyfile ~/.tarsnap-write.key \
+		--print-stats \
+		--checkpoint-bytes 1G \
+		--humanize-numbers \
+	        ./*
     )
 done
