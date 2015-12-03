@@ -3,8 +3,6 @@
     st = status
     d = diff
 
-[github]
-	user = tomfitzhenry
 [merge]
 	tool = diffconflicts
 [mergetool "diffconflicts"]
