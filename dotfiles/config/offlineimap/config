@@ -16,7 +16,7 @@ ssl = yes
 remotehost = imap.zoho.com
 remoteuser = tom@tom-fitzhenry.me.uk
 remotepasseval = keyring.get_password("mail.zoho.com","tom@tom-fitzhenry.me.uk")
-cert_fingerprint = f8fa861afd7e65634037400757beacb6111217f4
+sslcacertfile=/usr/local/etc/openssl/cert.pem
 
 [Account gmail]
 localrepository = Gmail-Local
@@ -32,4 +32,4 @@ ssl = yes
 remotehost = imap.gmail.com
 remoteuser = thomasfitzhenry@gmail.com
 remotepasseval = keyring.get_password("imap.gmail.com","thomasfitzhenry@gmail.com")
-cert_fingerprint = A27E722B2654911B06B86A37011E34222A36B825
+sslcacertfile=/usr/local/etc/openssl/cert.pem
