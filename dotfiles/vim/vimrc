@@ -4,7 +4,5 @@ call pathogen#infect()
 let g:airline#extensions#tabline#enabled = 1
 
 set hlsearch
-set ignorecase
-set smartcase
 
 set spelllang=en_gb
