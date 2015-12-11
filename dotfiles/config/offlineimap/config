@@ -1,23 +1,6 @@
 [general]
-accounts = zoho,gmail
+accounts = gmail
 pythonfile=~/.config/offlineimap/config.py
-
-[Account zoho]
-localrepository = Local
-remoterepository = Remote
-
-[Repository Local]
-type = Maildir
-localfolders = ~/backups/zoho/
-
-[Repository Remote]
-type = IMAP
-ssl = yes
-remotehost = imap.zoho.com
-remoteuser = tom@tom-fitzhenry.me.uk
-remotepasseval = keyring.get_password("mail.zoho.com","tom@tom-fitzhenry.me.uk")
-readonly = True
-sslcacertfile=/usr/local/etc/openssl/cert.pem
 
 [Account gmail]
 localrepository = Gmail-Local
