@@ -74,3 +74,5 @@ for FILE in "$(pwd)"/dotfiles/*;
 do
     Install_file ${FILE} ${HOME}/.
 done
+
+ssh-regenerate-config
