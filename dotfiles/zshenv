@@ -5,12 +5,6 @@ export PATH=/usr/local/bin:$PATH
 
 export PATH=$HOME/.local/bin:$PATH
 
-export EDITOR=vim
-export VISUAL=vim
-
-export NAME='Tom Fitzhenry'
-export EMAIL='tom@tom-fitzhenry.me.uk'
-
 if [ -f ~/.environment.local ]; then
     . ~/.environment.local
 fi
