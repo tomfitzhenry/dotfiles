@@ -1,3 +1,5 @@
+UseRoaming no
+
 Host alioth
     User tomfitzhenry-guest
     Hostname alioth.debian.org
