@@ -1,4 +1,2 @@
 source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
-
-let g:airline#extensions#tabline#enabled = 1
