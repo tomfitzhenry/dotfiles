@@ -1,5 +1,0 @@
-[merge]
-	tool = fugitive
-
-[mergetool "fugitive"]
-	cmd = vim "+Gdiff" $MERGED

@@ -19,9 +19,6 @@
 [submodule "dotfiles/vim/bundle/ack.vim"]
 	path = dotfiles/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "dotfiles/vim/bundle/syntastic"]
-	path = dotfiles/vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "dotfiles/vim/bundle/vim-airline"]
 	path = dotfiles/vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -37,9 +34,3 @@
 [submodule "dotfiles/vim/bundle/vim-polyglot.git"]
 	path = dotfiles/vim/bundle/vim-polyglot.git
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "dotfiles/vim/bundle/vim-fugitive.git"]
-	path = dotfiles/vim/bundle/vim-fugitive.git
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "dotfiles/vim/bundle/fzf.vim"]
-	path = dotfiles/vim/bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
