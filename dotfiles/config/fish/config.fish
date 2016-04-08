@@ -6,8 +6,8 @@ set PATH $HOME/.local/bin $PATH
 
 ssh-regenerate-config
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 export NAME='Tom Fitzhenry'
 export EMAIL='tom@tom-fitzhenry.me.uk'

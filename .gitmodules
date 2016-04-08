@@ -4,33 +4,18 @@
 [submodule "dotfiles/vim/bundle/haskell.vim"]
 	path = dotfiles/vim/bundle/haskell.vim
 	url = https://github.com/vim-scripts/haskell.vim
-[submodule "dotfiles/vim/bundle/vim-pathogen"]
-	path = dotfiles/vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
 [submodule "dotfiles/vim/bundle/neco-ghc"]
 	path = dotfiles/vim/bundle/neco-ghc
 	url = https://github.com/ujihisa/neco-ghc.git
-[submodule "dotfiles/vim/bundle/vim-unimpaired"]
-	path = dotfiles/vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "dotfiles/vim/bundle/vim-sensible"]
-	path = dotfiles/vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
 [submodule "dotfiles/vim/bundle/ack.vim"]
 	path = dotfiles/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "dotfiles/vim/bundle/vim-airline"]
 	path = dotfiles/vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "dotfiles/vim/bundle/vim-signify"]
-	path = dotfiles/vim/bundle/vim-signify
-	url = https://github.com/mhinz/vim-signify.git
 [submodule "dotfiles/tmux/plugins/tmux-sensible"]
 	path = dotfiles/tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
 [submodule "dotfiles/tmux/plugins/tmux-pain-control"]
 	path = dotfiles/tmux/plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control
-[submodule "dotfiles/vim/bundle/vim-polyglot.git"]
-	path = dotfiles/vim/bundle/vim-polyglot.git
-	url = https://github.com/sheerun/vim-polyglot.git
