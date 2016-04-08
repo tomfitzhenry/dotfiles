@@ -19,3 +19,5 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 if [ -f ~/.environment.local ]
 	source ~/.environment.local
 end
+
+eval (python -m virtualfish)
