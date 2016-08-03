@@ -75,8 +75,6 @@ do
     Install_file ${FILE} ${HOME}/.
 done
 
-ssh-regenerate-config
-
 # Stop the remote control daemon, which is the thing that opens iTunes
 # when play/pause is triggered.
 # Frustratingly, play/pause is trigger when I take my magic headphones off,

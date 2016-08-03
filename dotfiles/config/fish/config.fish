@@ -4,8 +4,6 @@
 set PATH /usr/local/bin $PATH
 set PATH $HOME/.local/bin $PATH
 
-ssh-regenerate-config
-
 export EDITOR=nvim
 export VISUAL=nvim
 

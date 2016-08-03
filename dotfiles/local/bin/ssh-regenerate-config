@@ -1,2 +1,0 @@
-#!/bin/sh
-cat ~/.config/ssh/config.d/* > ~/.ssh/config
