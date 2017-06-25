@@ -17,4 +17,4 @@ remotehost = imap.gmail.com
 remoteuser = thomasfitzhenry@gmail.com
 remotepasseval = keyring.get_password("imap.gmail.com","thomasfitzhenry@gmail.com")
 readonly = True
-sslcacertfile=/usr/local/etc/openssl/cert.pem
+sslcacertfile=/etc/ssl/certs/ca-certificates.crt
