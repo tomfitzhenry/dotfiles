@@ -14,6 +14,8 @@ export FZF_DEFAULT_OPTS="--multi"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+export JAVA_HOME=(/usr/libexec/java_home)
+
 if [ -f ~/.environment.local ]
 	source ~/.environment.local
 end
