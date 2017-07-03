@@ -1,0 +1,4 @@
+mode standard
+no-cc
+header "X-Debbugs-CC: tom@tom-fitzhenry.me.uk"
+smtphost reportbug.debian.org
