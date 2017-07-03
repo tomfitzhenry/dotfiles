@@ -74,10 +74,3 @@ for FILE in "$(pwd)"/dotfiles/*;
 do
     Install_file ${FILE} ${HOME}/.
 done
-
-# Stop the remote control daemon, which is the thing that opens iTunes
-# when play/pause is triggered.
-# Frustratingly, play/pause is trigger when I take my magic headphones off,
-# even if I'm listening to https://youtube.com which doesn't even listen to
-# play/pause OSX events.
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
