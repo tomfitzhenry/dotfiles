@@ -9,8 +9,4 @@ export EMAIL='tom@tom-fitzhenry.me.uk'
 
 export JAVA_HOME=(/usr/libexec/java_home)
 
-if [ -f ~/.environment.local ]
-	source ~/.environment.local
-end
-
 eval (python -m virtualfish)
