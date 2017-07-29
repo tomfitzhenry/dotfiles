@@ -14,5 +14,4 @@
   (setq gnus-use-cache t))
 
 (use-package evil
-  :config
-  (evil-mode 1))
+  :config)
