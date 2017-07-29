@@ -13,5 +13,7 @@
   (setq gnus-select-method '(nntp "news.gmane.org"))
   (setq gnus-use-cache t))
 
+(use-package magit)
+
 (use-package evil
   :config)
