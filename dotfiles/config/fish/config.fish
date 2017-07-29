@@ -7,6 +7,4 @@ set PATH $HOME/.local/bin $PATH
 export NAME='Tom Fitzhenry'
 export EMAIL='tom@tom-fitzhenry.me.uk'
 
-export JAVA_HOME=(/usr/libexec/java_home)
-
 eval (python -m virtualfish)
