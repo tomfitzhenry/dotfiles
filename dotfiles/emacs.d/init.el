@@ -16,5 +16,4 @@
   :config
   (ivy-mode 1))
 
-(use-package evil
-  :config)
+(use-package evil)
