@@ -5,15 +5,16 @@
 
 (require 'use-package)
 
-(use-package better-defaults
-  :ensure t)
-
 (use-package gnus
   :config
   (setq gnus-select-method '(nntp "news.gmane.org"))
   (setq gnus-use-cache t))
 
 (use-package magit)
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
 
 (use-package evil
   :config)
