@@ -1,7 +1,3 @@
-# Put /usr/local/bin (Homebrew) before /usr/bin
-# I could modify /etc/paths to put /usr/local/bin before /usr/bin
-# but that might screw over system processes.
-set PATH /usr/local/bin $PATH
 set PATH $HOME/.local/bin $PATH
 
 export NAME='Tom Fitzhenry'
