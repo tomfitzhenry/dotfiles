@@ -1,20 +1,20 @@
 [general]
-accounts = gmail
+accounts = personal
 pythonfile=~/.config/offlineimap/config.py
 
-[Account gmail]
-localrepository = Gmail-Local
-remoterepository = Gmail-Remote
+[Account personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
 
-[Repository Gmail-Local]
+[Repository Personal-Local]
 type = Maildir
-localfolders = ~/backups/gmail-thomasfitzhenry
+localfolders = ~/backups/email-tom-fitzhenry.me.uk
 
-[Repository Gmail-Remote]
+[Repository Personal-Remote]
 type = IMAP
 ssl = yes
-remotehost = imap.gmail.com
-remoteuser = thomasfitzhenry@gmail.com
-remotepasseval = keyring.get_password("imap.gmail.com","thomasfitzhenry@gmail.com")
+remotehost = imap.fastmail.com
+remoteuser = tom@tom-fitzhenry.me.uk
+remotepasseval = keyring.get_password("email","tom@tom-fitzhenry.me.uk")
 readonly = True
 sslcacertfile=/etc/ssl/certs/ca-certificates.crt
