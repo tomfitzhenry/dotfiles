@@ -1,8 +1,3 @@
 Host alioth
     User tomfitzhenry-guest
     Hostname alioth.debian.org
-
-Host bitbucket-tomfitzhenry
-    Hostname bitbucket.org
-    User git
-    IdentityFile ~/.ssh/id_rsa.bitbucket_tomfitzhenry
