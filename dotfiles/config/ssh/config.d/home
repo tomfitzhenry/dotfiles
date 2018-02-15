@@ -2,15 +2,6 @@ Host alioth
     User tomfitzhenry-guest
     Hostname alioth.debian.org
 
-Host uwcs
-    Hostname nodd.uwcs.co.uk
-    User tomfitzyuk
-
-Host server007
-    Hostname server007.tom-fitzhenry.me.uk
-    User tom
-    IdentityFile ~/.ssh/id_rsa.personal
-
 Host bitbucket-tomfitzhenry
     Hostname bitbucket.org
     User git
