@@ -1,6 +1,6 @@
 (require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+; Disable installation via emacs, since it has poor security
+(setq package-archives '())
 (package-initialize)
 
 (require 'use-package)
@@ -15,7 +15,6 @@
 
 (use-package magit)
 (use-package ivy
-  :ensure t
   :config
   (ivy-mode 1))
 
@@ -26,7 +25,6 @@
   (projectile-mode 1))
 
 (use-package swiper
-  :ensure t
   :config
   (global-set-key "\C-s" 'swiper)
   )
