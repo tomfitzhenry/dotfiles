@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+set -o pipefail
+
+USERNAME=tomfitzhenry
+BACKUP_DIR=~/backups/keybase
+
+mkdir -p "$BACKUP_DIR"
+cd "$BACKUP_DIR"
+
+keybase git list \
+    | grep 'keybase://' \
+    | awk '{print $2}' \
+    | while read -r REPO
+do
+    DIR=$(basename "$REPO").git
+    if [ ! -d "$DIR" ]; then
+        git clone --mirror --quiet "$REPO"
+    else
+        git -C "$DIR" remote update > /dev/null
+    fi
+done
