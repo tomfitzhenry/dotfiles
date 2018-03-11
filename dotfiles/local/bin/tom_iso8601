@@ -1,5 +1,3 @@
 #!/bin/sh
-
-set -eu
-
-date -u +"%Y%m%dT%H%M%SZ"
+echo "Deprecated. Use: date -uIs"
+exit 1
