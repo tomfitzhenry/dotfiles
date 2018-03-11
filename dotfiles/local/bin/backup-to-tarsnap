@@ -4,11 +4,12 @@ set -o pipefail
 
 BACKUP_DIR=~/backups
 
-for DIR in $BACKUP_DIR/*; do
-    ARCHIVE_NAME=20150831.$(basename "$DIR")."$(date -u +"%Y%m%dT%H%M%S")"
+function backupDirectory {
+    local PATH_TO_DIRECTORY="$1"
+    local ARCHIVE_NAME=20150831.$(basename "$PATH_TO_DIRECTORY")."$(date -u +"%Y%m%dT%H%M%S")"
     echo "$ARCHIVE_NAME"
     (
-        cd "$DIR"
+        cd "$PATH_TO_DIRECTORY"
         tarsnap -c \
 		-v \
 		-f "$ARCHIVE_NAME" \
@@ -19,4 +20,17 @@ for DIR in $BACKUP_DIR/*; do
 		--humanize-numbers \
 	        ./*
     )
-done
+}
+
+set +eu
+[ -z "$1" ]
+ALL_ARCHIVES=$?
+set -eu
+
+if [ $ALL_ARCHIVES -eq 0 ]; then
+    for DIR in $BACKUP_DIR/*; do
+	backupDirectory "$DIR"
+    done
+else
+    backupDirectory "$1"
+fi
