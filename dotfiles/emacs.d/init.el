@@ -9,6 +9,8 @@
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
+(setq scroll-step            1
+      scroll-conservatively  10000)
 
 (use-package gnus
   :config
