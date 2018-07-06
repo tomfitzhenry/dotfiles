@@ -7,6 +7,7 @@
 (add-to-list 'exec-path "~/.local/bin")
 (recentf-mode 1)
 (global-hl-line-mode t)
+(global-auto-revert-mode t)
 (setq make-backup-files nil)
 
 (use-package gnus
