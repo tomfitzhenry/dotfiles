@@ -37,5 +37,10 @@
   (global-set-key "\C-s" 'swiper)
   )
 
+(use-package which-key
+  :config
+  (which-key-setup-side-window-right-bottom)
+  (which-key-mode 1))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
