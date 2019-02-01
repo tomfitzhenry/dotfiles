@@ -1,0 +1,37 @@
+#!/bin/sh
+set -eu
+
+PACKAGES="
+ack-grep
+apt-file
+diffutils
+dnsutils
+elpa-bind-key
+elpa-elfeed
+elpa-evil
+elpa-ledger
+elpa-magit
+elpa-projectile
+elpa-use-package
+git
+htop
+iotop
+jq
+moreutils
+mosh
+mpv
+ncdu
+netcat-traditional
+pwgen
+silversearcher-ag
+socat
+strace
+sudo
+tree
+tmux
+vim-nox
+"
+
+for p in $PACKAGES; do
+	dpkg -s $p || apt install -y $p
+done
