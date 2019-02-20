@@ -16,8 +16,10 @@
   :ensure t
   :pin manual
   :config
+(use-package magit
+  :ensure t
+  :pin manual)
 
-(use-package magit)
 (use-package ivy
   :ensure t
   :pin melpa
