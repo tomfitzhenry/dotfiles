@@ -55,6 +55,14 @@
   (which-key-setup-side-window-right-bottom)
   (which-key-mode 1))
 
+(use-package elfeed
+  :ensure t
+  :pin manual
+  :config
+  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
+  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
+  (elfeed-load-opml "~/sync/Misc/feeds.opml"))
+
 (use-package json-mode
   :ensure t
   :pin melpa)
