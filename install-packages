@@ -6,6 +6,7 @@ ack-grep
 apt-file
 diffutils
 dnsutils
+elpa-async
 elpa-bind-key
 elpa-elfeed
 elpa-evil
