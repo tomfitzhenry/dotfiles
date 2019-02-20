@@ -1,7 +1,8 @@
-(require 'package)
-; Disable installation via emacs, since it has poor security
-(setq package-archives '())
 (package-initialize)
+(add-to-list 'package-archives
+	                  '("melpa" . "https://melpa.org/packages/") t)
+(unless package-archive-contents
+  (package-refresh-contents))
 
 (require 'use-package)
 (add-to-list 'exec-path "~/.local/bin")
@@ -13,31 +14,45 @@
       scroll-conservatively  10000)
 
 (use-package gnus
+(use-package org
+  :ensure t
+  :pin manual
   :config
   (setq gnus-select-method '(nntp "news.gmane.org"))
   (setq gnus-use-cache t))
 
 (use-package magit)
 (use-package ivy
+  :ensure t
+  :pin melpa
   :config
   (ivy-mode 1))
 
 (use-package evil
+  :ensure t
+  :pin manual
   :config
   (evil-mode 1))
 
 (use-package projectile
+  :ensure t
+  :pin manual
   :config
   (projectile-global-mode 1))
 
-(use-package ag)
+(use-package ag
+  :ensure t
+  :pin melpa)
 
 (use-package swiper
+  :ensure t
+  :pin melpa
   :config
-  (global-set-key "\C-s" 'swiper)
-  )
+  (global-set-key "\C-s" 'swiper))
 
 (use-package which-key
+  :ensure t
+  :pin manual
   :config
   (which-key-setup-side-window-right-bottom)
   (which-key-mode 1))
