@@ -55,5 +55,19 @@
   (which-key-setup-side-window-right-bottom)
   (which-key-mode 1))
 
+(use-package json-mode
+  :ensure t
+  :pin melpa)
+
+; Useful for async copy commands, especially when copying over TRAMP
+(use-package nix-mode
+  :ensure t
+  :pin melpa)
+
+(use-package dired-async
+  :ensure t
+  :pin manual
+  :config
+  (dired-async-mode))
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
