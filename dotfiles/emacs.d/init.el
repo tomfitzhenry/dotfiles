@@ -12,13 +12,10 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 
-(use-package gnus
 (use-package org
   :ensure t
   :pin manual
   :config
-  (setq gnus-select-method '(nntp "news.gmane.org"))
-  (setq gnus-use-cache t))
 
 (use-package magit)
 (use-package ivy
