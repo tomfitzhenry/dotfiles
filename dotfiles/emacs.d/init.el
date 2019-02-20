@@ -5,7 +5,6 @@
   (package-refresh-contents))
 
 (require 'use-package)
-(add-to-list 'exec-path "~/.local/bin")
 (recentf-mode 1)
 (global-hl-line-mode t)
 (global-auto-revert-mode t)
