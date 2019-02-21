@@ -11,6 +11,7 @@
 (setq make-backup-files nil)
 (setq scroll-step            1
       scroll-conservatively  10000)
+(server-start)
 
 (use-package org
   :ensure t
