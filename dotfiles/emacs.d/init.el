@@ -89,5 +89,17 @@
   :config
   ; Useful for async copy commands, especially when copying over TRAMP
   (dired-async-mode))
+
+(use-package notifications)
+
+(use-package weechat
+  :ensure t
+  :pin melpa
+  :after (notifications)
+  :init
+  (setq weechat-modules '(weechat-button weechat-complete weechat-notifications))
+  :config
+  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
