@@ -78,15 +78,15 @@
   :ensure t
   :pin melpa)
 
-; Useful for async copy commands, especially when copying over TRAMP
 (use-package nix-mode
   :ensure t
   :pin melpa)
 
-(use-package dired-async
+(use-package async
   :ensure t
   :pin manual
   :config
+  ; Useful for async copy commands, especially when copying over TRAMP
   (dired-async-mode))
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
