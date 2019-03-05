@@ -19,12 +19,12 @@
   :ensure t
   :pin manual
   :config
-  (setq org-agenda-files (list "~/sync/Misc/"))
+  (setq org-agenda-files '("~/sync/Misc"))
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
   (setq org-habit-show-habits-only-for-today nil)
-  (setq org-modules 'org-habit)
-  (setq org-todo-keywords '(sequence "TODO" "WAIT" "DONE"))
+  (setq org-modules '(org-habit))
+  (setq org-todo-keywords '("TODO" "WAIT" "DONE"))
   (global-set-key "\C-cl" 'org-store-link)
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cc" 'org-capture)
