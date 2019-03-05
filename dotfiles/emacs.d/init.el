@@ -42,6 +42,10 @@
   :config
   (ivy-mode 1))
 
+(use-package counsel
+  :ensure t
+  :pin melpa)
+
 (use-package evil
   :ensure t
   :pin manual
