@@ -28,6 +28,10 @@
   (global-set-key "\C-cc" 'org-capture)
   (global-set-key "\C-cb" 'org-switchb))
 
+(use-package notmuch
+  :ensure t
+  :pin manual)
+
 (use-package magit
   :ensure t
   :pin manual)
