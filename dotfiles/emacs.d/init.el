@@ -109,5 +109,11 @@
   :config
   (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
+(use-package go-mode
+  :ensure t
+  :pin melpa
+  :config
+  (add-hook 'before-save-hook 'gofmt-before-save))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
