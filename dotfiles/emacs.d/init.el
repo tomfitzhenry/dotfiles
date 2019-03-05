@@ -4,6 +4,8 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+(add-to-list 'load-path "/usr/share/org-mode/lisp")
+
 (require 'use-package)
 (recentf-mode 1)
 (global-hl-line-mode t)
