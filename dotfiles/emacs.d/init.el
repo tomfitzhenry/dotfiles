@@ -15,6 +15,7 @@
       scroll-conservatively  10000)
 (server-start)
 
+(winner-mode)
 (use-package keyfreq
   :ensure t
   :pin melpa
