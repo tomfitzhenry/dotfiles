@@ -15,6 +15,13 @@
       scroll-conservatively  10000)
 (server-start)
 
+(use-package keyfreq
+  :ensure t
+  :pin melpa
+  :config
+  (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1))
+
 (use-package org
   :ensure t
   :pin manual
