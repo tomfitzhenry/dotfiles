@@ -16,12 +16,6 @@
 (server-start)
 
 (winner-mode)
-(use-package keyfreq
-  :ensure t
-  :pin melpa
-  :config
-  (keyfreq-mode 1)
-  (keyfreq-autosave-mode 1))
 
 (use-package org
   :ensure t
