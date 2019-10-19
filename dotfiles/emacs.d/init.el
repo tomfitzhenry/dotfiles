@@ -5,6 +5,7 @@
   (package-refresh-contents))
 
 (add-to-list 'load-path "/usr/share/org-mode/lisp")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/emms/")
 
 (require 'use-package)
 (recentf-mode 1)
@@ -31,6 +32,16 @@
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cc" 'org-capture)
   (global-set-key "\C-cb" 'org-switchb))
+
+
+(use-package emms-info-libtag
+  :config
+  (setq emms-info-functions '(emms-info-libtag)))
+
+(use-package emms
+  :config
+  (emms-all)
+  (emms-default-players))
 
 (use-package notmuch
   :ensure t
