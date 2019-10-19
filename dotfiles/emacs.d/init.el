@@ -42,13 +42,13 @@
 
 (use-package ivy
   :ensure t
-  :pin melpa
+  :pin manual
   :config
   (ivy-mode 1))
 
 (use-package counsel
   :ensure t
-  :pin melpa)
+  :pin manual)
 
 (use-package evil
   :ensure t
@@ -64,11 +64,11 @@
 
 (use-package ag
   :ensure t
-  :pin melpa)
+  :pin manual)
 
 (use-package swiper
   :ensure t
-  :pin melpa
+  :pin manual
   :config
   (global-set-key "\C-s" 'swiper))
 
@@ -106,7 +106,7 @@
 
 (use-package weechat
   :ensure t
-  :pin melpa
+  :pin manual
   :after (notifications)
   :init
   (setq weechat-modules '(weechat-button weechat-complete weechat-notifications))
@@ -115,7 +115,7 @@
 
 (use-package go-mode
   :ensure t
-  :pin melpa
+  :pin manual
   :config
   (add-hook 'before-save-hook 'gofmt-before-save))
 
