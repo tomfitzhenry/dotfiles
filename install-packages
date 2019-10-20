@@ -25,6 +25,7 @@ elpa-weechat
 elpa-which-key
 emms
 git
+git-annex
 htop
 iotop
 jq
