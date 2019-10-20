@@ -35,6 +35,7 @@ mpv
 ncdu
 netcat-traditional
 org-mode
+pandoc
 pwgen
 silversearcher-ag
 socat
