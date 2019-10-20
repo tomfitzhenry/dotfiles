@@ -45,5 +45,5 @@ vim-nox
 "
 
 for p in $PACKAGES; do
-	dpkg -s $p || apt install -y $p
+	dpkg -s $p > /dev/null || apt install -y $p
 done
