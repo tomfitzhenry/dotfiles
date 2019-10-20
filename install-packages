@@ -2,7 +2,7 @@
 set -eu
 
 PACKAGES="
-ack-grep
+ack
 apt-file
 diffutils
 dnsutils
