@@ -4,3 +4,5 @@ export VISUAL="emacsclient -c"
 alias e="emacsclient -n"
 
 export PATH=~/.local/bin:$PATH
+
+export BEETSDIR=~/music

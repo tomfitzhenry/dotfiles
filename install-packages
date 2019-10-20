@@ -4,6 +4,7 @@ set -eu
 PACKAGES="
 ack
 apt-file
+beets
 diffutils
 dnsutils
 elpa-ag
