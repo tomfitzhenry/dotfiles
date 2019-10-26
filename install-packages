@@ -2,6 +2,7 @@
 set -eu
 
 PACKAGES="
+abcde
 ack
 apt-file
 beets
