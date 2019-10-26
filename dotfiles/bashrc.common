@@ -6,3 +6,5 @@ alias e="emacsclient -n"
 export PATH=~/.local/bin:$PATH
 
 export BEETSDIR=~/music
+
+source /usr/share/doc/fzf/examples/key-bindings.bash

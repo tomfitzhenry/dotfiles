@@ -24,6 +24,7 @@ elpa-use-package
 elpa-weechat
 elpa-which-key
 emms
+fzf
 git
 git-annex
 htop
