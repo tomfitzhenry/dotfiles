@@ -28,6 +28,8 @@ elpa-which-key
 elpa-zenburn-theme
 emms
 fzf
+gdb
+gdb-doc
 git
 git-annex
 htop
