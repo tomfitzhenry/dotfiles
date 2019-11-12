@@ -43,7 +43,10 @@
 (use-package emms
   :config
   (emms-all)
-  (emms-default-players))
+  (emms-default-players)
+  ; Show Albums and Artists.
+  (add-to-list 'emms-browser-show-display-hook 'emms-browser-expand-to-level-2)
+  (setq emms-source-file-default-directory "~/music"))
 
 (use-package beacon
   :ensure t
