@@ -16,6 +16,8 @@
       scroll-conservatively  10000)
 (server-start)
 
+(load-theme 'zenburn t)
+
 (winner-mode)
 
 (use-package org
