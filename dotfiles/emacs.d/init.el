@@ -44,6 +44,10 @@
   :config
   (emms-all)
   (emms-default-players)
+  (global-set-key (kbd "<f5>") 'emms-smart-browse)
+  (global-set-key (kbd "<f6>") 'emms-previous)
+  (global-set-key (kbd "<f7>") 'emms-pause)
+  (global-set-key (kbd "<f8>") 'emms-next)
   ; Show Albums and Artists.
   (add-to-list 'emms-browser-show-display-hook 'emms-browser-expand-to-level-2)
   (setq emms-source-file-default-directory "~/music"))
