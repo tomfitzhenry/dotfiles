@@ -79,7 +79,8 @@
   :ensure t
   :pin manual
   :config
-  (projectile-global-mode 1))
+  (projectile-global-mode 1)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 (use-package ag
   :ensure t
