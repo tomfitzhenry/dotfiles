@@ -10,6 +10,7 @@ diffutils
 dnsutils
 elpa-ag
 elpa-async
+elpa-beacon
 elpa-bind-key
 elpa-counsel
 elpa-elfeed

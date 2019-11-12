@@ -43,6 +43,12 @@
   (emms-all)
   (emms-default-players))
 
+(use-package beacon
+  :ensure t
+  :pin manual
+  :config
+  (beacon-mode 1))
+
 (use-package notmuch
   :ensure t
   :pin manual)
