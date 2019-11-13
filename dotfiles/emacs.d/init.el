@@ -19,6 +19,11 @@
 (load-theme 'zenburn t)
 
 
+(use-package shell
+  :config
+  (global-set-key (kbd "C-c s") 'shell)
+  :bind (:map shell-mode-map ("C-r" . counsel-shell-history)))
+
 (use-package org
   :ensure t
   :pin manual
