@@ -17,13 +17,10 @@ elpa-elfeed
 elpa-evil
 elpa-go-mode
 elpa-ivy
-elpa-ledger
 elpa-magit
-elpa-notmuch
 elpa-projectile
 elpa-swiper
 elpa-use-package
-elpa-weechat
 elpa-which-key
 elpa-zenburn-theme
 emms

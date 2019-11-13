@@ -18,7 +18,6 @@
 
 (load-theme 'zenburn t)
 
-(winner-mode)
 
 (use-package org
   :ensure t
@@ -57,10 +56,6 @@
   :pin manual
   :config
   (beacon-mode 1))
-
-(use-package notmuch
-  :ensure t
-  :pin manual)
 
 (use-package magit
   :ensure t
@@ -128,17 +123,6 @@
   :config
   ; Useful for async copy commands, especially when copying over TRAMP
   (dired-async-mode))
-
-(use-package notifications)
-
-(use-package weechat
-  :ensure t
-  :pin manual
-  :after (notifications)
-  :init
-  (setq weechat-modules '(weechat-button weechat-complete weechat-notifications))
-  :config
-  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
 (use-package go-mode
   :ensure t
