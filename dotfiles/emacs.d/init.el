@@ -18,6 +18,21 @@
 
 (load-theme 'zenburn t)
 
+(use-package dashboard
+  :ensure t
+  :pin melpa
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-items '((recents  . 5)
+                          (projects . 5)
+                          (bookmarks . 5)
+                          (agenda . 10)
+                          (registers . 5)))
+  (global-set-key (kbd "<f1>") (lambda () (interactive) (switch-to-buffer (get-buffer "*dashboard*"))))
+  (setq dashboard-startup-banner nil)
+  (setq dashboard-set-init-info nil)
+  (setq dashboard-set-footer nil)
+  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
 
 (use-package shell
   :config
