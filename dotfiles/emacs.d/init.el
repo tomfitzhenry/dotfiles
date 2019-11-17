@@ -23,7 +23,7 @@
   :pin melpa
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-items '((recents  . 5)
+  (setq dashboard-items '(
                           (projects . 5)
                           (bookmarks . 5)
                           (agenda . 10)
