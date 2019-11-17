@@ -32,6 +32,7 @@
   (setq dashboard-startup-banner nil)
   (setq dashboard-set-init-info nil)
   (setq dashboard-set-footer nil)
+  (add-to-list 'evil-emacs-state-modes 'dashboard-mode)
   (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
 
 (use-package shell
