@@ -23,6 +23,7 @@ elpa-swiper
 elpa-use-package
 elpa-which-key
 elpa-zenburn-theme
+emacs-common-non-dfsg
 emms
 fzf
 gdb
@@ -39,6 +40,7 @@ mpv
 ncdu
 netcat-traditional
 org-mode
+org-mode-doc
 pandoc
 pwgen
 silversearcher-ag
