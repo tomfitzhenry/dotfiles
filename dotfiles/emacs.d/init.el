@@ -48,6 +48,7 @@
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
   (setq org-todo-keywords '("TODO" "WAIT" "DONE"))
+  (setq org-default-notes-file (concat org-directory "/notes.org"))
   (global-set-key "\C-cl" 'org-store-link)
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cc" 'org-capture)
