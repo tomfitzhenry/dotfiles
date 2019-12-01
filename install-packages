@@ -8,6 +8,7 @@ apt-file
 beets
 diffutils
 dnsutils
+doc-rfc
 elpa-ag
 elpa-async
 elpa-beacon
