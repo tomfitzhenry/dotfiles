@@ -47,6 +47,7 @@
   :pin manual
   :config
   (setq org-agenda-files '("~/sync/Misc"))
+  (setq org-directory "~/docs/org/")
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
   (setq org-todo-keywords '("TODO" "WAIT" "DONE"))
@@ -129,7 +130,7 @@
   :config
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
-  (elfeed-load-opml "~/sync/Misc/feeds.opml"))
+  (elfeed-load-opml "~/docs/feeds.opml"))
 
 (use-package json-mode
   :ensure t
