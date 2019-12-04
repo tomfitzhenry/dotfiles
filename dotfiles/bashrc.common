@@ -7,4 +7,6 @@ export PATH=~/.local/bin:$PATH
 
 export BEETSDIR=~/music
 
-source /usr/share/doc/fzf/examples/key-bindings.bash
+if [ ! $TERM = "dumb" ]; then
+	source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
