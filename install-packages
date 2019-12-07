@@ -16,6 +16,7 @@ elpa-bind-key
 elpa-counsel
 elpa-elfeed
 elpa-evil
+elpa-flycheck
 elpa-go-mode
 elpa-ivy
 elpa-magit
