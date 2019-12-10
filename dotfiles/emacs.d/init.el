@@ -50,6 +50,12 @@
   :config
   (global-flycheck-mode))
 
+(use-package undo-tree
+  :diminish
+  :config
+  (setq undo-tree-visualizer-timestamps t)
+  (setq undo-tree-visualizer-diff t))
+
 (use-package org
   :ensure t
   :pin manual
