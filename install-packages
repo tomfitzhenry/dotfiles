@@ -11,6 +11,7 @@ dnsutils
 doc-rfc
 elpa-ag
 elpa-async
+elpa-avy
 elpa-beacon
 elpa-bind-key
 elpa-counsel

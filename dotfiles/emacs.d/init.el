@@ -40,6 +40,9 @@
   (add-to-list 'evil-emacs-state-modes 'dashboard-mode)
   (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
 
+;; No key bindings because avy can be used from swiper, by pressing C-'
+(use-package avy)
+
 (use-package shell
   :config
   (add-to-list 'evil-emacs-state-modes 'shell-mode)
