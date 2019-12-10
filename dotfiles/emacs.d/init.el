@@ -42,6 +42,7 @@
 
 (use-package shell
   :config
+  (add-to-list 'evil-emacs-state-modes 'shell-mode)
   (global-set-key (kbd "C-c s") 'shell)
   :bind (:map shell-mode-map ("C-r" . counsel-shell-history)))
 
