@@ -21,6 +21,8 @@
 
 (load-theme 'zenburn t)
 
+(setq column-number-mode t)
+
 (use-package dashboard
   :ensure t
   :pin melpa
