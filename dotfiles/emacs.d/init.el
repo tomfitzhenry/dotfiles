@@ -77,6 +77,7 @@
   (setq emms-info-functions '(emms-info-libtag)))
 
 (use-package emms
+  :diminish
   :config
   (emms-all)
   (emms-default-players)
@@ -99,6 +100,7 @@
   :pin manual)
 
 (use-package ivy
+  :diminish
   :ensure t
   :pin manual
   :config
@@ -132,6 +134,7 @@
   (global-set-key "\C-s" 'swiper))
 
 (use-package which-key
+  :diminish
   :ensure t
   :pin manual
   :config
