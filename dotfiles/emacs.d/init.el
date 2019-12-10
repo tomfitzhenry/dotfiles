@@ -16,6 +16,7 @@
 (setq make-backup-files nil)
 (setq scroll-step            1
       scroll-conservatively  10000)
+(desktop-save-mode 1)
 (server-start)
 
 (load-theme 'zenburn t)
