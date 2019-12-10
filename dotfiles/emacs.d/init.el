@@ -50,6 +50,8 @@
   :config
   (global-flycheck-mode))
 
+(windmove-default-keybindings)
+
 (use-package undo-tree
   :diminish
   :config
@@ -59,6 +61,8 @@
 (use-package org
   :ensure t
   :pin manual
+  :init
+  (setq org-replace-disputed-keys t)
   :config
   (setq org-agenda-files '("~/sync/Misc"))
   (setq org-directory "~/docs/org/")
