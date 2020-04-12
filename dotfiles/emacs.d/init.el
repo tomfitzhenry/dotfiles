@@ -80,6 +80,9 @@
   (global-set-key "\C-cc" 'org-capture)
   (global-set-key "\C-cb" 'org-switchb))
 
+;; purges unused buffers at midnight
+(use-package midnight)
+
 
 (use-package emms-info-libtag
   :config
