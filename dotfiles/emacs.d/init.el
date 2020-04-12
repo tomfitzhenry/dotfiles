@@ -21,6 +21,8 @@
 (desktop-save-mode 1)
 (server-start)
 
+(goto-address-mode)
+
 (load-theme 'zenburn t)
 
 (setq column-number-mode t)
