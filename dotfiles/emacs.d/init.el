@@ -1,11 +1,22 @@
-(package-initialize)
-(add-to-list 'package-archives
-	                  '("melpa" . "https://melpa.org/packages/") t)
-(unless package-archive-contents
-  (package-refresh-contents))
+(require 'package)
 
-(add-to-list 'load-path "/usr/share/org-mode/lisp")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/emms/")
+(defun my-system-type-is-nixos ()
+  (file-exists-p "/etc/NIXOS"))
+
+(if (my-system-type-is-nixos)
+    (progn
+      ; Don't grab from elsewhere.
+      (setq package-archives nil))
+  (progn
+    ; On non-NixOS machines I regrettably have to grab things from MELPA.
+    (add-to-list 'package-archives
+		 '("melpa" . "https://melpa.org/packages/") t)
+    (unless package-archive-contents
+      (package-refresh-contents))
+    (add-to-list 'load-path "/usr/share/org-mode/lisp")
+    (add-to-list 'load-path "/usr/share/emacs/site-lisp/emms/")))
+
+(package-initialize)
 
 (require 'use-package)
 ;; prefer distro provided packages, for security/compatibility
@@ -147,8 +158,7 @@
   :ensure t)
 
 (use-package nix-mode
-  ; not in Debian, so let's download if needed
-  :ensure t)
+  :if (my-system-type-is-nixos))
 
 (use-package geiser)
 
