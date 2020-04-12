@@ -23,6 +23,10 @@
 
 (goto-address-mode)
 
+(use-package evil
+  :config
+  (evil-mode 1))
+
 (load-theme 'zenburn t)
 
 (setq column-number-mode t)
@@ -114,9 +118,6 @@
 
 (use-package counsel)
 
-(use-package evil
-  :config
-  (evil-mode 1))
 
 (use-package projectile
   :config
