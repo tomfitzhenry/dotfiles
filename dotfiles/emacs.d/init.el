@@ -158,7 +158,7 @@
 
 (use-package go-mode
   :config
-  (add-hook 'before-save-hook 'gofmt-before-save))
+  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
