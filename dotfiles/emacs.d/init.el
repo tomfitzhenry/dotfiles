@@ -8,6 +8,8 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/emms/")
 
 (require 'use-package)
+;; prefer distro provided packages, for security/compatibility
+(setq use-package-always-pin "manual")
 (recentf-mode 1)
 (global-hl-line-mode t)
 ; Reduce frequency of auto-revert interval from 5s to 20 minutes, to save battery. inotify will do most reverts anyway.
@@ -24,8 +26,8 @@
 (setq column-number-mode t)
 
 (use-package dashboard
+  ; not in Debian, so let's download if needed
   :ensure t
-  :pin melpa
   :config
   (dashboard-setup-startup-hook)
   (setq dashboard-items '(
@@ -62,8 +64,6 @@
   (setq undo-tree-visualizer-diff t))
 
 (use-package org
-  :ensure t
-  :pin manual
   :init
   (setq org-replace-disputed-keys t)
   :config
@@ -97,83 +97,59 @@
   (setq emms-source-file-default-directory "~/music"))
 
 (use-package beacon
-  :ensure t
-  :pin manual
   :config
   (beacon-mode 1))
 
-(use-package magit
-  :ensure t
-  :pin manual)
+(use-package magit)
 
 (use-package ivy
   :diminish
-  :ensure t
-  :pin manual
   :config
   (ivy-mode 1))
 
-(use-package counsel
-  :ensure t
-  :pin manual)
+(use-package counsel)
 
 (use-package evil
-  :ensure t
-  :pin manual
   :config
   (evil-mode 1))
 
 (use-package projectile
-  :ensure t
-  :pin manual
   :config
   (projectile-global-mode 1)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
-(use-package ag
-  :ensure t
-  :pin manual)
+(use-package ag)
 
 (use-package swiper
-  :ensure t
-  :pin manual
   :config
   (global-set-key "\C-s" 'swiper))
 
 (use-package which-key
   :diminish
-  :ensure t
-  :pin manual
   :config
   (which-key-setup-side-window-right-bottom)
   (which-key-mode 1))
 
 (use-package elfeed
-  :ensure t
-  :pin manual
   :config
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
   (elfeed-load-opml "~/docs/feeds.opml"))
 
 (use-package json-mode
-  :ensure t
-  :pin melpa)
+  ; not in Debian, so let's download if needed
+  :ensure t)
 
 (use-package nix-mode
-  :ensure t
-  :pin melpa)
+  ; not in Debian, so let's download if needed
+  :ensure t)
 
 (use-package async
-  :ensure t
-  :pin manual
   :config
   ; Useful for async copy commands, especially when copying over TRAMP
   (dired-async-mode))
 
 (use-package go-mode
-  :ensure t
-  :pin manual
   :config
   (add-hook 'before-save-hook 'gofmt-before-save))
 
