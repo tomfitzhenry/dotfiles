@@ -167,7 +167,9 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
 
-(use-package weechat)
+(use-package weechat
+  :config
+  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (use-package work)
