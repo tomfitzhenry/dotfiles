@@ -149,6 +149,8 @@
   ; not in Debian, so let's download if needed
   :ensure t)
 
+(use-package geiser)
+
 (use-package async
   :config
   ; Useful for async copy commands, especially when copying over TRAMP
