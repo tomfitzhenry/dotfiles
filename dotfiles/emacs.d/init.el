@@ -153,10 +153,6 @@
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
   (elfeed-load-opml "~/docs/feeds.opml"))
 
-(use-package json-mode
-  ; not in Debian, so let's download if needed
-  :ensure t)
-
 (use-package nix-mode
   :if (my-system-type-is-nixos))
 
