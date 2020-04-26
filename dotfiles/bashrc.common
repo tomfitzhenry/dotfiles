@@ -6,5 +6,14 @@ alias e="emacsclient -n"
 export PATH=~/.local/bin:$PATH
 
 if [ ! $TERM = "dumb" ]; then
-	source /usr/share/doc/fzf/examples/key-bindings.bash
+        # debian
+	if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+		source /usr/share/doc/fzf/examples/key-bindings.bash
+	fi
+
+        # nixos
+	if command -v fzf-share >/dev/null; then
+		source "$(fzf-share)/key-bindings.bash"
+		source "$(fzf-share)/completion.bash"
+	fi
 fi
