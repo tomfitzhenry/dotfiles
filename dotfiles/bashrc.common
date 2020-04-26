@@ -5,8 +5,6 @@ alias e="emacsclient -n"
 
 export PATH=~/.local/bin:$PATH
 
-export BEETSDIR=~/music
-
 if [ ! $TERM = "dumb" ]; then
 	source /usr/share/doc/fzf/examples/key-bindings.bash
 fi
