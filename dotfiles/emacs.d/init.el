@@ -42,23 +42,6 @@
 
 (setq column-number-mode t)
 
-(use-package dashboard
-  ; not in Debian, so let's download if needed
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook)
-  (setq dashboard-items '(
-                          (projects . 5)
-                          (bookmarks . 5)
-                          (agenda . 10)
-                          (registers . 5)))
-  (global-set-key (kbd "<f1>") (lambda () (interactive) (switch-to-buffer (get-buffer "*dashboard*"))))
-  (setq dashboard-startup-banner nil)
-  (setq dashboard-set-init-info nil)
-  (setq dashboard-set-footer nil)
-  (add-to-list 'evil-emacs-state-modes 'dashboard-mode)
-  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
-
 ;; No key bindings because avy can be used from swiper, by pressing C-'
 (use-package avy)
 
@@ -85,6 +68,7 @@
   (setq org-replace-disputed-keys t)
   :config
   (setq org-agenda-files '("~/sync/Misc"))
+  (global-set-key (kbd "<f1>") (lambda () (interactive) (org-agenda nil "n")))
   (setq org-directory "~/docs/org/")
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
