@@ -12,6 +12,7 @@
 (require 'use-package)
 ;; prefer distro provided packages, for security/compatibility
 (setq use-package-always-pin "manual")
+(load-theme 'zenburn t)
 (recentf-mode 1)
 (global-hl-line-mode t)
 ; Reduce frequency of auto-revert interval from 5s to 20 minutes, to save battery. inotify will do most reverts anyway.
@@ -29,42 +30,58 @@
 
 (goto-address-mode)
 
+(use-package ag)
+
+(use-package async
+  :config
+  ; Useful for async copy commands, especially when copying over TRAMP
+  (dired-async-mode))
+
+;; No key bindings because avy can be used from swiper, by pressing C-'
+(use-package avy)
+
+(use-package beacon
+  :config
+  (beacon-mode 1))
+
 (use-package bookmark
   :config
   (setq bookmark-save-flag 1)
   (global-set-key (kbd "<f2>") (lambda () (interactive) (counsel-bookmark))))
 
+(use-package counsel)
+
+(use-package elfeed
+  :config
+  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
+  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
+
 (use-package evil
   :config
   (evil-mode 1))
-
-(load-theme 'zenburn t)
-
-;; C-c left, to undo window configurations.
-(use-package winner
-  :config
-  (winner-mode))
-
-;; No key bindings because avy can be used from swiper, by pressing C-'
-(use-package avy)
-
-(use-package shell
-  :config
-  (add-to-list 'evil-emacs-state-modes 'shell-mode)
-  (global-set-key (kbd "C-c s") 'shell)
-  :bind (:map shell-mode-map ("C-r" . counsel-shell-history)))
 
 (use-package flycheck
   :config
   (global-flycheck-mode))
 
-(windmove-default-keybindings)
+(use-package geiser)
 
-(use-package undo-tree
+(use-package go-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
+
+(use-package ivy
   :diminish
   :config
-  (setq undo-tree-visualizer-timestamps t)
-  (setq undo-tree-visualizer-diff t))
+  (ivy-mode 1))
+
+(use-package magit)
+
+;; purges unused buffers at midnight
+(use-package midnight)
+
+(use-package nix-mode
+  :if (my-system-type-is-nixos))
 
 (use-package org
   :init
@@ -80,34 +97,32 @@
   (global-set-key "\C-cc" 'org-capture)
   (global-set-key "\C-cb" 'org-switchb))
 
-;; purges unused buffers at midnight
-(use-package midnight)
-
-(use-package beacon
-  :config
-  (beacon-mode 1))
-
-(use-package magit)
-
-(use-package ivy
-  :diminish
-  :config
-  (ivy-mode 1))
-
-(use-package counsel)
-
 (use-package projectile
   :config
   (projectile-mode 1)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
-(use-package ag)
+(use-package rfc-mode)
+
+(use-package shell
+  :config
+  (add-to-list 'evil-emacs-state-modes 'shell-mode)
+  (global-set-key (kbd "C-c s") 'shell)
+  :bind (:map shell-mode-map ("C-r" . counsel-shell-history)))
 
 (use-package swiper
   :config
   (global-set-key "\C-s" 'swiper))
 
-(use-package rfc-mode)
+(use-package undo-tree
+  :diminish
+  :config
+  (setq undo-tree-visualizer-timestamps t)
+  (setq undo-tree-visualizer-diff t))
+
+(use-package weechat
+  :config
+  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
 (use-package which-key
   :diminish
@@ -115,27 +130,13 @@
   (which-key-setup-side-window-right-bottom)
   (which-key-mode 1))
 
-(use-package elfeed
+(use-package windmove
   :config
-  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
+  (windmove-default-keybindings))
 
-(use-package nix-mode
-  :if (my-system-type-is-nixos))
-
-(use-package geiser)
-
-(use-package async
+;; C-c left, to undo window configurations.
+(use-package winner
   :config
-  ; Useful for async copy commands, especially when copying over TRAMP
-  (dired-async-mode))
-
-(use-package go-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
-
-(use-package weechat
-  :config
-  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
+  (winner-mode))
 
 (load (system-name))
