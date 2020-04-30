@@ -30,6 +30,9 @@
 
 (goto-address-mode)
 
+(require 'evil)
+(evil-mode 1)
+
 (use-package ag)
 
 (use-package async
@@ -56,9 +59,6 @@
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
-(use-package evil
-  :config
-  (evil-mode 1))
 
 (use-package flycheck
   :config
