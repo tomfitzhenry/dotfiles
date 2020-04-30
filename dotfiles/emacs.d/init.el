@@ -20,6 +20,7 @@
 (setq make-backup-files nil)
 (setq scroll-step            1
       scroll-conservatively  10000)
+(setq column-number-mode t)
 (desktop-save-mode 1)
 (server-start)
 
@@ -31,7 +32,6 @@
 
 (load-theme 'zenburn t)
 
-(setq column-number-mode t)
 
 ;; No key bindings because avy can be used from swiper, by pressing C-'
 (use-package avy)
