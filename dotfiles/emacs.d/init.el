@@ -27,6 +27,11 @@
 
 (goto-address-mode)
 
+(use-package bookmark
+  :config
+  (setq bookmark-save-flag 1)
+  (global-set-key (kbd "<f2>") (lambda () (interactive) (counsel-bookmark))))
+
 (use-package evil
   :config
   (evil-mode 1))
