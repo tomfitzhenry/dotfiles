@@ -70,14 +70,11 @@
   :init
   (setq org-replace-disputed-keys t)
   :config
-  (setq org-agenda-files '("~/sync/Misc"))
   (global-set-key (kbd "<f1>") (lambda () (interactive) (org-agenda nil "n")))
-  (setq org-directory "~/docs/org/")
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
   (setq org-agenda-show-future-repeats 'next)
   (setq org-agenda-todo-ignore-scheduled 'future)
-  (setq org-default-notes-file (concat org-directory "/notes.org"))
   (global-set-key "\C-cl" 'org-store-link)
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cc" 'org-capture)
@@ -98,7 +95,6 @@
   (ivy-mode 1))
 
 (use-package counsel)
-
 
 (use-package projectile
   :config
@@ -122,8 +118,7 @@
 (use-package elfeed
   :config
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
-  (elfeed-load-opml "~/docs/feeds.opml"))
+  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
 (use-package nix-mode
   :if (my-system-type-is-nixos))
@@ -143,5 +138,4 @@
   :config
   (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(use-package work)
+(load (system-name))
