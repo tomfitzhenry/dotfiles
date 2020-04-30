@@ -38,6 +38,10 @@
 
 (load-theme 'zenburn t)
 
+;; C-c left, to undo window configurations.
+(use-package winner
+  :config
+  (winner-mode))
 
 ;; No key bindings because avy can be used from swiper, by pressing C-'
 (use-package avy)
