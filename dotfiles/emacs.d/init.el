@@ -25,7 +25,6 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 (setq column-number-mode t)
-(desktop-save-mode 1)
 (server-start)
 
 (goto-address-mode)
@@ -53,6 +52,11 @@
   (global-set-key (kbd "<f2>") (lambda () (interactive) (counsel-bookmark))))
 
 (use-package counsel)
+
+(use-package desktop
+  :config
+  (setq desktop-dirname "~/.emacs.d")
+  (desktop-save-mode 1))
 
 (use-package elfeed
   :config
