@@ -14,6 +14,7 @@
 (global-hl-line-mode t)
 ; Reduce frequency of auto-revert interval from 5s to 20 minutes, to save battery. inotify will do most reverts anyway.
 (setq auto-revert-interval (* 60 20))
+(setq vc-follow-symlinks t)
 (setq focus-follows-mouse t)
 (setq mouse-autoselect-window t)
 (global-auto-revert-mode t)
