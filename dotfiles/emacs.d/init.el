@@ -3,6 +3,8 @@
 (defun my-system-type-is-nixos ()
   (file-exists-p "/etc/NIXOS"))
 
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
 ; Don't grab from elsewhere.
 (setq package-archives nil)
 (package-initialize)
@@ -108,6 +110,8 @@
 (use-package swiper
   :config
   (global-set-key "\C-s" 'swiper))
+
+(use-package rfc-mode)
 
 (use-package which-key
   :diminish
