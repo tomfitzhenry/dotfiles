@@ -99,10 +99,10 @@
   (global-set-key "\C-cc" 'org-capture)
   (global-set-key "\C-cb" 'org-switchb))
 
-(use-package projectile
+(use-package project
   :config
-  (projectile-mode 1)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+  (global-set-key (kbd "C-c p f") 'project-find-file)
+  (global-set-key (kbd "C-c p s") 'project-find-regexp))
 
 (use-package rfc-mode)
 
