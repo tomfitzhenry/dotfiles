@@ -65,10 +65,10 @@
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
-
-(use-package flycheck
+(use-package flymake
   :config
-  (global-flycheck-mode))
+  (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+  (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error))
 
 (use-package geiser)
 
