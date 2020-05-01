@@ -58,6 +58,8 @@
   (setq desktop-dirname "~/.emacs.d")
   (desktop-save-mode 1))
 
+(use-package eglot)
+
 (use-package elfeed
   :config
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
@@ -69,10 +71,6 @@
   (global-flycheck-mode))
 
 (use-package geiser)
-
-(use-package go-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
 
 (use-package ivy
   :diminish
