@@ -34,8 +34,6 @@
 (require 'evil)
 (evil-mode 1)
 
-(use-package ag)
-
 (use-package async
   :config
   ; Useful for async copy commands, especially when copying over TRAMP
