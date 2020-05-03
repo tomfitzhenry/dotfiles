@@ -12,7 +12,6 @@
 (require 'use-package)
 ;; prefer distro provided packages, for security/compatibility
 (setq use-package-always-pin "manual")
-(load-theme 'zenburn t)
 (recentf-mode 1)
 (global-hl-line-mode t)
 ; Reduce frequency of auto-revert interval from 5s to 20 minutes, to save battery. inotify will do most reverts anyway.
@@ -132,5 +131,9 @@
 (use-package winner
   :config
   (winner-mode))
+
+(use-package zenburn-theme
+  :config
+  (load-theme 'zenburn t))
 
 (load (system-name))
