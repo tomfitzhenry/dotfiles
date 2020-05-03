@@ -124,12 +124,6 @@
   :config
   (add-to-list 'evil-emacs-state-modes 'weechat-mode))
 
-(use-package which-key
-  :diminish
-  :config
-  (which-key-setup-side-window-right-bottom)
-  (which-key-mode 1))
-
 (use-package windmove
   :config
   (windmove-default-keybindings))
