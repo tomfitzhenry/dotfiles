@@ -24,7 +24,10 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 (setq column-number-mode t)
-(server-start)
+
+(use-package server
+  :config
+  (add-hook 'after-init-hook 'server-start t))
 
 (goto-address-mode)
 
