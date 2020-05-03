@@ -71,6 +71,16 @@
 
 (use-package geiser)
 
+(use-package ibuffer
+  :config
+  (global-set-key (kbd "C-x C-b") 'ibuffer))
+
+(use-package ibuffer-project
+  :config
+ (add-hook 'ibuffer-hook
+  (lambda ()
+    (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups)))))
+
 (use-package ivy
   :diminish
   :config
