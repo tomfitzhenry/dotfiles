@@ -98,13 +98,17 @@
   :init
   (setq org-replace-disputed-keys t)
   :config
+  (global-set-key "\C-cc" 'org-capture))
+
+(use-package org-agenda
+  :config
   (global-set-key (kbd "<f1>") (lambda () (interactive) (org-agenda nil "n")))
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-if-done t)
   (setq org-agenda-show-future-repeats 'next)
   (setq org-agenda-todo-ignore-scheduled 'future)
-  (global-set-key "\C-ca" 'org-agenda)
-  (global-set-key "\C-cc" 'org-capture))
+  (global-set-key "\C-ca" 'org-agenda))
+
 (use-package package-lint-flymake
   :config
   (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))
