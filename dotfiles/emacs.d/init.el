@@ -57,6 +57,10 @@
   (setq desktop-dirname "~/.emacs.d")
   (desktop-save-mode 1))
 
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode))
+
 (use-package eglot)
 
 (use-package elfeed
