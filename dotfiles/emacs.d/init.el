@@ -105,6 +105,10 @@
   (setq org-agenda-todo-ignore-scheduled 'future)
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cc" 'org-capture))
+(use-package package-lint-flymake
+  :config
+  (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))
+
 
 (use-package project
   :config
