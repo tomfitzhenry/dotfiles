@@ -1,5 +1,3 @@
-(require 'package)
-
 (defun my-system-type-is-nixos ()
   (file-exists-p "/etc/NIXOS"))
 
@@ -7,9 +5,10 @@
 
 ; Don't grab from elsewhere.
 (setq package-archives nil)
-(package-initialize)
 
-(require 'use-package)
+(eval-when-compile
+  (require 'use-package))
+
 ;; prefer distro provided packages, for security/compatibility
 (setq use-package-always-pin "manual")
 (recentf-mode 1)
