@@ -11,7 +11,6 @@
 
 ;; prefer distro provided packages, for security/compatibility
 (setq use-package-always-pin "manual")
-(recentf-mode 1)
 (global-hl-line-mode t)
 ; Reduce frequency of auto-revert interval from 5s to 20 minutes, to save battery. inotify will do most reverts anyway.
 (setq auto-revert-interval (* 60 20))
