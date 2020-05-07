@@ -41,12 +41,17 @@
   :config
   (beacon-mode 1))
 
+(defun my/bookmark-jump-or-save ()
+  (interactive)
+  (let ((b (completing-read "Bookmark: " (bookmark-all-names))))
+    (if (member b (bookmark-all-names))
+	(bookmark-jump b)
+      (bookmark-set b))))
+
 (use-package bookmark
   :config
   (setq bookmark-save-flag 1)
-  (global-set-key (kbd "<f2>") (lambda () (interactive) (counsel-bookmark))))
-
-(use-package counsel)
+  (global-set-key (kbd "<f2>") 'my/bookmark-jump-or-save))
 
 (use-package desktop
   :config
@@ -81,11 +86,6 @@
   (lambda ()
     (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups)))))
 
-(use-package ivy
-  :diminish
-  :config
-  (ivy-mode 1))
-
 (use-package magit)
 
 ;; purges unused buffers at midnight
@@ -93,6 +93,11 @@
 
 (use-package nix-mode
   :if (my-system-type-is-nixos))
+
+;; an fzf-like completion-style
+(use-package orderless
+  :init (icomplete-mode)
+  :custom (completion-styles '(orderless)))
 
 (use-package org
   :init
@@ -131,15 +136,16 @@
 
 (use-package rfc-mode)
 
+(defun my/comint-history ()
+  (interactive)
+  (let ((b (completing-read "Shell history: " (ring-elements comint-input-ring))))
+    (insert b)))
+
 (use-package shell
   :config
   (add-to-list 'evil-emacs-state-modes 'shell-mode)
   (global-set-key (kbd "C-c s") 'shell)
-  :bind (:map shell-mode-map ("C-r" . counsel-shell-history)))
-
-(use-package swiper
-  :config
-  (global-set-key "\C-s" 'swiper))
+  :bind (:map shell-mode-map ("C-r" . 'my/comint-history)))
 
 (use-package undo-tree
   :diminish
