@@ -76,6 +76,10 @@
 
 (use-package geiser)
 
+(use-package imenu
+  :config
+  (global-set-key (kbd "C-c i") 'imenu))
+
 (use-package ibuffer
   :config
   (global-set-key (kbd "C-x C-b") 'ibuffer))
