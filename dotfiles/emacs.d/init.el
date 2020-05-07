@@ -38,9 +38,6 @@
   ; Useful for async copy commands, especially when copying over TRAMP
   (dired-async-mode))
 
-;; No key bindings because avy can be used from swiper, by pressing C-'
-(use-package avy)
-
 (use-package beacon
   :config
   (beacon-mode 1))
