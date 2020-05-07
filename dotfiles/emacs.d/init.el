@@ -3,6 +3,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(require 'package)
 ; Don't grab from elsewhere.
 (setq package-archives nil)
 
