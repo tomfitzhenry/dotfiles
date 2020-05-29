@@ -175,6 +175,8 @@
 
 (use-package zenburn-theme
   :config
+  (setq zenburn-use-variable-pitch t)
+  (setq zenburn-scale-org-headlines t)
   (load-theme 'zenburn t))
 
 (load (system-name))
