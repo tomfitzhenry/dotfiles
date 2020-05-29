@@ -3,6 +3,8 @@ export VISUAL="emacsclient -c"
 
 alias e="emacsclient -n"
 
+HISTSIZE=-1 HISTFILESIZE=-1
+
 export PATH=~/.local/bin:$PATH
 
 if [ ! $TERM = "dumb" ]; then
