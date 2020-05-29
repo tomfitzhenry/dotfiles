@@ -10,8 +10,6 @@
 (eval-when-compile
   (require 'use-package))
 
-;; prefer distro provided packages, for security/compatibility
-(setq use-package-always-pin "manual")
 (global-hl-line-mode t)
 
 (setq vc-follow-symlinks t)
