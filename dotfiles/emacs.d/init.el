@@ -54,11 +54,6 @@
   (setq bookmark-save-flag 1)
   (global-set-key (kbd "<f2>") 'my/bookmark-jump-or-save))
 
-(use-package desktop
-  :config
-  (setq desktop-dirname "~/.emacs.d")
-  (desktop-save-mode 1))
-
 (use-package diff-hl
   :config
   (global-diff-hl-mode))
