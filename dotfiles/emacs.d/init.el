@@ -139,7 +139,9 @@
   (global-set-key (kbd "C-c p x") 'my/project-shell)
   (global-set-key (kbd "C-c p s") 'project-find-regexp))
 
-(use-package rfc-mode)
+(use-package rfc-mode
+  :config
+  (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc")))
 
 (defun my/comint-history ()
   (interactive)
