@@ -19,3 +19,6 @@ if [ ! $TERM = "dumb" ]; then
 		source "$(fzf-share)/completion.bash"
 	fi
 fi
+
+# Needed for SSH's U2F?
+export GIT_SSH_COMMAND="ssh"
