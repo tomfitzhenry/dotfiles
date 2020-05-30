@@ -10,8 +10,6 @@
 (eval-when-compile
   (require 'use-package))
 
-(global-hl-line-mode t)
-
 (setq vc-follow-symlinks t)
 (setq focus-follows-mouse t)
 (setq mouse-autoselect-window t)
@@ -29,10 +27,6 @@
 
 (require 'evil)
 (evil-mode 1)
-
-(use-package beacon
-  :config
-  (beacon-mode 1))
 
 (defun my/bookmark-jump-or-save ()
   (interactive)
