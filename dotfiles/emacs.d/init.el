@@ -30,11 +30,6 @@
 (require 'evil)
 (evil-mode 1)
 
-(use-package dired-async
-  :config
-  ; Useful for async copy commands, especially when copying over TRAMP
-  (dired-async-mode))
-
 (use-package beacon
   :config
   (beacon-mode 1))
