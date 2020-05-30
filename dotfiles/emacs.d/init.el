@@ -15,8 +15,7 @@
 (setq mouse-autoselect-window t)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
-(setq scroll-step            1
-      scroll-conservatively  10000)
+(setq scroll-conservatively  100)
 (setq column-number-mode t)
 
 (use-package server
