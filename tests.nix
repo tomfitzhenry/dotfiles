@@ -17,6 +17,7 @@ let
     org
     package-lint
     package-lint-flymake
+    rfc-mode
     use-package
     weechat
     zenburn-theme
