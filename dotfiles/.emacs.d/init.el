@@ -160,3 +160,5 @@
   (load-theme 'zenburn t))
 
 (load (system-name))
+
+(provide 'init)
