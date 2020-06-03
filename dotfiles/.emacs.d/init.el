@@ -80,6 +80,15 @@
 (use-package nix-mode
   :if (my-system-type-is-nixos))
 
+(use-package nov
+  :config
+  (add-hook 'nov-mode-hook
+	    (lambda ()
+	      (text-scale-increase 2)
+	      (setq-local line-spacing 5)))
+  (add-to-list 'evil-emacs-state-modes 'nov-mode)
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+
 ;; an fzf-like completion-style
 (use-package orderless
   :init (icomplete-mode)

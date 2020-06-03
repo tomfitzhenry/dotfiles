@@ -14,6 +14,7 @@ let
     magit
     nix-mode
     notmuch
+    nov
     org
     package-lint
     package-lint-flymake
