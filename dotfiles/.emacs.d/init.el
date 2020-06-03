@@ -47,6 +47,7 @@
 
 (use-package elfeed
   :config
+  (setq elfeed-sort-order 'ascending)
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
