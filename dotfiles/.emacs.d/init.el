@@ -51,6 +51,10 @@
   (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
   (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
+(use-package explain-pause-mode
+  :config
+  (explain-pause-mode t))
+
 (use-package flymake
   :config
   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
