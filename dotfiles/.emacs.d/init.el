@@ -133,6 +133,8 @@
   :config
   (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc")))
 
+(use-package rofi)
+
 (defun my/comint-history ()
   (interactive)
   (let ((b (completing-read "Shell history: " (ring-elements comint-input-ring))))
