@@ -20,5 +20,9 @@ if [ ! $TERM = "dumb" ]; then
 	fi
 fi
 
+if [ -e "/run/current-system/sw/share/bash-completion/completions/autojump.bash" ] ;  then
+	source "/run/current-system/sw/share/bash-completion/completions/autojump.bash"
+fi
+
 # Needed for SSH's U2F?
 export GIT_SSH_COMMAND="ssh"
