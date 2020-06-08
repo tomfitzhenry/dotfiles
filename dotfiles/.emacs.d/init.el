@@ -24,8 +24,11 @@
 
 (goto-address-mode)
 
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :config
+  (add-hook 'text-mode-hook 'evil-local-mode)
+  (add-hook 'prog-mode-hook 'evil-local-mode)
+  (setq evil-default-state 'emacs))
 
 (defun my/bookmark-jump-or-save ()
   (interactive)
@@ -47,9 +50,7 @@
 
 (use-package elfeed
   :config
-  (setq elfeed-sort-order 'ascending)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
+  (setq elfeed-sort-order 'ascending))
 
 (use-package explain-pause-mode
   :config
@@ -90,7 +91,6 @@
 	    (lambda ()
 	      (text-scale-increase 2)
 	      (setq-local line-spacing 5)))
-  (add-to-list 'evil-emacs-state-modes 'nov-mode)
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 ;; an fzf-like completion-style
@@ -146,7 +146,6 @@
 
 (use-package shell
   :config
-  (add-to-list 'evil-emacs-state-modes 'shell-mode)
   (global-set-key (kbd "C-c s") 'shell)
   :bind (:map shell-mode-map ("C-r" . 'my/comint-history)))
 
@@ -156,9 +155,7 @@
   (setq undo-tree-visualizer-timestamps t)
   (setq undo-tree-visualizer-diff t))
 
-(use-package weechat
-  :config
-  (add-to-list 'evil-emacs-state-modes 'weechat-mode))
+(use-package weechat)
 
 (use-package windmove
   :config
