@@ -11,7 +11,6 @@
   (require 'use-package))
 
 (global-auto-revert-mode t)
-(setq make-backup-files nil)
 (setq scroll-conservatively  100)
 (setq column-number-mode t)
 
