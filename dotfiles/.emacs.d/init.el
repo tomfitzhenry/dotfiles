@@ -150,7 +150,6 @@
   :bind (:map shell-mode-map ("C-r" . 'my/comint-history)))
 
 (use-package undo-tree
-  :diminish
   :config
   (setq undo-tree-visualizer-timestamps t)
   (setq undo-tree-visualizer-diff t))
