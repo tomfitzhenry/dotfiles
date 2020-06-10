@@ -10,7 +10,6 @@
 (eval-when-compile
   (require 'use-package))
 
-(setq vc-follow-symlinks t)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
 (setq scroll-conservatively  100)
@@ -156,6 +155,10 @@
   :config
   (setq undo-tree-visualizer-timestamps t)
   (setq undo-tree-visualizer-diff t))
+
+(use-package vc
+  :config
+  (setq vc-follow-symlinks t))
 
 (use-package weechat)
 
