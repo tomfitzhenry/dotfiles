@@ -11,13 +11,14 @@
   (require 'use-package))
 
 (setq vc-follow-symlinks t)
-(setq focus-follows-mouse t)
-(setq mouse-autoselect-window t)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
 (setq scroll-conservatively  100)
 (setq column-number-mode t)
 
+(setq focus-follows-mouse t)
+(setq mouse-autoselect-window t)
+(setq mouse-drag-and-drop-region t)
 
 (goto-address-mode)
 
