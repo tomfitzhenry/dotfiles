@@ -21,12 +21,6 @@
 
 (goto-address-mode)
 
-(use-package evil
-  :config
-  (add-hook 'text-mode-hook 'evil-local-mode)
-  (add-hook 'prog-mode-hook 'evil-local-mode)
-  (setq evil-default-state 'emacs))
-
 (defun my/bookmark-jump-or-save ()
   (interactive)
   (let ((b (completing-read "Bookmark: " (bookmark-all-names))))
@@ -52,6 +46,12 @@
 (use-package explain-pause-mode
   :config
   (explain-pause-mode t))
+
+(use-package evil
+  :config
+  (add-hook 'text-mode-hook 'evil-local-mode)
+  (add-hook 'prog-mode-hook 'evil-local-mode)
+  (setq evil-default-state 'emacs))
 
 (use-package flymake
   :config
