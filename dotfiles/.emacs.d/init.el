@@ -18,9 +18,6 @@
 (setq scroll-conservatively  100)
 (setq column-number-mode t)
 
-(use-package server
-  :config
-  (add-hook 'after-init-hook 'server-start t))
 
 (goto-address-mode)
 
@@ -138,6 +135,10 @@
   (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc")))
 
 (use-package rofi)
+
+(use-package server
+  :config
+  (add-hook 'after-init-hook 'server-start t))
 
 (defun my/comint-history ()
   (interactive)
