@@ -46,10 +46,6 @@
   :config
   (setq elfeed-sort-order 'ascending))
 
-(use-package explain-pause-mode
-  :config
-  (explain-pause-mode t))
-
 (use-package evil
   :config
   (add-hook 'text-mode-hook 'evil-local-mode)
