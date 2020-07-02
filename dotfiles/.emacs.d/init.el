@@ -109,6 +109,8 @@
   (setq org-agenda-todo-ignore-scheduled 'future)
   (global-set-key "\C-ca" 'org-agenda))
 
+(use-package org-mouse)
+
 (use-package package-lint-flymake
   :config
   (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))
