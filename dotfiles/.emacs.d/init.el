@@ -46,12 +46,6 @@
   :config
   (setq elfeed-sort-order 'ascending))
 
-(use-package evil
-  :config
-  (add-hook 'text-mode-hook 'evil-local-mode)
-  (add-hook 'prog-mode-hook 'evil-local-mode)
-  (setq evil-default-state 'emacs))
-
 (use-package flymake
   :config
   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)

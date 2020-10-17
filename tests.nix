@@ -8,7 +8,6 @@ let
     eglot
     elfeed
     diff-hl
-    evil
     geiser
     ibuffer-project
     magit
