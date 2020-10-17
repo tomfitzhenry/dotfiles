@@ -5,8 +5,6 @@ alias e="emacsclient -n"
 
 HISTSIZE=-1 HISTFILESIZE=-1
 
-export PATH=~/.local/bin:$PATH
-
 if [ ! $TERM = "dumb" ]; then
         # debian
 	if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
