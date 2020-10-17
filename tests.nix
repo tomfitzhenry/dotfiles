@@ -15,6 +15,7 @@ let
     nix-mode
     notmuch
     nov
+    orderless
     org
     package-lint
     package-lint-flymake
