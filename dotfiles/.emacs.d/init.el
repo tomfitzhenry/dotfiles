@@ -145,11 +145,6 @@
   (global-set-key (kbd "C-c s") 'shell)
   :bind (:map shell-mode-map ("C-r" . 'my/comint-history)))
 
-(use-package undo-tree
-  :config
-  (setq undo-tree-visualizer-timestamps t)
-  (setq undo-tree-visualizer-diff t))
-
 (use-package vc
   :config
   (setq vc-follow-symlinks t))
