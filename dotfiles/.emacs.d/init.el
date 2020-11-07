@@ -107,6 +107,8 @@
 
 (use-package org-mouse)
 
+(use-package org-roam)
+
 (use-package package-lint-flymake
   :config
   (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))

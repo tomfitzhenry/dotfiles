@@ -17,6 +17,7 @@ let
     nov
     orderless
     org
+    org-roam
     package-lint
     package-lint-flymake
     rfc-mode
