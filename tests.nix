@@ -5,6 +5,7 @@
 import (<nixpkgs> + "/nixos/tests/make-test-python.nix") ({ pkgs, ...} :
 let
   emacs = pkgs.emacsWithPackages (with pkgs.emacsPackages; [
+    debbugs
     eglot
     elfeed
     diff-hl
