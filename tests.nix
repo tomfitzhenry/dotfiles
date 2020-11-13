@@ -5,8 +5,7 @@
 import (<nixpkgs> + "/nixos/tests/make-test-python.nix") ({ pkgs, ...} :
 let
   emacs = pkgs.emacsWithPackages (with pkgs.emacsPackages; [
-    debbugs
-    eglot
+    company
     elfeed
     diff-hl
     geiser
@@ -22,7 +21,6 @@ let
     package-lint-flymake
     rfc-mode
     use-package
-    weechat
     zenburn-theme
   ]);
 

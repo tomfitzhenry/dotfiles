@@ -42,6 +42,10 @@
   (setq bookmark-save-flag 1)
   (global-set-key (kbd "<f2>") 'my/bookmark-jump-or-save))
 
+(use-package company
+  :config
+  (global-company-mode))
+
 (use-package compile
   :config
   (setq compilation-scroll-output t))
