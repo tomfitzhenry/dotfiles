@@ -52,8 +52,6 @@
   :config
   (global-diff-hl-mode))
 
-(use-package eglot)
-
 (use-package elfeed
   :config
   (setq elfeed-sort-order 'ascending))
@@ -175,8 +173,6 @@
 (use-package vc
   :config
   (setq vc-follow-symlinks t))
-
-(use-package weechat)
 
 (use-package windmove
   :config
