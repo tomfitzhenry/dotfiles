@@ -29,6 +29,7 @@
 
 ;; Set visual fill modein Log-Edit
 (add-hook 'log-edit-hook 'turn-on-auto-fill)
+(add-hook 'log-edit-hook 'log-edit-show-diff)
 
 (defun my/bookmark-jump-or-save ()
   (interactive)
