@@ -102,7 +102,9 @@
 
 (use-package org
   :init
+  (setq org-startup-folded nil)
   (setq org-replace-disputed-keys t)
+  (setq org-catch-invisible-edits 'smart)
   :config
   (global-set-key "\C-cc" 'org-capture))
 
