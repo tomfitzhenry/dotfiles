@@ -27,6 +27,9 @@
 
 (global-set-key (kbd "C-c y") 'my/completing-kill-ring)
 
+;; Set visual fill modein Log-Edit
+(add-hook 'log-edit-hook 'turn-on-auto-fill)
+
 (defun my/bookmark-jump-or-save ()
   (interactive)
   (let ((b (completing-read "Bookmark: " (bookmark-all-names))))
