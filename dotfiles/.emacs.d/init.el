@@ -139,6 +139,19 @@
   (global-set-key (kbd "C-c p x") 'my/project-shell)
   (global-set-key (kbd "C-c p s") 'project-find-regexp))
 
+(defun reb-visual-replace (to-string)
+      "Replace current RE from point with `query-replace-regexp'."
+      (interactive
+       (progn (barf-if-buffer-read-only)
+              (list (query-replace-read-to (reb-target-binding reb-regexp)
+                                           "Query replace"  t))))
+      (with-current-buffer reb-target-buffer
+        (query-replace-regexp (reb-target-binding reb-regexp) to-string)))
+
+(use-package re-builder
+  :config
+  (define-key reb-mode-map "\C-c\C-v" 'reb-visual-replace))
+
 (use-package rfc-mode
   :config
   (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc")))
