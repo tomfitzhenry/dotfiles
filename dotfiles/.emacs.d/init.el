@@ -46,8 +46,6 @@
   :config
   (setq compilation-scroll-output t))
 
-(use-package debbugs)
-
 (use-package diff-hl
   :config
   (global-diff-hl-mode))
