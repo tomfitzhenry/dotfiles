@@ -20,6 +20,13 @@
 
 (goto-address-mode)
 
+(defun my/completing-kill-ring ()
+  (interactive)
+  (insert
+   (completing-read "Yank: " kill-ring)))
+
+(global-set-key (kbd "C-c y") 'my/completing-kill-ring)
+
 (defun my/bookmark-jump-or-save ()
   (interactive)
   (let ((b (completing-read "Bookmark: " (bookmark-all-names))))
