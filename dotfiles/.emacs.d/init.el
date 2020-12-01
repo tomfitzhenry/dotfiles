@@ -59,6 +59,10 @@
   :config
   (setq elfeed-sort-order 'ascending))
 
+(use-package flimenu
+  :config
+  (flimenu-global-mode))
+
 (use-package flymake
   :config
   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)

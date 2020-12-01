@@ -10,6 +10,7 @@ let
     diff-hl
     geiser
     ibuffer-project
+    flimenu
     magit
     nix-mode
     notmuch
