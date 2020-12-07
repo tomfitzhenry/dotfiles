@@ -67,6 +67,10 @@
 
 (use-package geiser)
 
+(use-package icomplete-vertical
+  :config
+  (icomplete-vertical-mode))
+
 (use-package imenu
   :config
   (global-set-key (kbd "C-c i") 'imenu))

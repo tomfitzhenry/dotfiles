@@ -10,6 +10,7 @@ let
     diff-hl
     geiser
     ibuffer-project
+    icomplete-vertical
     flimenu
     magit
     nix-mode
