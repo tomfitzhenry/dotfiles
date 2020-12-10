@@ -99,14 +99,12 @@
   (define-key shell-mode-map (kbd "C-r") 'consult-history))
 
 ;; Themes
-(load-theme 'modus-operandi t)
-(defun toggle-dark-mode ()
-  (interactive)
-  (if (member 'modus-vivendi custom-enabled-themes)
-      (load-theme 'modus-operandi t)
-      (disable-theme 'modus-vivendi)
-    (load-theme 'modus-vivendi t)
-    (disable-theme 'modus-operandi)))
+;; 3sf, close enough.
+(setq calendar-latitude -33.8)
+(setq calendar-longitude 151)
+(setq circadian-themes '((:sunrise . modus-operandi)
+                         (:sunset . modus-vivendi)))
+(circadian-setup)
 
 ;; VC
 (add-hook 'log-edit-hook 'turn-on-auto-fill)
