@@ -17,10 +17,6 @@
 (setq scroll-conservatively 100)
 (setq column-number-mode t)
 
-(setq focus-follows-mouse t)
-(setq mouse-autoselect-window t)
-(setq mouse-drag-and-drop-region t)
-
 (goto-address-mode)
 
 ;; Bookmarks
@@ -53,6 +49,10 @@
 (require 'orderless)
 (setq completion-styles '(orderless))
 
+;; Mouse
+(setq focus-follows-mouse t)
+(setq mouse-autoselect-window t)
+(setq mouse-drag-and-drop-region t)
 
 ;;; Org
 (global-set-key (kbd "C-c a") #'org-agenda)
