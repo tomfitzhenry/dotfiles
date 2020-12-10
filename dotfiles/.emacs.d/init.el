@@ -15,22 +15,20 @@
 (setq package-archives nil)
 (setq vc-follow-symlinks t)
 
+;; Misc
 (setq scroll-conservatively 100)
+(setq compilation-scroll-output t)
 (setq column-number-mode t)
+(setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
+(setq elfeed-sort-order 'ascending)
+(global-set-key (kbd "M-y") 'consult-yank-pop)
 
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 (global-set-key (kbd "<f2>") 'consult-bookmark)
 
-(setq compilation-scroll-output t)
-
 ;; Completion
 (setq completion-in-region-function 'consult-completion-in-region)
-
-(global-set-key	(kbd "M-y") 'consult-yank-pop)
-
-;; elfeed
-(setq elfeed-sort-order 'ascending)
 
 ;; Buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -88,8 +86,6 @@
 
 (with-eval-after-load "re-builder"
   (define-key reb-mode-map "\C-c\C-v" 'reb-visual-replace))
-
-(setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
 
 ;; Server
 (add-hook 'after-init-hook 'server-start)
