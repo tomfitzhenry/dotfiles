@@ -53,19 +53,18 @@
 (require 'orderless)
 (setq completion-styles '(orderless))
 
-(setq org-startup-folded nil)
-(setq org-replace-disputed-keys t)
-(setq org-catch-invisible-edits 'smart)
 
+;;; Org
 (global-set-key (kbd "C-c a") #'org-agenda)
-(setq org-agenda-skip-scheduled-if-done t)
-(setq org-agenda-skip-deadline-if-done t)
-(setq org-agenda-show-future-repeats 'next)
-(setq org-agenda-todo-ignore-scheduled 'future)
-
-(eval-after-load "org"
-  '(require 'org-mouse))
-
+(with-eval-after-load "org"
+  (setq org-startup-folded nil)
+  (setq org-replace-disputed-keys t)
+  (setq org-catch-invisible-edits 'smart)
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done t)
+  (setq org-agenda-show-future-repeats 'next)
+  (setq org-agenda-todo-ignore-scheduled 'future)
+  (require 'org-mouse))
 
 ;; Project
 (add-hook
