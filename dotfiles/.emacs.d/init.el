@@ -90,13 +90,8 @@
 (add-hook 'after-init-hook 'server-start)
 
 ;; Shell
-(defun my/comint-history ()
-  (interactive)
-  (let ((b (completing-read "Shell history: " (ring-elements comint-input-ring))))
-    (insert b)))
-
 (with-eval-after-load "shell"
-  (define-key shell-mode-map (kbd "C-r") 'my/comint-history))
+  (define-key shell-mode-map (kbd "C-r") 'consult-history))
 
 ;; Themes
 (load-theme 'modus-operandi t)
