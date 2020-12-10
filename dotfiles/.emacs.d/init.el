@@ -17,17 +17,15 @@
 (setq scroll-conservatively 100)
 (setq column-number-mode t)
 
-(goto-address-mode)
-
 ;; Bookmarks
 (setq bookmark-save-flag 1)
+(global-set-key (kbd "<f2>") 'consult-bookmark)
 
 (setq compilation-scroll-output t)
 
 ;; Completion
 (setq completion-in-region-function 'consult-completion-in-region)
 
-(global-set-key (kbd "<f2>") 'consult-bookmark)
 (global-set-key	(kbd "M-y") 'consult-yank-pop)
 
 ;; elfeed
