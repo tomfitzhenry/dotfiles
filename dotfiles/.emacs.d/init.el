@@ -97,7 +97,6 @@
 
 (with-eval-after-load "shell"
   (define-key shell-mode-map (kbd "C-r") 'my/comint-history))
-(define-key global-map (kbd "C-c s") 'shell)
 
 ;; Themes
 (load-theme 'modus-operandi t)
