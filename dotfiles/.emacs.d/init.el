@@ -20,28 +20,13 @@
 
 (goto-address-mode)
 
-(defun my/completing-kill-ring ()
-  (interactive)
-  (insert
-   (completing-read "Yank: " kill-ring)))
-
-(global-set-key (kbd "C-c y") 'my/completing-kill-ring)
-
 ;; Set visual fill modein Log-Edit
 (add-hook 'log-edit-hook 'turn-on-auto-fill)
 (add-hook 'log-edit-hook 'log-edit-show-diff)
 
-(defun my/bookmark-jump-or-save ()
-  (interactive)
-  (let ((b (completing-read "Bookmark: " (bookmark-all-names))))
-    (if (member b (bookmark-all-names))
-	(bookmark-jump b)
-      (bookmark-set b))))
-
 (use-package bookmark
   :config
-  (setq bookmark-save-flag 1)
-  (global-set-key (kbd "<f2>") 'my/bookmark-jump-or-save))
+  (setq bookmark-save-flag 1))
 
 (use-package company
   :config
@@ -50,6 +35,12 @@
 (use-package compile
   :config
   (setq compilation-scroll-output t))
+
+(use-package consult
+  :config
+  (setq completion-in-region-function 'consult-completion-in-region)
+  :bind (("<f2>" . consult-bookmark)
+	 ("M-y" . consult-yank-pop)))
 
 (use-package diff-hl
   :config
