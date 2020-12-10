@@ -1,6 +1,3 @@
-(defun my-system-type-is-nixos ()
-  (file-exists-p "/etc/NIXOS"))
-
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (require 'package)
@@ -76,9 +73,6 @@
 
 ;; purges unused buffers at midnight
 (use-package midnight)
-
-(use-package nix-mode
-  :if (my-system-type-is-nixos))
 
 (use-package nov
   :config

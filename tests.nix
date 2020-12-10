@@ -14,7 +14,6 @@ let
     flimenu
     magit
     modus-operandi-theme
-    nix-mode
     notmuch
     nov
     orderless
