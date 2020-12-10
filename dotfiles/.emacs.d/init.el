@@ -36,6 +36,9 @@
 (require 'midnight)
 (global-auto-revert-mode)
 
+;; Flymake
+(add-hook 'prog-mode-hook 'flymake-mode)
+
 ;; imenu
 (global-set-key (kbd "C-c i") 'imenu)
 (flimenu-global-mode)
