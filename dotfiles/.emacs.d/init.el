@@ -28,10 +28,6 @@
   :config
   (setq bookmark-save-flag 1))
 
-(use-package company
-  :config
-  (global-company-mode))
-
 (use-package compile
   :config
   (setq compilation-scroll-output t))
