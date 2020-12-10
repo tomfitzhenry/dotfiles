@@ -4,6 +4,7 @@
 
 (require 'bookmark)
 
+;;;###autoload
 (defun rofi (in)
     (if (eq in "")
       (mapconcat 'identity (bookmark-all-names) "\n")

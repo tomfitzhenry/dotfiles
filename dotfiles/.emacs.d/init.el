@@ -1,14 +1,20 @@
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+(defun update-all-autoloads ()
+  (interactive)
+  (let ((generated-autoload-file "~/.emacs.d/lisp/loaddefs.el"))
+    (when (not (file-exists-p generated-autoload-file))
+      (with-current-buffer (find-file-noselect generated-autoload-file)
+        (insert ";;") ;; create the file with non-zero size to appease autoload
+        (save-buffer)))
+    (update-directory-autoloads "~/.emacs.d/lisp")))
 
-(require 'package)
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(load-file "~/.emacs.d/lisp/loaddefs.el")
+(add-hook 'kill-emacs-hook 'update-all-autoloads)
+
 ; Don't grab from elsewhere.
 (setq package-archives nil)
 
-(eval-when-compile
-  (require 'use-package))
-
-(global-auto-revert-mode t)
-(setq scroll-conservatively  100)
+(setq scroll-conservatively 100)
 (setq column-number-mode t)
 
 (setq focus-follows-mouse t)
@@ -17,100 +23,48 @@
 
 (goto-address-mode)
 
-;; Set visual fill modein Log-Edit
-(add-hook 'log-edit-hook 'turn-on-auto-fill)
-(add-hook 'log-edit-hook 'log-edit-show-diff)
+;; Bookmarks
+(setq bookmark-save-flag 1)
 
-(use-package bookmark
-  :config
-  (setq bookmark-save-flag 1))
+(setq compilation-scroll-output t)
 
-(use-package compile
-  :config
-  (setq compilation-scroll-output t))
+;; Completion
+(setq completion-in-region-function 'consult-completion-in-region)
 
-(use-package consult
-  :config
-  (setq completion-in-region-function 'consult-completion-in-region)
-  :bind (("<f2>" . consult-bookmark)
-	 ("M-y" . consult-yank-pop)))
+(global-set-key (kbd "<f2>") 'consult-bookmark)
+(global-set-key	(kbd "M-y") 'consult-yank-pop)
 
-(use-package diff-hl
-  :config
-  (global-diff-hl-mode))
+;; elfeed
+(setq elfeed-sort-order 'ascending)
 
-(use-package elfeed
-  :config
-  (setq elfeed-sort-order 'ascending))
-
-(use-package flimenu
-  :config
-  (flimenu-global-mode))
-
-(use-package flymake)
-
-(use-package geiser)
-
-(use-package icomplete-vertical
-  :config
-  (icomplete-vertical-mode))
-
-(use-package imenu
-  :config
-  (global-set-key (kbd "C-c i") 'imenu))
-
-(use-package ibuffer
-  :config
-  (global-set-key (kbd "C-x C-b") 'ibuffer))
-
-(use-package ibuffer-project
-  :config
- (add-hook 'ibuffer-hook
-  (lambda ()
-    (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups)))))
-
-(use-package magit)
-
+;; Buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 ;; purges unused buffers at midnight
-(use-package midnight)
+(require 'midnight)
+(global-auto-revert-mode)
 
-(use-package nov
-  :config
-  (add-hook 'nov-mode-hook
-	    (lambda ()
-	      (text-scale-increase 2)
-	      (setq-local line-spacing 5)))
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+;; imenu
+(global-set-key (kbd "C-c i") 'imenu)
+(flimenu-global-mode)
 
-;; an fzf-like completion-style
-(use-package orderless
-  :init (icomplete-mode)
-  :custom (completion-styles '(orderless)))
+;; Minibuffer
+(icomplete-mode)
+(icomplete-vertical-mode)
+(require 'orderless)
+(setq completion-styles '(orderless))
 
-(use-package org
-  :init
-  (setq org-startup-folded nil)
-  (setq org-replace-disputed-keys t)
-  (setq org-catch-invisible-edits 'smart)
-  :config
-  (global-set-key "\C-cc" 'org-capture))
+(setq org-startup-folded nil)
+(setq org-replace-disputed-keys t)
+(setq org-catch-invisible-edits 'smart)
 
-(use-package org-agenda
-  :config
-  (global-set-key (kbd "<f1>") (lambda () (interactive) (org-agenda nil "n")))
-  (setq org-agenda-skip-scheduled-if-done t)
-  (setq org-agenda-skip-deadline-if-done t)
-  (setq org-agenda-show-future-repeats 'next)
-  (setq org-agenda-todo-ignore-scheduled 'future)
-  (global-set-key "\C-ca" 'org-agenda))
+(global-set-key (kbd "C-c a") #'org-agenda)
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-agenda-skip-deadline-if-done t)
+(setq org-agenda-show-future-repeats 'next)
+(setq org-agenda-todo-ignore-scheduled 'future)
 
-(use-package org-mouse)
-
-(use-package org-roam)
-
-(use-package package-lint-flymake
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))
+(eval-after-load "org"
+  '(require 'org-mouse))
 
 (defun my/project-name (p)
   (file-name-nondirectory (directory-file-name (car (project-roots p)))))
@@ -122,11 +76,17 @@
 	 (default-directory (car (project-roots p))))
     (shell sname)))
 
-(use-package project
-  :config
-  (global-set-key (kbd "C-c p f") 'project-find-file)
-  (global-set-key (kbd "C-c p x") 'my/project-shell)
-  (global-set-key (kbd "C-c p s") 'project-find-regexp))
+;; Project
+(add-hook
+  'ibuffer-hook
+  (lambda ()
+    (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups))))
+
+(global-set-key (kbd "C-c p f") 'project-find-file)
+(global-set-key (kbd "C-c p x") 'my/project-shell)
+(global-set-key (kbd "C-c p s") 'project-find-regexp)
+
+;; Regex
 
 (defun reb-visual-replace (to-string)
       "Replace current RE from point with `query-replace-regexp'."
@@ -137,42 +97,25 @@
       (with-current-buffer reb-target-buffer
         (query-replace-regexp (reb-target-binding reb-regexp) to-string)))
 
-(use-package re-builder
-  :config
+(with-eval-after-load "re-builder"
   (define-key reb-mode-map "\C-c\C-v" 'reb-visual-replace))
 
-(use-package rfc-mode
-  :config
-  (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc")))
+(setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
 
-(use-package rofi)
+;; Server
+(add-hook 'after-init-hook 'server-start)
 
-(use-package server
-  :config
-  (add-hook 'after-init-hook 'server-start t))
-
+;; Shell
 (defun my/comint-history ()
   (interactive)
   (let ((b (completing-read "Shell history: " (ring-elements comint-input-ring))))
     (insert b)))
 
-(use-package shell
-  :config
-  (global-set-key (kbd "C-c s") 'shell)
-  :bind (:map shell-mode-map ("C-r" . 'my/comint-history)))
+(with-eval-after-load "shell"
+  (define-key shell-mode-map (kbd "C-r") 'my/comint-history))
+(define-key global-map (kbd "C-c s") 'shell)
 
-(use-package vc
-  :config
-  (setq vc-follow-symlinks t))
-
-(use-package windmove
-  :config
-  (windmove-default-keybindings))
-
-;; C-c left, to undo window configurations.
-(use-package winner
-  :config
-  (winner-mode))
+(setq vc-follow-symlinks t)
 
 (defun toggle-dark-mode ()
   (interactive)
@@ -184,6 +127,15 @@
 
 (load-theme 'modus-operandi t)
 
-(load (system-name))
+;; VC
+(add-hook 'log-edit-hook 'turn-on-auto-fill)
+(add-hook 'log-edit-hook 'log-edit-show-diff)
+(global-diff-hl-mode)
 
+;; Windows
+(windmove-default-keybindings)
+;; C-c left, to undo window configurations.
+(winner-mode)
+
+(load (system-name))
 (provide 'init)
