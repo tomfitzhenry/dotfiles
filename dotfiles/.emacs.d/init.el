@@ -13,6 +13,7 @@
 
 ; Don't grab from elsewhere.
 (setq package-archives nil)
+(setq vc-follow-symlinks t)
 
 (setq scroll-conservatively 100)
 (setq column-number-mode t)
@@ -103,8 +104,8 @@
   (define-key shell-mode-map (kbd "C-r") 'my/comint-history))
 (define-key global-map (kbd "C-c s") 'shell)
 
-(setq vc-follow-symlinks t)
-
+;; Themes
+(load-theme 'modus-operandi t)
 (defun toggle-dark-mode ()
   (interactive)
   (if (member 'modus-vivendi custom-enabled-themes)
@@ -112,8 +113,6 @@
       (disable-theme 'modus-vivendi)
     (load-theme 'modus-vivendi t)
     (disable-theme 'modus-operandi)))
-
-(load-theme 'modus-operandi t)
 
 ;; VC
 (add-hook 'log-edit-hook 'turn-on-auto-fill)
