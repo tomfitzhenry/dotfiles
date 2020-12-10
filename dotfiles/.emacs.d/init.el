@@ -69,10 +69,6 @@
   (lambda ()
     (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups))))
 
-(global-set-key (kbd "C-c p f") 'project-find-file)
-(global-set-key (kbd "C-c p x") 'project-shell)
-(global-set-key (kbd "C-c p s") 'project-find-regexp)
-
 ;; Regex
 
 (defun reb-visual-replace (to-string)
