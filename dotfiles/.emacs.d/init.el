@@ -36,6 +36,11 @@
 (require 'midnight)
 (global-auto-revert-mode)
 
+;; Eshell
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
+
 ;; Flymake
 (add-hook 'prog-mode-hook 'flymake-mode)
 
