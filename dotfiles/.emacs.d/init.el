@@ -41,6 +41,11 @@
           (lambda ()
             (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
 
+;; TODO(https://github.com/minad/consult/issues/48)
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (setq completion-in-region-function 'completion--in-region)))
+
 ;; Flymake
 (add-hook 'prog-mode-hook 'flymake-mode)
 
