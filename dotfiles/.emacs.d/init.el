@@ -66,15 +66,6 @@
 (eval-after-load "org"
   '(require 'org-mouse))
 
-(defun my/project-name (p)
-  (file-name-nondirectory (directory-file-name (car (project-roots p)))))
-
-(defun my/project-shell ()
-  (interactive)
-  (let* ((p (project-current))
-	 (sname (concat "sh: " (my/project-name p)))
-	 (default-directory (car (project-roots p))))
-    (shell sname)))
 
 ;; Project
 (add-hook
@@ -83,7 +74,7 @@
     (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups))))
 
 (global-set-key (kbd "C-c p f") 'project-find-file)
-(global-set-key (kbd "C-c p x") 'my/project-shell)
+(global-set-key (kbd "C-c p x") 'project-shell)
 (global-set-key (kbd "C-c p s") 'project-find-regexp)
 
 ;; Regex
