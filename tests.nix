@@ -13,6 +13,7 @@ let
     icomplete-vertical
     flimenu
     magit
+    modus-operandi-theme
     nix-mode
     notmuch
     nov
@@ -23,7 +24,6 @@ let
     package-lint-flymake
     rfc-mode
     use-package
-    zenburn-theme
   ]);
 
   # Since the Nix VM under test doesn't have access to my dotfiles, I

@@ -193,11 +193,15 @@
   :config
   (winner-mode))
 
-(use-package zenburn-theme
-  :config
-  (setq zenburn-use-variable-pitch t)
-  (setq zenburn-scale-org-headlines t)
-  (load-theme 'zenburn t))
+(defun toggle-dark-mode ()
+  (interactive)
+  (if (member 'modus-vivendi custom-enabled-themes)
+      (load-theme 'modus-operandi t)
+      (disable-theme 'modus-vivendi)
+    (load-theme 'modus-vivendi t)
+    (disable-theme 'modus-operandi)))
+
+(load-theme 'modus-operandi t)
 
 (load (system-name))
 
