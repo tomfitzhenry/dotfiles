@@ -48,6 +48,9 @@
 
 ;; Flymake
 (add-hook 'prog-mode-hook 'flymake-mode)
+(add-hook 'prog-mode-hook 'flymake-aspell-setup)
+(add-hook 'text-mode-hook 'flymake-mode)
+(add-hook 'text-mode-hook 'flymake-aspell-setup)
 
 ;; imenu
 (global-set-key (kbd "C-c i") 'consult-imenu)
