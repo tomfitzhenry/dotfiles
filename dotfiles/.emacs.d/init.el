@@ -90,20 +90,6 @@
   (lambda ()
     (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups))))
 
-;; Regex
-
-(defun reb-visual-replace (to-string)
-      "Replace current RE from point with `query-replace-regexp'."
-      (interactive
-       (progn (barf-if-buffer-read-only)
-              (list (query-replace-read-to (reb-target-binding reb-regexp)
-                                           "Query replace"  t))))
-      (with-current-buffer reb-target-buffer
-        (query-replace-regexp (reb-target-binding reb-regexp) to-string)))
-
-(with-eval-after-load "re-builder"
-  (define-key reb-mode-map "\C-c\C-v" 'reb-visual-replace))
-
 ;; Server
 (add-hook 'after-init-hook 'server-start)
 
