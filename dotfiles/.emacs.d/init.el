@@ -76,6 +76,10 @@
   (setq org-agenda-todo-ignore-scheduled 'future)
   (require 'org-mouse))
 
+;; pcomplete
+(add-hook 'eshell-mode-hook 'fish-completion-mode)
+(setq fish-completion-fallback-on-bash-p t)
+
 ;; Project
 (add-hook
   'ibuffer-hook
