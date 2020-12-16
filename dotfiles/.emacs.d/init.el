@@ -11,8 +11,7 @@
 (load-file "~/.emacs.d/lisp/loaddefs.el")
 (add-hook 'kill-emacs-hook 'update-all-autoloads)
 
-; Don't grab from elsewhere.
-(setq package-archives nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (setq vc-follow-symlinks t)
 
 ;; Misc
