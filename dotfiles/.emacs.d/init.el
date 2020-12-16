@@ -62,6 +62,7 @@
 (icomplete-vertical-mode)
 (require 'orderless)
 (setq completion-styles '(orderless))
+(consult-preview-mode)
 
 ;; Mouse
 (setq focus-follows-mouse t)
