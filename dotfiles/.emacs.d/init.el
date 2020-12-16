@@ -51,6 +51,7 @@
 (add-hook 'prog-mode-hook 'flymake-aspell-setup)
 (add-hook 'text-mode-hook 'flymake-mode)
 (add-hook 'text-mode-hook 'flymake-aspell-setup)
+(add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 
 ;; imenu
 (global-set-key (kbd "C-c i") 'consult-imenu)
