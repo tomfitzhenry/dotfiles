@@ -1,15 +1,4 @@
-(defun update-all-autoloads ()
-  (interactive)
-  (let ((generated-autoload-file "~/.emacs.d/lisp/loaddefs.el"))
-    (when (not (file-exists-p generated-autoload-file))
-      (with-current-buffer (find-file-noselect generated-autoload-file)
-        (insert ";;") ;; create the file with non-zero size to appease autoload
-        (save-buffer)))
-    (update-directory-autoloads "~/.emacs.d/lisp")))
-
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(load-file "~/.emacs.d/lisp/loaddefs.el")
-(add-hook 'kill-emacs-hook 'update-all-autoloads)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (setq vc-follow-symlinks t)
