@@ -80,12 +80,7 @@
   (define-key shell-mode-map (kbd "C-r") 'consult-history))
 
 ;; Themes
-;; 3sf, close enough.
-(setq calendar-latitude -33.8)
-(setq calendar-longitude 151)
-(setq circadian-themes '((:sunrise . modus-operandi)
-                         (:sunset . modus-vivendi)))
-(circadian-setup)
+(load-theme 'modus-operandi t)
 
 ;; VC
 (add-hook 'log-edit-hook 'turn-on-auto-fill)
