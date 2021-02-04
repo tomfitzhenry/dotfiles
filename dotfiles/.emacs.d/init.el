@@ -20,8 +20,6 @@
 
 ;; Buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-;; purges unused buffers at midnight
-(require 'midnight)
 (global-auto-revert-mode)
 
 ;; Eshell
