@@ -33,7 +33,7 @@
 (add-hook 'text-mode-hook 'flymake-mode)
 (add-hook 'text-mode-hook 'flymake-aspell-setup)
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
-(add-hook 'emacs-lisp-mode-hook 'package-lint-flymake-setup)
+(add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
 ;; imenu
 (global-set-key (kbd "C-c i") 'consult-imenu)
