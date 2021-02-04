@@ -87,10 +87,5 @@
 (add-hook 'log-edit-hook 'log-edit-show-diff)
 (global-diff-hl-mode)
 
-;; Windows
-(windmove-default-keybindings)
-;; C-c left, to undo window configurations.
-(winner-mode)
-
 (load (system-name))
 (provide 'init)
