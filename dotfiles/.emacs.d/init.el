@@ -28,9 +28,7 @@
 
 ;; Flymake
 (add-hook 'prog-mode-hook 'flymake-mode)
-(add-hook 'prog-mode-hook 'flymake-aspell-setup)
 (add-hook 'text-mode-hook 'flymake-mode)
-(add-hook 'text-mode-hook 'flymake-aspell-setup)
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
