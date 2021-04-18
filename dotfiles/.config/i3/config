@@ -36,8 +36,7 @@ floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec "rofi -show combi -modi combi -combi-modi window,drun,run,emacs:~/.emacs.d/emacs-rofi-hook.sh"
-bindsym $mod+Shift+d exec "rofi -show combi -modi combi -combi-modi emacs:~/.emacs.d/emacs-rofi-hook.sh,custom:~/.config/rofi/scripts/custom.sh"
+bindsym $mod+d exec "rofi -show combi -modi combi -combi-modi window,drun,run,emacs"
 
 # Change focus
 bindsym $mod+j focus left
