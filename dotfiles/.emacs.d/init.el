@@ -8,8 +8,6 @@
 (setq compilation-scroll-output t)
 (setq column-number-mode t)
 (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
-(setq elfeed-sort-order 'ascending)
-(global-set-key (kbd "M-y") 'consult-yank-pop)
 
 ;; Bookmarks
 (setq bookmark-save-flag 1)
