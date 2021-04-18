@@ -11,7 +11,8 @@ for_window [instance="origin.exe"] floating enable
 for_window [window_role="PictureInPicture"] floating disable
 
 # Suspend when idle for 5min
-exec --no-startup-id xautolock -time 5 -locker "systemctl suspend" -detectsleep
+exec --no-startup-id xautolock -time 5 -locker "systemctl suspend" -detectsleep # Firefox
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 300 'systemctl suspend' '' # NixOS
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
