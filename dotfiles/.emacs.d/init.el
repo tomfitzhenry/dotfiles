@@ -1,6 +1,19 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(setq package-selected-packages
+      '(bluetooth
+        consult
+        fish-completion
+        flymake-shellcheck
+        ibuffer-project
+        icomplete-vertical
+        json-mode
+        jsonnet-mode
+        orderless
+        rfc-mode))
+(package-install-selected-packages)
+
 (setq vc-follow-symlinks t)
 
 ;; Misc
