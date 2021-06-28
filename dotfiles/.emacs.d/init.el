@@ -50,7 +50,7 @@
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
 ;; imenu
-(global-set-key (kbd "C-c i") 'consult-imenu)
+(global-set-key (kbd "C-c i") 'imenu)
 
 ;; Minibuffer
 (icomplete-mode)
