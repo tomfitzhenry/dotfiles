@@ -11,7 +11,8 @@
         json-mode
         jsonnet-mode
         orderless
-        rfc-mode))
+        rfc-mode
+        vterm))
 (package-install-selected-packages)
 
 (setq vc-follow-symlinks t)
