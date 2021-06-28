@@ -103,16 +103,3 @@
 
 (load (system-name))
 (provide 'init)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(geiser guix elpher zenburn-theme weechat rfc-mode package-lint-flymake org orderless nov notmuch nix-mode markdown-mode magit json-mode icomplete-vertical ibuffer-project go-mode git-annex flymake-shellcheck flymake-aspell flycheck elfeed eglot diff-hl debbugs circadian bluetooth vterm-toggle nntwitter nnreddit nnhackernews consult)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
