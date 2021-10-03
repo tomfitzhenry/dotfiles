@@ -70,18 +70,6 @@
 (setq mouse-autoselect-window t)
 (setq mouse-drag-and-drop-region t)
 
-;;; Org
-(global-set-key (kbd "C-c a") #'org-agenda)
-(with-eval-after-load "org"
-  (setq org-startup-folded nil)
-  (setq org-replace-disputed-keys t)
-  (setq org-catch-invisible-edits 'smart)
-  (setq org-agenda-skip-scheduled-if-done t)
-  (setq org-agenda-skip-deadline-if-done t)
-  (setq org-agenda-show-future-repeats 'next)
-  (setq org-agenda-todo-ignore-scheduled 'future)
-  (require 'org-mouse))
-
 ;; pcomplete
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
 (setq fish-completion-fallback-on-bash-p t)
