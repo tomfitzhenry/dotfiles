@@ -103,8 +103,6 @@
 (load-theme 'modus-operandi t)
 
 ;; VC
-(add-hook 'log-edit-hook 'turn-on-auto-fill)
-(add-hook 'log-edit-hook 'log-edit-show-diff)
 (global-diff-hl-mode)
 
 (load (system-name))
