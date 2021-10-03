@@ -90,6 +90,14 @@
 ;; Themes
 (load-theme 'modus-operandi t)
 
+;; Time
+(setq display-time-world-list
+      '(("America/Los_Angeles" "LAX")
+	("UTC" "UTC")
+	("Europe/London" "LON")
+	("Australia/Sydney" "SYD")))
+(setq display-time-world-time-format "%a %F %T %z")
+
 ;; VC
 (global-diff-hl-mode)
 
