@@ -6,7 +6,6 @@
         consult
         fish-completion
         flymake-shellcheck
-        ibuffer-project
         icomplete-vertical
         json-mode
         jsonnet-mode
@@ -39,7 +38,6 @@
 (setq completion-in-region-function 'consult-completion-in-region)
 
 ;; Buffers
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-auto-revert-mode)
 
 ;; Embark
@@ -80,11 +78,6 @@
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
 (setq fish-completion-fallback-on-bash-p t)
 
-;; Project
-(add-hook
-  'ibuffer-hook
-  (lambda ()
-    (setq ibuffer-filter-groups (ibuffer-project-generate-filter-groups))))
 
 ;; Server
 (add-hook 'after-init-hook 'server-start)
