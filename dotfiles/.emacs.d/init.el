@@ -19,7 +19,6 @@
 ;; Misc
 (setq ring-bell-function 'ignore)
 (setq scroll-conservatively 100)
-(setq compilation-scroll-output t)
 (setq column-number-mode t)
 
 ;; Autosave
