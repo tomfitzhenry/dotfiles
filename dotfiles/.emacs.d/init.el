@@ -40,10 +40,6 @@
 ;; Buffers
 (global-auto-revert-mode)
 
-;; Embark
-(global-set-key (kbd "C-S-a") 'embark-act)
-(setq embark-prompter 'embark-completing-read-prompter)
-
 ;; Eshell
 (add-hook 'eshell-mode-hook
           (lambda ()
