@@ -22,7 +22,6 @@
 (setq compilation-scroll-output t)
 (setq column-number-mode t)
 (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
-(setq consult-preview-key nil) ;; slow with TRAMP
 
 ;; Autosave
 (setq backup-directory-alist
