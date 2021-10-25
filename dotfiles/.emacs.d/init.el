@@ -2,8 +2,7 @@
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (setq package-selected-packages
-      '(bluetooth
-        consult
+      '(consult
         fish-completion
         flymake-shellcheck
         icomplete-vertical
