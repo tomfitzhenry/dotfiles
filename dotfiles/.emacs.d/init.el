@@ -21,7 +21,6 @@
 (setq scroll-conservatively 100)
 (setq compilation-scroll-output t)
 (setq column-number-mode t)
-(setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
 
 ;; Autosave
 (setq backup-directory-alist
