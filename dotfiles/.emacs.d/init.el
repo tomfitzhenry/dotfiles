@@ -33,9 +33,6 @@
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 
-;; Completion
-(setq completion-in-region-function 'consult-completion-in-region)
-
 ;; Buffers
 (global-auto-revert-mode)
 
