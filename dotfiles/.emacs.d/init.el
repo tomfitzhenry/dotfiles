@@ -25,6 +25,12 @@
 (setq rfc-mode-directory (expand-file-name "~/go/src/salsa.debian.org/debian/doc-rfc"))
 (setq consult-preview-key nil) ;; slow with TRAMP
 
+;; Autosave
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 (global-set-key (kbd "<f2>") 'consult-bookmark)
