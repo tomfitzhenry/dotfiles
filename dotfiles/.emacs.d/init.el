@@ -32,7 +32,6 @@
 
 ;; Bookmarks
 (setq bookmark-save-flag 1)
-(global-set-key (kbd "<f2>") 'consult-bookmark)
 
 ;; Completion
 (setq completion-in-region-function 'consult-completion-in-region)
