@@ -16,7 +16,6 @@
 ;; Misc
 (setq ring-bell-function 'ignore)
 (setq scroll-conservatively 100)
-(setq column-number-mode t)
 
 ;; Autosave
 (setq backup-directory-alist
@@ -29,6 +28,7 @@
 
 ;; Buffers
 (global-auto-revert-mode)
+(setq column-number-mode t)
 
 ;; Eshell
 (add-hook 'eshell-mode-hook
