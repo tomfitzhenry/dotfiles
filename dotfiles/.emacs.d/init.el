@@ -13,9 +13,6 @@
         vterm))
 (package-install-selected-packages)
 
-;; Misc
-(setq scroll-conservatively 100)
-
 ;; Autosave
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
