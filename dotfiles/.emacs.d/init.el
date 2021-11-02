@@ -46,9 +46,6 @@
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
-;; imenu
-(global-set-key (kbd "C-c i") 'imenu)
-
 ;; Minibuffer
 (icomplete-mode)
 (icomplete-vertical-mode)
