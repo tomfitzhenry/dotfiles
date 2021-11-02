@@ -14,7 +14,6 @@
 (package-install-selected-packages)
 
 ;; Misc
-(setq ring-bell-function 'ignore)
 (setq scroll-conservatively 100)
 
 ;; Autosave
