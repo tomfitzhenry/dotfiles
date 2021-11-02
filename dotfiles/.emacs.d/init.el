@@ -13,8 +13,6 @@
         vterm))
 (package-install-selected-packages)
 
-(setq vc-follow-symlinks t)
-
 ;; Misc
 (setq ring-bell-function 'ignore)
 (setq scroll-conservatively 100)
