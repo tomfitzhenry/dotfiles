@@ -49,8 +49,6 @@
 (setq completion-styles '(orderless))
 
 ;; Mouse
-(setq focus-follows-mouse t)
-(setq mouse-autoselect-window t)
 (setq mouse-drag-and-drop-region t)
 
 ;; pcomplete
