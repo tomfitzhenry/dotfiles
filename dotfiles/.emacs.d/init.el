@@ -57,6 +57,8 @@
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
 (setq fish-completion-fallback-on-bash-p t)
 
+;; prog
+(add-hook 'prog-mode-hook 'show-paren-mode)
 
 ;; Server
 (add-hook 'after-init-hook 'server-start)
