@@ -8,6 +8,7 @@
         json-mode
         jsonnet-mode
         orderless
+	paredit-menu
         rfc-mode
         vterm))
 (package-install-selected-packages)
@@ -46,6 +47,8 @@
 (add-hook 'lisp-mode-hook             'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           'enable-paredit-mode)
+(with-eval-after-load "paredit"
+  (require 'paredit-menu))
 
 ;; Minibuffer
 (icomplete-mode)
