@@ -5,7 +5,6 @@
       '(consult
         fish-completion
         flymake-shellcheck
-        icomplete-vertical
         json-mode
         jsonnet-mode
         orderless
@@ -84,6 +83,9 @@
 
 ;; VC
 (global-diff-hl-mode)
+
+;; Web
+(setq browse-url-browser-function 'eww-browse-url)
 
 (load (system-name))
 (provide 'init)
