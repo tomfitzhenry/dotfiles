@@ -79,8 +79,5 @@
 ;; VC
 (global-diff-hl-mode)
 
-;; Web
-(setq browse-url-browser-function 'eww-browse-url)
-
 (load (system-name))
 (provide 'init)
