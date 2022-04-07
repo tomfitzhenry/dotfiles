@@ -43,10 +43,7 @@
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
 ;; Lisp
-(add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           'enable-paredit-mode)
+(add-hook 'lisp-data-mode-hook 'enable-paredit-mode)
 (with-eval-after-load "paredit"
   (require 'paredit-menu))
 
