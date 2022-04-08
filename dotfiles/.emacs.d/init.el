@@ -10,7 +10,6 @@
 (setq bookmark-save-flag 1)
 
 ;; Buffers
-(global-auto-revert-mode)
 (setq column-number-mode t)
 
 ;; Eshell
