@@ -35,10 +35,7 @@
   (require 'paredit-menu))
 
 ;; Minibuffer
-(icomplete-mode)
-(icomplete-vertical-mode)
-(require 'orderless)
-(setq completion-styles '(orderless))
+(fido-vertical-mode)
 
 ;; Mouse
 (setq mouse-drag-and-drop-region t)
