@@ -1,18 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(setq package-selected-packages
-      '(consult
-        fish-completion
-        flymake-shellcheck
-        json-mode
-        jsonnet-mode
-        orderless
-	paredit-menu
-        rfc-mode
-        vterm))
-(package-install-selected-packages)
-
 ;; Autosave
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
