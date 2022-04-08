@@ -1,11 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; Autosave
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 
