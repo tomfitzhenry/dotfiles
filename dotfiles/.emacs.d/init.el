@@ -1,5 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(setq make-backup-file nil)
+
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 
