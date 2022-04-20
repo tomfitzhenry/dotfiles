@@ -23,9 +23,7 @@
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
 ;; Lisp
-(add-hook 'lisp-data-mode-hook 'enable-paredit-mode)
-(with-eval-after-load "paredit"
-  (require 'paredit-menu))
+(electric-pair-mode)
 
 ;; Minibuffer
 (fido-vertical-mode)
