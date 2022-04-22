@@ -24,7 +24,7 @@
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 
-(global-set-key (kbd "M-s i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
+(global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
 
 ;; Lisp
 (electric-pair-mode)
