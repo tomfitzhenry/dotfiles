@@ -1,5 +1,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(with-eval-after-load 'geiser-guile
+  (add-to-list 'geiser-guile-load-path "~/src/guix"))
+(setq enable-local-variables :safe)
+
 (setq make-backup-file nil)
 
 ;; Bookmarks
