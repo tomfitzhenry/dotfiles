@@ -8,11 +8,13 @@
   (add-to-list 'geiser-guile-load-path "~/src/guix"))
 (setq enable-local-variables :safe)
 
-(setq make-backup-file nil)
-
-;; Bookmarks
+;; Misc
 (setq bookmark-save-flag 1)
-
+(setq make-backup-file nil)
+(fido-vertical-mode)
+(add-hook 'after-init-hook 'server-start)
+(global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
+(load-theme 'modus-operandi t)
 
 ;; Editing
 (setq column-number-mode t)
@@ -22,8 +24,6 @@
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 (global-diff-hl-mode)
-
-(global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
 
 ;; Gnus
 (setq-default
@@ -41,12 +41,6 @@
  gnus-sum-thread-tree-root ""
  gnus-sum-thread-tree-single-leaf "╰► "
  gnus-sum-thread-tree-vertical "│")
-
-;; Minibuffer
-(fido-vertical-mode)
-
-;; Server
-(add-hook 'after-init-hook 'server-start)
 
 ;; Shell-ish
 (add-hooks 'eshell-mode-hook
@@ -78,9 +72,6 @@
  smtpmail-stream-type  'ssl
  user-full-name "Tom Fitzhenry"
  user-mail-address "tom@tom-fitzhenry.me.uk")
-
-;; Themes
-(load-theme 'modus-operandi t)
 
 (load (system-name))
 (provide 'init)
