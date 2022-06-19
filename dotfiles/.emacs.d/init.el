@@ -30,6 +30,23 @@
 
 (global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
 
+;; Gnus
+(setq-default
+ gnus-select-method '(nnil "")
+ gnus-secondary-select-methods '((nntp "news.yhetil.org")
+				 (nntp "nntp.lore.kernel.org"))
+ gnus-use-adaptive-scoring t
+ gnus-summary-line-format "%U%R%z %(%&user-date;  %-15,15f  %B %s%)\n"
+ gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
+ gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
+ gnus-thread-sort-functions '(gnus-thread-sort-by-date)
+ gnus-sum-thread-tree-false-root ""
+ gnus-sum-thread-tree-indent " "
+ gnus-sum-thread-tree-leaf-with-other "├► "
+ gnus-sum-thread-tree-root ""
+ gnus-sum-thread-tree-single-leaf "╰► "
+ gnus-sum-thread-tree-vertical "│")
+
 ;; Lisp
 (electric-pair-mode)
 
