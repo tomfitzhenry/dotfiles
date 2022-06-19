@@ -67,6 +67,16 @@
 (with-eval-after-load "shell"
   (define-key shell-mode-map (kbd "C-r") 'consult-history))
 
+;; SMTP
+(setq-default
+ smtpmail-smtp-server "smtp.fastmail.com"
+ smtpmail-smtp-user "tom@tom-fitzhenry.me.uk"
+ smtpmail-smtp-service 465
+ send-mail-function 'smtpmail-send-it
+ smtpmail-stream-type  'ssl
+ user-full-name "Tom Fitzhenry"
+ user-mail-address "tom@tom-fitzhenry.me.uk")
+
 ;; Themes
 (load-theme 'modus-operandi t)
 
