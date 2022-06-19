@@ -13,15 +13,15 @@
 ;; Bookmarks
 (setq bookmark-save-flag 1)
 
-;; Buffers
+
+;; Editing
 (setq column-number-mode t)
-
-
-;; Flymake
+(setq mouse-drag-and-drop-region t)
 (add-hook 'prog-mode-hook 'flymake-mode)
 (add-hook 'text-mode-hook 'flymake-mode)
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
+(global-diff-hl-mode)
 
 (global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
 
@@ -44,9 +44,6 @@
 
 ;; Minibuffer
 (fido-vertical-mode)
-
-;; Mouse
-(setq mouse-drag-and-drop-region t)
 
 ;; Server
 (add-hook 'after-init-hook 'server-start)
@@ -83,9 +80,6 @@
 
 ;; Themes
 (load-theme 'modus-operandi t)
-
-;; VC
-(global-diff-hl-mode)
 
 (load (system-name))
 (provide 'init)
