@@ -18,7 +18,6 @@
             (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
 
 (add-hook 'shell-mode-hook  'with-editor-export-editor)
-(add-hook 'term-exec-hook   'with-editor-export-editor)
 (add-hook 'eshell-mode-hook 'with-editor-export-editor)
 (add-hook 'vterm-mode-hook  'with-editor-export-editor)
 
