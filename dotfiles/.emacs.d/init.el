@@ -42,9 +42,6 @@
  gnus-sum-thread-tree-single-leaf "╰► "
  gnus-sum-thread-tree-vertical "│")
 
-;; Lisp
-(electric-pair-mode)
-
 ;; Minibuffer
 (fido-vertical-mode)
 
