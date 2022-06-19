@@ -1,5 +1,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(defun add-hooks (hook &rest functions)
+  (dolist (function functions)
+    (add-hook hook function)))
+
 (with-eval-after-load 'geiser-guile
   (add-to-list 'geiser-guile-load-path "~/src/guix"))
 (setq enable-local-variables :safe)
@@ -12,14 +16,6 @@
 ;; Buffers
 (setq column-number-mode t)
 
-;; Eshell
-(add-hook 'eshell-mode-hook
-          (lambda ()
-            (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
-
-(add-hook 'shell-mode-hook  'with-editor-export-editor)
-(add-hook 'eshell-mode-hook 'with-editor-export-editor)
-(add-hook 'vterm-mode-hook  'with-editor-export-editor)
 
 ;; Flymake
 (add-hook 'prog-mode-hook 'flymake-mode)
@@ -55,16 +51,28 @@
 ;; Mouse
 (setq mouse-drag-and-drop-region t)
 
-;; pcomplete
-(add-hook 'eshell-mode-hook 'fish-completion-mode)
-(setq fish-completion-fallback-on-bash-p t)
-
 ;; Server
 (add-hook 'after-init-hook 'server-start)
 
-;; Shell
+;; Shell-ish
+(add-hooks 'eshell-mode-hook
+	   'detached-eshell-mode
+	   'fish-completion-mode
+	   'with-editor-export-editor
+	   (lambda ()
+	     (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
+
+(add-hooks 'shell-mode-hook
+	   'detached-shell-mode
+	   'with-editor-export-editor)
+
 (with-eval-after-load "shell"
   (define-key shell-mode-map (kbd "C-r") 'consult-history))
+
+(add-hooks 'vterm-mode-hook
+	   'with-editor-export-editor)
+
+(setq fish-completion-fallback-on-bash-p t)
 
 ;; SMTP
 (setq-default
