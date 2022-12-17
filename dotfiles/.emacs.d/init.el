@@ -6,7 +6,7 @@
 
 ;; Misc
 (setq bookmark-save-flag 1)
-(setq make-backup-file nil)
+(setq make-backup-files nil)
 (fido-vertical-mode)
 (add-hook 'after-init-hook 'server-start)
 (global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
