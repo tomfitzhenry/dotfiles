@@ -62,16 +62,5 @@
 
 (setq fish-completion-fallback-on-bash-p t)
 
-;; SMTP
-(add-hook 'mail-mode-hook 'turn-on-auto-fill)
-(setq-default
- smtpmail-smtp-server "smtp.fastmail.com"
- smtpmail-smtp-user "tom@tom-fitzhenry.me.uk"
- smtpmail-smtp-service 465
- send-mail-function 'smtpmail-send-it
- smtpmail-stream-type  'ssl
- user-full-name "Tom Fitzhenry"
- user-mail-address "tom@tom-fitzhenry.me.uk")
-
 (load (system-name))
 (provide 'init)
