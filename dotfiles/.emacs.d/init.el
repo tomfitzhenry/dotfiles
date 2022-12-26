@@ -33,10 +33,6 @@
 	   'with-editor-export-editor
 	   (lambda ()
 	     (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
-
-(add-hooks 'vterm-mode-hook
-	   'with-editor-export-editor)
-
 (setq fish-completion-fallback-on-bash-p t)
 
 (load (system-name))
