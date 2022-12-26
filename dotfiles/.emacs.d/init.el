@@ -9,7 +9,6 @@
 (setq make-backup-files nil)
 (fido-vertical-mode)
 (add-hook 'after-init-hook 'server-start)
-(global-set-key (kbd "M-g i") 'imenu) ;; emacs-devel "Proposal: add a binding for `imenu' under M-g"
 (load-theme 'modus-operandi t)
 
 ;; Editing
