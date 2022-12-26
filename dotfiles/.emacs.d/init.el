@@ -20,6 +20,7 @@
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 (global-diff-hl-mode)
+(direnv-mode)
 
 ;; Shell-ish
 (add-hooks 'eshell-mode-hook
