@@ -1,9 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(defun add-hooks (hook &rest functions)
-  (dolist (function functions)
-    (add-hook hook function)))
-
 ;; Misc
 (setq bookmark-save-flag 1)
 (setq make-backup-files nil)
@@ -26,12 +22,11 @@
 (add-hook 'dired-mode-hook #'denote-dired-mode)
 
 ;; Shell-ish
-(add-hooks 'eshell-mode-hook
-	   'detached-eshell-mode
-	   'fish-completion-mode
-	   'with-editor-export-editor
-	   (lambda ()
-	     (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
+(add-hook 'eshell-mode-hook 'detached-shell-mode)
+(add-hook 'eshell-mode-hook 'fish-completion-mode)
+(add-hook 'eshell-mode-hook 'with-editor-export-editor)
+(add-hook 'eshell-mode-hook (lambda ()
+			      (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
 (setq fish-completion-fallback-on-bash-p t)
 
 (load (system-name))
