@@ -3,6 +3,7 @@
 ;; Misc
 (setq bookmark-save-flag 1)
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 (fido-vertical-mode)
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-operandi t)
