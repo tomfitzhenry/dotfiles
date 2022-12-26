@@ -34,13 +34,6 @@
 	   (lambda ()
 	     (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
 
-(add-hooks 'shell-mode-hook
-	   'detached-shell-mode
-	   'with-editor-export-editor)
-
-(with-eval-after-load "shell"
-  (define-key shell-mode-map (kbd "C-r") 'consult-history))
-
 (add-hooks 'vterm-mode-hook
 	   'with-editor-export-editor)
 
