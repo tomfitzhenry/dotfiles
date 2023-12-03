@@ -18,10 +18,6 @@
 (global-diff-hl-mode)
 (direnv-mode)
 
-;; Notes
-(setq denote-directory "~/src/notes/")
-(add-hook 'dired-mode-hook #'denote-dired-mode)
-
 ;; Shell-ish
 (add-hook 'eshell-mode-hook 'detached-shell-mode)
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
