@@ -18,7 +18,6 @@
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
-(direnv-mode)
 
 ;; Shell-ish
 (add-hook 'eshell-mode-hook 'detached-shell-mode)
