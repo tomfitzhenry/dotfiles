@@ -35,6 +35,7 @@
        ("Europe/London" "LON")
        ("Australia/Sydney" "SYD")))
 (setq world-clock-time-format "%a %F %T %z")
+(display-time)
 
 (load (system-name))
 (provide 'init)
