@@ -4,7 +4,7 @@
 (setq bookmark-save-flag 1)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-(fido-vertical-mode)
+(icomplete-vertical-mode)
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-operandi t)
 (setq native-comp-async-report-warnings-errors 'silent)
