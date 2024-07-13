@@ -19,6 +19,12 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
+(setq tom-log-target "~/archives/log/master.txt")
+(defun tom-log ()
+  (interactive)
+  (find-file tom-log-target))
+(keymap-global-set "C-c l" 'tom-log)
+
 ;; Shell-ish
 (add-hook 'eshell-mode-hook 'detached-shell-mode)
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
