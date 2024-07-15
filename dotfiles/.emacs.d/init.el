@@ -5,6 +5,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (icomplete-vertical-mode)
+(setq icomplete-show-matches-on-no-input t)
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-operandi t)
 (setq native-comp-async-report-warnings-errors 'silent)
