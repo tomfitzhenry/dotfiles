@@ -27,6 +27,7 @@
 (keymap-global-set "C-c l" 'tom-log)
 
 ;; Shell-ish
+(setq comint-prompt-read-only t)
 (add-hook 'eshell-mode-hook 'detached-shell-mode)
 (add-hook 'eshell-mode-hook 'fish-completion-mode)
 (add-hook 'eshell-mode-hook 'with-editor-export-editor)
