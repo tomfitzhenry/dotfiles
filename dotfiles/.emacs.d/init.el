@@ -19,7 +19,7 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
-(setq tom-log-target "~/archives/log/master.txt")
+(setq tom-log-target "~/archives/log/master.md")
 (defun tom-log ()
   (interactive)
   (find-file tom-log-target))
