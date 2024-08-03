@@ -21,6 +21,11 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
+;; Rust
+(add-hook 'rust-mode-hook
+	  (lambda () (setq indent-tabs-mode nil)))
+(setq rust-format-on-save t)
+
 (setq tom-log-target "~/archives/log/master.md")
 (defun tom-log ()
   (interactive)
