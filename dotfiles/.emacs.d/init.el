@@ -25,6 +25,7 @@
 (add-hook 'rust-mode-hook
 	  (lambda () (setq indent-tabs-mode nil)))
 (setq rust-format-on-save t)
+(add-hook 'rust-mode-hook 'eglot-ensure)
 
 (setq tom-log-target "~/archives/log/master.md")
 (defun tom-log ()
