@@ -95,8 +95,8 @@
       ],
       [
         "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
+        "KC_F11",
+        "KC_F12",
         "LSFT(KC_LBRACKET)",
         "LSFT(KC_RBRACKET)",
         "LSFT(KC_BSLASH)"
@@ -126,7 +126,7 @@
         "KC_TRNS"
       ],
       [
-        "KC_F11",
+        "KC_TRNS",
         "KC_F10",
         "KC_F9",
         "KC_F8",
@@ -134,7 +134,7 @@
         "KC_F6"
       ],
       [
-        "KC_F12",
+        "KC_TRNS",
         "KC_KP_ASTERISK",
         "KC_TRNS",
         "KC_TRNS",
