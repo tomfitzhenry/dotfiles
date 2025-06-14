@@ -40,8 +40,8 @@
         -1,
         -1,
         "MO(1)",
-        "KC_BSPACE",
-        "KC_SPACE"
+        "KC_SPACE",
+        "KC_BSPACE"
       ],
       [
         "KC_MINUS",
