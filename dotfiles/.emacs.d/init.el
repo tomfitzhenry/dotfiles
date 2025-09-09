@@ -13,11 +13,12 @@
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
 (global-diff-hl-mode)
-(dolist (mapping '(("\\.json\\'" . json-ts-mode)
-                   ("\\.go\\'" . go-ts-mode)
-                   ("\\.rs\\'" . rust-ts-mode)
-		   ("\\.ya?ml\\'" . yaml-ts-mode)))
-  (add-to-list 'auto-mode-alist mapping))
+
+;; Use tree-sitter for AST stuff.
+(require 'go-ts-mode)
+(require 'json-ts-mode)
+(require 'rust-ts-mode)
+(require 'yaml-ts-mode)
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
