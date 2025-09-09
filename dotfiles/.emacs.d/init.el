@@ -13,8 +13,12 @@
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
 (global-diff-hl-mode)
-(require 'treesit-auto)
-(treesit-auto-add-to-auto-mode-alist)
+(require 'json-ts-mode)
+(require 'go-ts-mode)
+(require 'nix-ts-mode)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode))
+(require 'rust-ts-mode)
+(require 'yaml-ts-mode)
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
