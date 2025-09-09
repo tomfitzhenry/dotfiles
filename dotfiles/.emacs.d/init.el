@@ -24,10 +24,8 @@
 (global-diff-hl-mode)
 
 ;; Rust
-(add-hook 'rust-mode-hook
-	  (lambda () (setq indent-tabs-mode nil)))
-(setq rust-format-on-save t)
-(add-hook 'rust-mode-hook 'eglot-ensure)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
+(add-hook 'rust-ts-mode-hook 'eglot-ensure)
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
