@@ -23,6 +23,10 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
+;; Tree sitter
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
+
 ;; Go
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
 (add-hook 'go-ts-mode-hook 'eglot-ensure)
