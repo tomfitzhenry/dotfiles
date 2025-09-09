@@ -29,12 +29,6 @@
 (setq rust-format-on-save t)
 (add-hook 'rust-mode-hook 'eglot-ensure)
 
-(setq tom-log-target "~/archives/log/master.md")
-(defun tom-log ()
-  (interactive)
-  (find-file tom-log-target))
-(keymap-global-set "C-c l" 'tom-log)
-
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
 (setq comint-prompt-read-only t)
