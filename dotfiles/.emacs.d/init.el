@@ -20,7 +20,6 @@
 (add-hook 'text-mode-hook 'flymake-mode)
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
 (add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
 ;; Tree sitter
