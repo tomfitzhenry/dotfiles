@@ -16,22 +16,14 @@
 ;; Editing
 (setq column-number-mode t)
 (setq mouse-drag-and-drop-region t)
-(add-hook 'prog-mode-hook 'flymake-mode)
+(add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
-(add-hook 'sh-mode-hook 'eglot-ensure)
 (global-diff-hl-mode)
-
-;; Tree sitter
-(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
-
-;; Go
-(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
-(add-hook 'go-ts-mode-hook 'eglot-ensure)
-
-;; Rust
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
-(add-hook 'rust-ts-mode-hook 'eglot-ensure)
+(dolist (mapping '(("\\.json\\'" . json-ts-mode)
+                   ("\\.go\\'" . go-ts-mode)
+                   ("\\.rs\\'" . rust-ts-mode)
+		   ("\\.ya?ml\\'" . yaml-ts-mode)))
+  (add-to-list 'auto-mode-alist mapping))
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
