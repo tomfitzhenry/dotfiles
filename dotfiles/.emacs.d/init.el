@@ -18,7 +18,7 @@
 (setq mouse-drag-and-drop-region t)
 (add-hook 'prog-mode-hook 'flymake-mode)
 (add-hook 'text-mode-hook 'flymake-mode)
-(add-hook 'sh-mode-hook 'flymake-shellcheck-load)
+(add-hook 'sh-mode-hook 'eglot-ensure)
 (global-diff-hl-mode)
 
 ;; Tree sitter
