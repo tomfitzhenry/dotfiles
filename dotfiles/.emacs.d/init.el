@@ -11,7 +11,6 @@
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-operandi t)
 (setq native-comp-async-report-warnings-errors 'silent)
-(display-battery-mode t)
 
 ;; Editing
 (setq column-number-mode t)
