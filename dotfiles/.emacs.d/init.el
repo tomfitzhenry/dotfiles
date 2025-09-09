@@ -44,14 +44,5 @@
 			      (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
 (setq fish-completion-fallback-on-bash-p t)
 
-;; Clock
-(setq world-clock-list
-      '(("America/Los_Angeles" "LAX")
-       ("UTC" "UTC")
-       ("Europe/London" "LON")
-       ("Australia/Sydney" "SYD")))
-(setq world-clock-time-format "%a %F %T %z")
-(display-time)
-
 (load (system-name))
 (provide 'init)
