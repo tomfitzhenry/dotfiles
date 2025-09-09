@@ -23,6 +23,10 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (global-diff-hl-mode)
 
+;; Go
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+(add-hook 'go-ts-mode-hook 'eglot-ensure)
+
 ;; Rust
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
 (add-hook 'rust-ts-mode-hook 'eglot-ensure)
