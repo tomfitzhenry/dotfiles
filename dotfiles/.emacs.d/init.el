@@ -13,12 +13,7 @@
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
 (global-diff-hl-mode)
-
-;; Use tree-sitter for AST stuff.
-(require 'go-ts-mode)
-(require 'json-ts-mode)
-(require 'rust-ts-mode)
-(require 'yaml-ts-mode)
+(treesit-auto-add-to-auto-mode-alist)
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
