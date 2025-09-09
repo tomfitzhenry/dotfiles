@@ -1,6 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
-;; Misc
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (setq bookmark-save-flag 1)
