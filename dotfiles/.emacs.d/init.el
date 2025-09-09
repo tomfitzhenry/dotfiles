@@ -11,7 +11,6 @@
 
 ;; Editing
 (setq column-number-mode t)
-(setq mouse-drag-and-drop-region t)
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
 (global-diff-hl-mode)
