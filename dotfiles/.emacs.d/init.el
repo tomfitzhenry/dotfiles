@@ -19,7 +19,6 @@
 (add-hook 'prog-mode-hook 'flymake-mode)
 (add-hook 'text-mode-hook 'flymake-mode)
 (add-hook 'sh-mode-hook 'flymake-shellcheck-load)
-(add-hook 'flymake-diagnostic-functions 'package-lint-flymake)
 (global-diff-hl-mode)
 
 ;; Tree sitter
