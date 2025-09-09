@@ -13,6 +13,7 @@
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
 (global-diff-hl-mode)
+(require 'treesit-auto)
 (treesit-auto-add-to-auto-mode-alist)
 
 ;; Shell-ish
