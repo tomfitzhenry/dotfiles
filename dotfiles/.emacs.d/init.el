@@ -15,6 +15,8 @@
 (global-diff-hl-mode)
 (require 'json-ts-mode)
 (require 'go-ts-mode)
+(require 'markdown-ts-mode)
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-mode))
 (require 'nix-ts-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode))
 (require 'nushell-ts-mode)
