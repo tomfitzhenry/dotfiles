@@ -23,13 +23,6 @@
 
 ;; Shell-ish
 (keymap-global-set "C-t" 'shell-pop)
-(setq comint-prompt-read-only t)
-(add-hook 'eshell-mode-hook 'detached-shell-mode)
-(add-hook 'eshell-mode-hook 'fish-completion-mode)
-(add-hook 'eshell-mode-hook 'with-editor-export-editor)
-(add-hook 'eshell-mode-hook (lambda ()
-			      (define-key eshell-mode-map (kbd "C-r") 'consult-history)))
-(setq fish-completion-fallback-on-bash-p t)
 
 (load (system-name))
 (provide 'init)
