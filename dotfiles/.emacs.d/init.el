@@ -17,6 +17,7 @@
 (require 'go-ts-mode)
 (require 'nix-ts-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode))
+(require 'nushell-ts-mode)
 (require 'rust-ts-mode)
 (require 'yaml-ts-mode)
 
