@@ -1,4 +1,5 @@
-(tool-bar-mode -1)
+(if window-system
+    (tool-bar-mode -1))
 (menu-bar-mode -1)
 (setq bookmark-save-flag 1)
 (setq make-backup-files nil)
