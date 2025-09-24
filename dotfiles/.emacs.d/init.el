@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (if window-system
     (tool-bar-mode -1))
 (menu-bar-mode -1)
