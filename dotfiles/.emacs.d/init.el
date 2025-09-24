@@ -26,8 +26,5 @@
 (require 'rust-ts-mode)
 (require 'yaml-ts-mode)
 
-;; Shell-ish
-(keymap-global-set "C-t" 'shell-pop)
-
 (load (system-name))
 (provide 'init)
