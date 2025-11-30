@@ -8,8 +8,6 @@ nix-maid pkgs {
   file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
 
   packages = with pkgs; [
-    firefox
-
     git
     nushell
     p7zip
