@@ -14,6 +14,7 @@ nix-maid pkgs {
     p7zip
     restic
     wormhole-william
+    ghostty
 
     # Passwords
     passage
