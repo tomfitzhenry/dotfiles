@@ -31,8 +31,8 @@ nix-maid pkgs {
     nixd
 
     # Nix
-    nixfmt-rfc-style
     npins
+    nixfmt-tree
 
     (emacs-pgtk.pkgs.withPackages (
       with emacsPackages;
