@@ -16,6 +16,11 @@ nix-maid pkgs {
     wormhole-william
     ghostty
 
+    curl
+    dig
+    tree
+    tmux
+
     # Passwords
     passage
     age-plugin-yubikey
