@@ -1,0 +1,24 @@
+{
+  "pins": {
+    "nix-maid": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "viperML",
+        "repo": "nix-maid"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "d362e71ba087919822ec4f5c41b7572d828c749e",
+      "url": "https://github.com/viperML/nix-maid/archive/d362e71ba087919822ec4f5c41b7572d828c749e.tar.gz",
+      "hash": "0jjah1glr9prqd4bqb3sd2i74np9zhvjcsl6j6q9g96wv0xpx9zp"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre904258.a09378c01088/nixexprs.tar.xz",
+      "hash": "0fn1hxd6k6ab4lq40fqp1f2jivl95d3ksgxw4rg4x8w2chcrhrqf"
+    }
+  },
+  "version": 5
+}

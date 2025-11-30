@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+nix-env -if ./config.nix
+activate
