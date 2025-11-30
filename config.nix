@@ -18,8 +18,10 @@ nix-maid pkgs {
 
     curl
     dig
-    tree
+    ncdu
+    ripgrep
     tmux
+    tree
 
     # Passwords
     passage
