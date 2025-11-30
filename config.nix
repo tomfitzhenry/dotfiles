@@ -10,6 +10,7 @@ nix-maid pkgs {
   packages = with pkgs; [
     git
     nushell
+    openssh # since SteamOS's openssh has no libfido2.so
     p7zip
     restic
     wormhole-william
