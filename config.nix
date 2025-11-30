@@ -14,7 +14,6 @@ nix-maid pkgs {
     p7zip
     restic
     wormhole-william
-    ghostty
 
     curl
     dig
