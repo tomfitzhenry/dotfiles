@@ -11,6 +11,10 @@ nix-maid pkgs {
     firefox
 
     git
+    nushell
+    p7zip
+    restic
+    wormhole-william
 
     # Passwords
     passage
