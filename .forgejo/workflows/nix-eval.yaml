@@ -9,6 +9,8 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch:
 
+enable-email-notifications: true
+
 jobs:
   flake-check:
     runs-on: codeberg-small-lazy
