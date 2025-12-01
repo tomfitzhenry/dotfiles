@@ -17,6 +17,7 @@ nix-maid pkgs {
 
     curl
     dig
+    jq
     ncdu
     ripgrep
     tmux
@@ -29,11 +30,14 @@ nix-maid pkgs {
 
     # LSP
     bash-language-server
+    go
+    gopls
     nixd
 
     # Nix
-    npins
     nixfmt-tree
+    nixos-generators
+    npins
 
     (emacs-pgtk.pkgs.withPackages (
       with emacsPackages;
