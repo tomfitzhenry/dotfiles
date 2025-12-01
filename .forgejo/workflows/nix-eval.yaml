@@ -1,0 +1,28 @@
+name: Nix Evaluation Check
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  schedule:
+    # 3AM, Sunday.
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  flake-check:
+    runs-on: codeberg-small-lazy
+    container:
+      image: nixos/nix:latest
+
+    steps:
+      - name: Install actions/checkout dependencies
+        run: |
+          # https://code.forgejo.org/actions/checkout
+          nix-env -iA nixpkgs.nodejs_24
+
+      - name: Checkout repository
+        uses: https://data.forgejo.org/actions/checkout@v4
+
+      - name: Run nix flake check
+        run: nix-instantiate ./config.nix
