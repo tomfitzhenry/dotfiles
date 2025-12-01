@@ -26,5 +26,5 @@ jobs:
       - name: Checkout repository
         uses: https://data.forgejo.org/actions/checkout@v4
 
-      - name: Run nix flake check
+      - name: Check nix evaluation
         run: nix-instantiate ./config.nix
