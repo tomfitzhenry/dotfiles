@@ -9,6 +9,7 @@ nix-maid pkgs {
 
   packages = with pkgs; [
     git
+    gittuf
     nushell
     openssh # since SteamOS's openssh has no libfido2.so
     p7zip
