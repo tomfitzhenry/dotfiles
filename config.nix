@@ -13,6 +13,7 @@ nix-maid pkgs {
     lefthook
     nushell
     openssh # since SteamOS's openssh has no libfido2.so
+    pomerium-cli
     p7zip
     restic
     wormhole-william
