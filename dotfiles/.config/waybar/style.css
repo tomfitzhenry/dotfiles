@@ -1,0 +1,49 @@
+#workspaces button {
+  padding: 0 5px;
+}
+
+#workspaces button.focused {
+  background: #64727d;
+}
+
+#clock,
+#battery,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad {
+  margin: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#battery icon {
+  color: red;
+}
+
+#battery.charging,
+#battery.plugged {
+  background-color: darkgreen;
+}
+
+@keyframes blink {
+  to {
+    background-color: white;
+    color: black;
+  }
+}
+
+#battery.critical:not(.charging),
+#battery.warning:not(.charging) {
+  background-color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#idle_inhibitor.activated {
+  background-color: lightgray;
+  color: black;
+}

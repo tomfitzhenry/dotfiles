@@ -1,0 +1,23 @@
+// -*- mode: jsonc -*-
+{
+    "modules-left": [
+        "sway/workspaces",
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "battery",
+        "clock",
+        "tray",
+        "custom/power"
+    ],
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+}

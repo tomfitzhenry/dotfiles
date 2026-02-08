@@ -6,6 +6,8 @@ in
 nix-maid pkgs {
   file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
   file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
+  file.home.".config/sway".source = ./dotfiles/.config/sway;
+  file.home.".config/waybar/".source = ./dotfiles/.config/waybar;
 
   packages = with pkgs; [
     git
@@ -26,6 +28,11 @@ nix-maid pkgs {
     ripgrep
     tmux
     tree
+
+    # WM
+    alacritty
+    font-awesome
+    waybar
 
     # Passwords
     passage
