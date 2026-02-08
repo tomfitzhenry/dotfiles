@@ -32,6 +32,8 @@ nix-maid pkgs {
     # WM
     alacritty
     font-awesome
+    networkmanagerapplet
+    pasystray
     waybar
 
     # Passwords
