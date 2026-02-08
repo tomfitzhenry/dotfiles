@@ -11,6 +11,7 @@ nix-maid pkgs {
     git
     gittuf
     lefthook
+    mg
     nushell
     openssh # since SteamOS's openssh has no libfido2.so
     pomerium-cli
