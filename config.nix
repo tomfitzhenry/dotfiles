@@ -11,6 +11,7 @@ nix-maid pkgs {
 
   packages = with pkgs; [
     git
+    shpool
     gittuf
     lefthook
     mg
