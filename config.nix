@@ -11,6 +11,7 @@ nix-maid pkgs {
 
   packages = with pkgs; [
     git
+    jujutsu
     shpool
     gittuf
     lefthook
@@ -57,6 +58,7 @@ nix-maid pkgs {
       with emacsPackages;
       [
         eat
+        vc-jj
 
         # tree-sitter
         treesit-grammars.with-all-grammars
