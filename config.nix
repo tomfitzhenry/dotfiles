@@ -57,8 +57,6 @@ nix-maid pkgs {
       with emacsPackages;
       [
         eat
-        diff-hl
-        magit
 
         # tree-sitter
         treesit-grammars.with-all-grammars
