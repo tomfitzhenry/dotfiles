@@ -58,6 +58,8 @@ nix-maid pkgs {
       with emacsPackages;
       [
         vc-jj
+        vterm
+        with-editor
 
         # tree-sitter
         treesit-grammars.with-all-grammars

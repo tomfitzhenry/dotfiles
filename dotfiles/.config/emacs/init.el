@@ -26,5 +26,8 @@
 (require 'rust-ts-mode)
 (require 'yaml-ts-mode)
 
+;; Shell-ish
+(add-hook 'vterm-mode-hook 'with-editor-export-editor)
+
 (load (system-name))
 (provide 'init)
