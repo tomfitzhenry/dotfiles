@@ -14,7 +14,6 @@
 (setq column-number-mode t)
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
-(global-diff-hl-mode)
 
 ;; Tree-sitter. Emacs 31 should remove the need for this list.
 (require 'json-ts-mode)
