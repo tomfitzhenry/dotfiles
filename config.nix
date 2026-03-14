@@ -57,7 +57,6 @@ nix-maid pkgs {
     (emacs-pgtk.pkgs.withPackages (
       with emacsPackages;
       [
-        eat
         vc-jj
 
         # tree-sitter
