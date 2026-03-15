@@ -28,7 +28,6 @@ nix-maid pkgs {
     jq
     ncdu
     ripgrep
-    tmux
     tree
 
     # WM
