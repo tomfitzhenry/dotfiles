@@ -8,7 +8,7 @@
 (icomplete-vertical-mode)
 (setq icomplete-show-matches-on-no-input t)
 (add-hook 'after-init-hook 'server-start)
-(load-theme 'modus-operandi t)
+(load-theme 'modus-vivendi t)
 
 ;; Editing
 (setq column-number-mode t)
