@@ -10,6 +10,14 @@
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-vivendi t)
 
+;; Transient
+(with-eval-after-load 'calc
+  (keymap-set calc-mode-map "C-o" #'casual-calc-tmenu))
+(with-eval-after-load 'dired
+  (keymap-set dired-mode-map "C-o" #'casual-dired-tmenu))
+(with-eval-after-load 'ibuffer
+  (keymap-set ibuffer-mode-map "C-o" #'casual-ibuffer-tmenu))
+
 ;; Editing
 (setq column-number-mode t)
 (add-hook 'prog-mode-hook 'eglot-ensure)

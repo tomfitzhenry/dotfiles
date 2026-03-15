@@ -57,6 +57,7 @@ nix-maid pkgs {
     (emacs-pgtk.pkgs.withPackages (
       with emacsPackages;
       [
+        casual
         vc-jj
         vterm
         with-editor
