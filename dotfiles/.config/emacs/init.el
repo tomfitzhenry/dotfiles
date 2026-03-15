@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.config/emacs/user-lisp/") ;; Remove when Emacs 31 is released.
 (if window-system
     (tool-bar-mode -1))
 (menu-bar-mode -1)
