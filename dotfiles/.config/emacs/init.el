@@ -36,6 +36,18 @@
 
 ;; Shell-ish
 (add-hook 'vterm-mode-hook 'with-editor-export-editor)
+(defun vterm-project ()
+    (interactive)
+    (defvar vterm-buffer-name)
+    (let* ((default-directory (project-root (project-current t)))
+           (vterm-buffer-name (project-prefixed-buffer-name "vterm"))
+           (vterm-buffer (get-buffer vterm-buffer-name)))
+      (if (and vterm-buffer (not current-prefix-arg))
+          (pop-to-buffer vterm-buffer (bound-and-true-p display-comint-buffer-action))
+        (vterm-other-window t))))
+(with-eval-after-load 'project
+  (keymap-set project-prefix-map "t" #'vterm-project)
+  (add-to-list 'project-switch-commands '(vterm-project "Vterm" ?t)))
 
 (load (system-name))
 (provide 'init)
