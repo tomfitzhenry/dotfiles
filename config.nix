@@ -31,7 +31,7 @@ nix-maid pkgs {
     tree
 
     # WM
-    alacritty
+    ghostty
     font-awesome
     networkmanagerapplet
     pasystray

@@ -1,8 +1,8 @@
 set $mod Mod4
 
 bindsym $mod+d exec wmenu-run
-bindsym $mod+Return exec alacritty
-bindsym $mod+t exec alacritty
+bindsym $mod+Return exec ghostty
+bindsym $mod+t exec ghostty
 bindsym $mod+Shift+p exec swaylock
 bindsym $mod+r exec "emacsclient -c -a ''"
 
