@@ -87,6 +87,10 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+input "type:touchpad" {
+    natural_scroll enabled
+}
+
 bar {
     swaybar_command waybar
 }
