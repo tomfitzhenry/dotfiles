@@ -36,6 +36,7 @@ nix-maid pkgs {
     networkmanagerapplet
     pasystray
     waybar
+    wl-clipboard
 
     # Passwords
     passage
