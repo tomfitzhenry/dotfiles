@@ -30,6 +30,9 @@ nix-maid pkgs {
     ripgrep
     tree
 
+    # Desktop applications
+    signal-desktop
+
     # WM
     ghostty
     font-awesome
