@@ -12,6 +12,9 @@
 ;; disable copy via text selection
 (setq select-active-regions nil)
 
+(global-set-key (kbd "C-S-C") 'kill-ring-save)
+(global-set-key (kbd "C-S-V") 'yank)
+
 ;; Transient
 (with-eval-after-load 'calc
   (keymap-set calc-mode-map "C-o" #'casual-calc-tmenu))
