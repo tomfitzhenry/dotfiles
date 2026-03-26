@@ -24,6 +24,7 @@ nix-maid pkgs {
     restic
     wormhole-william
 
+    niri
     noctalia-shell
 
     curl
