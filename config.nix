@@ -4,6 +4,7 @@ let
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
+  file.home.".bashrc".source = ./dotfiles/.bashrc;
   file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
   file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
   file.home.".config/sway".source = ./dotfiles/.config/sway;
@@ -25,6 +26,7 @@ nix-maid pkgs {
 
     curl
     dig
+    fzf
     jq
     ncdu
     ripgrep
