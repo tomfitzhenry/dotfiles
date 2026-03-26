@@ -9,6 +9,8 @@
 (setq icomplete-show-matches-on-no-input t)
 (add-hook 'after-init-hook 'server-start)
 (load-theme 'modus-vivendi t)
+;; disable copy via text selection
+(setq select-active-regions nil)
 
 ;; Transient
 (with-eval-after-load 'calc
