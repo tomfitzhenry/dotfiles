@@ -1,9 +1,10 @@
 set $mod Mod4
+set $ipc noctalia-shell ipc call
 
-bindsym $mod+d exec wmenu-run
+bindsym $mod+d exec $ipc launcher toggle
 bindsym $mod+Return exec ghostty
 bindsym $mod+t exec ghostty
-bindsym $mod+Shift+p exec swaylock
+bindsym $mod+Shift+p exec $ipc lockScreen lock
 bindsym $mod+r exec "emacsclient -c -a ''"
 
 bindsym $mod+Shift+q kill
@@ -64,35 +65,21 @@ bindsym $mod+space focus mode_toggle
 # Applications:
 #
 
-# Automatic monitor management
-# https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
-exec_always "pkill kanshi; exec kanshi"
-
-exec_always "pkill nm-applet; exec nm-applet"
-exec_always "pkill pasystray; exec pasystray"
-
-exec swayidle -w \
-  timeout 300 'swaylock -f -c 000000' \
-  timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-  before-sleep 'swaylock -f -c 000000'
-
 # media/brightness buttons
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- 
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioRaiseVolume exec $ipc volume increase
+bindsym XF86AudioLowerVolume exec $ipc volume decrease
+bindsym XF86AudioMute exec $ipc volume muteOutput
+bindsym XF86AudioMicMute exec $ipc volume muteInput
+bindsym XF86MonBrightnessUp exec $ipc brightness increase
+bindsym XF86MonBrightnessDown exec $ipc brightness decrease
+bindsym XF86AudioPlay exec $ipc media playPause
+bindsym XF86AudioNext exec $ipc media next
+bindsym XF86AudioPrev exec $ipc media prev
 
 input "type:touchpad" {
     natural_scroll enabled
 }
 
-bar {
-    swaybar_command waybar
-}
+exec noctalia-shell
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway

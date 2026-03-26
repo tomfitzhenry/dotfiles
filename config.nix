@@ -24,6 +24,8 @@ nix-maid pkgs {
     restic
     wormhole-william
 
+    noctalia-shell
+
     curl
     dig
     fzf
@@ -38,9 +40,6 @@ nix-maid pkgs {
     # WM
     ghostty
     font-awesome
-    networkmanagerapplet
-    pasystray
-    waybar
     wl-clipboard
     xwayland-run
 
