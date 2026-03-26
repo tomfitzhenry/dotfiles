@@ -65,6 +65,10 @@ nix-maid pkgs {
     gopls
     nixd
 
+    # LLM
+    ollama
+    pi-coding-agent
+
     # Nix
     nixfmt-tree
     nixos-generators
