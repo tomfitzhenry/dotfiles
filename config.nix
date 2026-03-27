@@ -42,6 +42,7 @@ nix-maid pkgs {
     pasystray
     waybar
     wl-clipboard
+    xwayland-run
 
     # Passwords
     passage
