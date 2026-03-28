@@ -37,6 +37,7 @@ nix-maid pkgs {
 
     # Desktop applications
     signal-desktop
+    foliate
 
     # WM
     ghostty
