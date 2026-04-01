@@ -1,4 +1,4 @@
-EDITOR=mg
+export EDITOR=mg
 
 shopt -s histappend
 HISTSIZE=2000
