@@ -36,6 +36,7 @@ nix-maid pkgs {
     tree
 
     # Desktop applications
+    brave
     signal-desktop
     foliate
 
