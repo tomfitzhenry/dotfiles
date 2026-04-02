@@ -5,6 +5,7 @@ let
 in
 nix-maid pkgs {
   file.home.".bashrc".source = ./dotfiles/.bashrc;
+  file.home.".gitconfig".source = ./dotfiles/.gitconfig;
   file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
   file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
   file.home.".config/sway".source = ./dotfiles/.config/sway;
