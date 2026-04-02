@@ -1,6 +1,12 @@
 let
   sources = import ./npins;
-  pkgs = import sources.nixpkgs { };
+  pkgs = import sources.nixpkgs {
+    config.allowUnfreePredicate =
+      pkg:
+      builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
+        "claude-code"
+      ];
+  };
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
@@ -38,6 +44,7 @@ nix-maid pkgs {
 
     # Desktop applications
     brave
+    claude-code
     signal-desktop
     foliate
 
