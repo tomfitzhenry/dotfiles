@@ -78,6 +78,7 @@ nix-maid pkgs {
       with epkgs;
       [
         casual
+        pi-coding-agent
         vc-jj
         vterm
         with-editor
