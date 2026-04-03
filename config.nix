@@ -74,8 +74,8 @@ nix-maid pkgs {
     nixos-generators
     npins
 
-    (emacs-pgtk.pkgs.withPackages (
-      with emacsPackages;
+    (emacs-pgtk.pkgs.withPackages (epkgs:
+      with epkgs;
       [
         casual
         vc-jj
