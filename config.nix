@@ -72,6 +72,8 @@ nix-maid pkgs {
     nixfmt-tree
     nixos-generators
     npins
+    nix-init
+    nixpkgs-review
 
     (emacs-pgtk.pkgs.withPackages (epkgs:
       with epkgs;
