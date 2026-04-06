@@ -45,6 +45,7 @@ nix-maid pkgs {
     brave
     claude-code
     signal-desktop
+    telegram-desktop
     foliate
 
     # WM
