@@ -48,6 +48,7 @@ nix-maid pkgs {
     signal-desktop
     telegram-desktop
     foliate
+    showtime
 
     # WM
     ghostty
