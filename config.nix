@@ -17,6 +17,7 @@ nix-maid pkgs {
   file.home.".config/sway".source = ./dotfiles/.config/sway;
 
   packages = with pkgs; [
+    aria2
     git
     jujutsu
     shpool
