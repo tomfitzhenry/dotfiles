@@ -9,15 +9,15 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "94259df69180276c61f7471de8baab66097b7600",
-      "url": "https://github.com/viperML/nix-maid/archive/94259df69180276c61f7471de8baab66097b7600.tar.gz",
-      "hash": "sha256-0S7sy0+02s0tWHkjgzMGI2oVVk7GTWsVOxeJGH+2EjU="
+      "revision": "993d95a0a5b2f4b06faa022b32112b699ca3bbfd",
+      "url": "https://github.com/viperML/nix-maid/archive/993d95a0a5b2f4b06faa022b32112b699ca3bbfd.tar.gz",
+      "hash": "sha256-pLCCqY/0JC7QdWqyEyDEvGl63f9aS8zrFLVJW7gUMKI="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
-      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre973302.106eb93cbb9d/nixexprs.tar.xz",
-      "hash": "sha256-YXwjgR1eZAhHYU/7p2hzod3VRsHwlOiekgPp0aJJULI="
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre976537.a3db02183b5d/nixexprs.tar.xz",
+      "hash": "sha256-rFByy+vYdvd2IZ7GYibTcc4fuJKj5+g/YkJxqxvt2+o="
     }
   },
   "version": 7
