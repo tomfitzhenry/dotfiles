@@ -18,6 +18,7 @@ nix-maid pkgs {
 
   packages = with pkgs; [
     aria2
+    gh
     git
     jujutsu
     shpool
@@ -68,8 +69,10 @@ nix-maid pkgs {
     nixd
 
     # LLM
+    gemini-cli
     ollama
     pi-coding-agent
+    python3
 
     # Nix
     nixfmt-tree
