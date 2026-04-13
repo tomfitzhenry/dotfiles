@@ -71,6 +71,10 @@ nix-maid pkgs {
     gopls
     nixd
 
+    # Networking
+    autossh
+    mptcpd
+
     # LLM
     gemini-cli
     ollama
