@@ -74,6 +74,7 @@ nix-maid pkgs {
     # LLM
     gemini-cli
     ollama
+    opencode
     pi-coding-agent
     python3
 
