@@ -10,6 +10,7 @@ let
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
+  file.home.".bash_profile".source = ./dotfiles/.bash_profile;
   file.home.".bashrc".source = ./dotfiles/.bashrc;
   file.home.".gitconfig".source = ./dotfiles/.gitconfig;
   file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
