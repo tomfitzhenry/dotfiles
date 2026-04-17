@@ -58,6 +58,8 @@ nix-maid pkgs {
     wl-clipboard
     xwayland-run
 
+    ssh-tpm-agent
+
     # Passwords
     passage
     age-plugin-yubikey
@@ -98,4 +100,34 @@ nix-maid pkgs {
       ]
     ))
   ];
+
+  # https://github.com/Foxboron/ssh-tpm-agent/blob/master/contrib/services/user/ssh-tpm-agent.service
+  systemd.services.ssh-tpm-agent = {
+    unitConfig = {
+      ConditionEnvironment = "!SSH_AGENT_PID";
+      Description = "ssh-tpm-agent service";
+    };
+    requires = [ "ssh-tpm-agent.socket" ];
+    serviceConfig = {
+      ExecStart = pkgs.lib.getExe pkgs.ssh-tpm-agent;
+      PassEnvironment = "SSH_AGENT_PID";
+      Environment = [
+        "SSH_TPM_AUTH_SOCK=%t/ssh-tpm-agent.sock"
+      ];
+      SuccessExitStatus = 2;
+    };
+  };
+
+  # https://github.com/Foxboron/ssh-tpm-agent/blob/master/contrib/services/user/ssh-tpm-agent.socket
+  systemd.sockets.ssh-tpm-agent = {
+    unitConfig = {
+      Description = "SSH TPM agent socket";
+    };
+    wantedBy = [ "sockets.target" ];
+    socketConfig = {
+      ListenStream = "%t/ssh-tpm-agent.sock";
+      SocketMode = "0600";
+      Service = "ssh-tpm-agent.service";
+    };
+  };
 }
