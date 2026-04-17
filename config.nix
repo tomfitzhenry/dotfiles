@@ -82,9 +82,8 @@ nix-maid pkgs {
     nix-init
     nixpkgs-review
 
-    (emacs-pgtk.pkgs.withPackages (epkgs:
-      with epkgs;
-      [
+    (emacs-pgtk.pkgs.withPackages (
+      epkgs: with epkgs; [
         casual
         pi-coding-agent
         vc-jj
