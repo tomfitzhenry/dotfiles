@@ -1,3 +1,5 @@
+[ -z "$PS1" ] && return
+
 export EDITOR=mg
 
 shopt -s histappend
@@ -8,5 +10,4 @@ if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/key-bindings.bash"
 fi
 
-SSH_AUTH_SOCK="$(ssh-tpm-agent --print-socket)"
-export SSH_AUTH_SOCK
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-/run/user/$UID}/ssh-tpm-agent.sock"

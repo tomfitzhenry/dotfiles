@@ -12,8 +12,8 @@
 ;; disable copy via text selection
 (setq select-active-regions nil)
 
-(global-set-key (kbd "C-S-C") 'kill-ring-save)
-(global-set-key (kbd "C-S-V") 'yank)
+(global-set-key (kbd "C-S-c") 'kill-ring-save)
+(global-set-key (kbd "C-S-v") 'yank)
 
 ;; Transient
 (with-eval-after-load 'calc
@@ -54,5 +54,5 @@
   (keymap-set project-prefix-map "t" #'vterm-project)
   (add-to-list 'project-switch-commands '(vterm-project "Vterm" ?t)))
 
-(load (system-name))
+(load (system-name) t)
 (provide 'init)
