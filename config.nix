@@ -13,6 +13,7 @@ nix-maid pkgs {
   file.home.".bash_profile".source = ./dotfiles/.bash_profile;
   file.home.".bashrc".source = ./dotfiles/.bashrc;
   file.home.".gitconfig".source = ./dotfiles/.gitconfig;
+  file.home.".mg".source = ./dotfiles/.mg;
   file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
   file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
   file.home.".config/sway".source = ./dotfiles/.config/sway;
