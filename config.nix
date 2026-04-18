@@ -1,4 +1,6 @@
+{ role ? "desktop" }:
 let
+  isDesktop = role == "desktop";
   sources = import ./npins;
   pkgs = import sources.nixpkgs {
     config.allowUnfreePredicate =
@@ -10,12 +12,15 @@ let
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
-  file.home.".bash_profile".source = ./dotfiles/.bash_profile;
-  file.home.".bashrc".source = ./dotfiles/.bashrc;
-  file.home.".gitconfig".source = ./dotfiles/.gitconfig;
-  file.home.".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
-  file.home.".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
-  file.home.".config/sway".source = ./dotfiles/.config/sway;
+  file.home = {
+    ".bash_profile".source = ./dotfiles/.bash_profile;
+    ".bashrc".source = ./dotfiles/.bashrc;
+    ".gitconfig".source = ./dotfiles/.gitconfig;
+    ".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
+    ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
+  } // (if isDesktop then {
+    ".config/sway".source = ./dotfiles/.config/sway;
+  } else {});
 
   packages = with pkgs; [
     aria2
@@ -33,9 +38,6 @@ nix-maid pkgs {
     restic
     wormhole-william
 
-    niri
-    noctalia-shell
-
     curl
     dig
     fzf
@@ -43,20 +45,6 @@ nix-maid pkgs {
     ncdu
     ripgrep
     tree
-
-    # Desktop applications
-    brave
-    claude-code
-    signal-desktop
-    telegram-desktop
-    foliate
-    showtime
-
-    # WM
-    ghostty
-    font-awesome
-    wl-clipboard
-    xwayland-run
 
     ssh-tpm-agent
 
@@ -89,7 +77,7 @@ nix-maid pkgs {
     npins
     nix-init
     nixpkgs-review
-
+  ] ++ pkgs.lib.optionals isDesktop [
     (emacs-pgtk.pkgs.withPackages (
       epkgs: with epkgs; [
         casual
@@ -105,6 +93,23 @@ nix-maid pkgs {
         nushell-ts-mode
       ]
     ))
+
+    niri
+    noctalia-shell
+
+    # Desktop applications
+    brave
+    claude-code
+    signal-desktop
+    telegram-desktop
+    foliate
+    showtime
+
+    # WM
+    ghostty
+    font-awesome
+    wl-clipboard
+    xwayland-run
   ];
 
   # https://github.com/Foxboron/ssh-tpm-agent/blob/master/contrib/services/user/ssh-tpm-agent.service
