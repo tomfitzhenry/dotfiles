@@ -75,6 +75,13 @@ nix-maid pkgs {
     autossh
     lftp
     mptcpd
+    (writeShellApplication {
+      name = "rssh";
+      runtimeInputs = [ mptcpd autossh openssh ];
+      text = ''
+        mptcpize run autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" "$@"
+      '';
+    })
 
     # LLM
     gemini-cli
