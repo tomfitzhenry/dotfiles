@@ -73,6 +73,7 @@ nix-maid pkgs {
 
     # Networking
     autossh
+    lftp
     mptcpd
 
     # LLM
