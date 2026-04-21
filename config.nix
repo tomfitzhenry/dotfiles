@@ -87,6 +87,10 @@ nix-maid pkgs {
     nix-init
     nixpkgs-review
 
+    # Rust
+    rustup
+    gcc
+
     (emacs-pgtk.pkgs.withPackages (
       epkgs: with epkgs; [
         casual
