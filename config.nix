@@ -32,6 +32,7 @@ nix-maid pkgs {
     gittuf
     lefthook
     mg
+    nodejs
     nushell
     openssh # since SteamOS's openssh has no libfido2.so
     pomerium-cli
@@ -59,6 +60,7 @@ nix-maid pkgs {
     go
     gopls
     nixd
+    typescript-language-server
 
     # Networking
     autossh
