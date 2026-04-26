@@ -114,6 +114,7 @@ nix-maid pkgs {
 
     # Desktop applications
     brave
+    evince
     signal-desktop
     telegram-desktop
     foliate
