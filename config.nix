@@ -74,6 +74,10 @@ nix-maid pkgs {
       '';
     })
 
+    # Cloud
+    oci-cli
+    (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
+
     # LLM
     claude-code
     gemini-cli
