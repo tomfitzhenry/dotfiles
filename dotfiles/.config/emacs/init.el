@@ -36,6 +36,7 @@
 (if (require 'nix-ts-mode nil 'noerror)
     (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode)))
 (require 'nushell-ts-mode nil 'noerror)
+(require 'typescript-ts-mode)
 (require 'rust-ts-mode)
 (require 'yaml-ts-mode)
 
