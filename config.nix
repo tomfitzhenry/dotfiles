@@ -119,6 +119,7 @@ nix-maid pkgs {
 
     niri
     noctalia-shell
+    opensc
 
     # Desktop applications
     brave
