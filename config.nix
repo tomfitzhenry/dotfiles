@@ -24,6 +24,7 @@ nix-maid pkgs {
   } else {});
 
   packages = with pkgs; [
+    wrangler
     aria2
     gh
     git
