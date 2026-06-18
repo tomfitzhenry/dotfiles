@@ -28,6 +28,7 @@ nix-maid pkgs {
     aria2
     gh
     git
+    git-lfs
     jujutsu
     shpool
     gittuf
