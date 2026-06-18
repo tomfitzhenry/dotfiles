@@ -41,6 +41,7 @@ nix-maid pkgs {
     p7zip
     restic
     wormhole-william
+    xxd
     yt-dlp
 
     curl
