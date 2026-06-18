@@ -167,4 +167,33 @@ nix-maid pkgs {
       Service = "ssh-tpm-agent.service";
     };
   };
+
+  # https://github.com/shell-pool/shpool/blob/master/systemd/shpool.service
+  systemd.services.shpool = {
+    unitConfig = {
+      Description = "Shpool - Shell Session Pool";
+    };
+    requires = [ "shpool.socket" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.lib.getExe pkgs.shpool} daemon";
+      KillMode = "mixed";
+      TimeoutStopSec = "2s";
+      SendSIGHUP = "yes";
+    };
+    wantedBy = [ "default.target" ];
+  };
+
+  # https://github.com/shell-pool/shpool/blob/master/systemd/shpool.socket
+  systemd.sockets.shpool = {
+    unitConfig = {
+      Description = "Shpool Shell Session Pooler";
+    };
+    wantedBy = [ "sockets.target" ];
+    socketConfig = {
+      ListenStream = "%t/shpool/shpool.socket";
+      SocketMode = "0600";
+      Service = "shpool.service";
+    };
+  };
 }
