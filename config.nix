@@ -128,6 +128,7 @@ nix-maid pkgs {
     evince
     signal-desktop
     telegram-desktop
+    tor-browser
     foliate
     showtime
 
