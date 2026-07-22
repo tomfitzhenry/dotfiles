@@ -26,6 +26,7 @@ nix-maid pkgs {
   packages = with pkgs; [
     wrangler
     aria2
+    forgejo-cli
     gh
     git
     git-lfs
