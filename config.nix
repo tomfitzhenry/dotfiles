@@ -17,6 +17,7 @@ nix-maid pkgs {
     ".bashrc".source = ./dotfiles/.bashrc;
     ".gitconfig".source = ./dotfiles/.gitconfig;
     ".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
+    ".config/jj/config.toml".source = ./dotfiles/.config/jj/config.toml;
     ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
     ".mg".source = ./dotfiles/.mg;
   } // (if isDesktop then {
