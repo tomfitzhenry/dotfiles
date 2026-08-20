@@ -19,7 +19,10 @@ nix-maid pkgs {
     ".config/git/config".source = ./dotfiles/.config/git/config;
     ".config/jj/config.toml".source = ./dotfiles/.config/jj/config.toml;
     ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
+    ".config/opencode/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".mg".source = ./dotfiles/.mg;
+    ".pi/agent/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
+    ".claude/CLAUDE.md".source = ./dotfiles/.config/opencode/AGENTS.md;
   } // (if isDesktop then {
     ".config/sway".source = ./dotfiles/.config/sway;
   } else {});
