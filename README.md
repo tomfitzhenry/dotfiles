@@ -11,5 +11,6 @@ Nix-managed dotfiles and user environment, applied with [nix-maid](https://githu
 | `npins/` | Pinned sources used by `config.nix`. |
 | `keyboards/` | QMK keyboard layouts (`ergodox-ez`, `silakka54`). |
 | `.forgejo/` | Forgejo CI workflows. |
+| `ci.nix` | [hercules-ci-effects](https://hercules-ci.com) config: builds the desktop and server configs on push, and weekly opens a PR bumping npins. |
 | `apply` | Installs the config: `nix-env -if config.nix` then activates. |
 | `update` | Runs `npins update` to refresh pins. |

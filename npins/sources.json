@@ -1,5 +1,18 @@
 {
   "pins": {
+    "hercules-ci-effects": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hercules-ci",
+        "repo": "hercules-ci-effects"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "f5df0b4ad1aea4a435dfdd65b616c64cadcd2725",
+      "url": "https://github.com/hercules-ci/hercules-ci-effects/archive/f5df0b4ad1aea4a435dfdd65b616c64cadcd2725.tar.gz",
+      "hash": "sha256-7eSczkh1DyJg6u3s4ql373SHtAQTBqYwKdJKOk87Mpk="
+    },
     "nix-maid": {
       "type": "Git",
       "repository": {
