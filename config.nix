@@ -9,6 +9,7 @@ let
         "claude-code"
       ];
   };
+  multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
@@ -123,9 +124,10 @@ nix-maid pkgs {
     ))
 
   ] ++ pkgs.lib.optionals isDesktop [
-
     niri
-    noctalia-shell
+    # noctalia-shell updates break my session, so let's control those.
+    (multiverse.fast.version "noctalia-shell" "4.7.7")
+    
     opensc
 
     # Desktop applications
