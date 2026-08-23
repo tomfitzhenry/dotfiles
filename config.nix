@@ -2,13 +2,7 @@
 let
   isDesktop = role == "desktop";
   sources = import ./npins;
-  pkgs = import sources.nixpkgs {
-    config.allowUnfreePredicate =
-      pkg:
-      builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
-        "claude-code"
-      ];
-  };
+  pkgs = import sources.nixpkgs { };
   multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
 in
@@ -23,7 +17,6 @@ nix-maid pkgs {
     ".config/opencode/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".mg".source = ./dotfiles/.mg;
     ".pi/agent/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
-    ".claude/CLAUDE.md".source = ./dotfiles/.config/opencode/AGENTS.md;
   } // (if isDesktop then {
     ".config/sway".source = ./dotfiles/.config/sway;
   } else {});
@@ -89,7 +82,6 @@ nix-maid pkgs {
     (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
 
     # LLM
-    claude-code
     gemini-cli
     ollama
     opencode
