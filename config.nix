@@ -7,9 +7,12 @@ let
   nix-maid = import sources.nix-maid;
 in
 nix-maid pkgs {
+  imports = [
+    ./modules/bashrc.nix
+  ];
+
   file.home = {
     ".bash_profile".source = ./dotfiles/.bash_profile;
-    ".bashrc".source = ./dotfiles/.bashrc;
     ".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
     ".config/git/config".source = ./dotfiles/.config/git/config;
     ".config/jj/config.toml".source = ./dotfiles/.config/jj/config.toml;
@@ -20,6 +23,29 @@ nix-maid pkgs {
   } // (if isDesktop then {
     ".config/sway".source = ./dotfiles/.config/sway;
   } else {});
+
+  home.sessionVariables = {
+    EDITOR = "mg";
+    # Claude Code's TUI enables terminal mouse tracking but doesn't disable it on
+    # ungraceful SSH disconnect (laptop sleep + autossh reconnect), leaving the
+    # terminal reporting every mouse move as SGR sequences that the fresh login
+    # shell echoes as text spam. Disable mouse capture at the app level:
+    # https://github.com/anthropics/claude-code/issues/72648
+    CLAUDE_CODE_DISABLE_MOUSE = "1";
+  };
+
+  home.bashrc.extraConfig = ''
+    shopt -s histappend
+    HISTSIZE=2000
+    HISTFILESIZE=20000
+
+    if command -v fzf-share >/dev/null; then
+      source "$(fzf-share)/key-bindings.bash"
+    fi
+
+    SSH_AUTH_SOCK="$(ssh-tpm-agent --print-socket)"
+    export SSH_AUTH_SOCK
+  '';
 
   packages = with pkgs; [
     wrangler
