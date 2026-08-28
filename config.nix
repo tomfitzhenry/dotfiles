@@ -9,6 +9,7 @@ in
 nix-maid pkgs {
   imports = [
     ./modules/bashrc.nix
+    ./modules/radicle.nix
   ];
 
   file.home = {
