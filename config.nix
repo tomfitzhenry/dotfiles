@@ -109,7 +109,6 @@ nix-maid pkgs {
     (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
 
     # LLM
-    gemini-cli
     ollama
     opencode
     pi-coding-agent
