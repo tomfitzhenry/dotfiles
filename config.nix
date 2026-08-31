@@ -53,6 +53,7 @@ nix-maid pkgs {
     aria2
     forgejo-cli
     gh
+    ghq
     git
     git-lfs
     jujutsu
