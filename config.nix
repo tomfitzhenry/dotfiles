@@ -15,7 +15,7 @@ nix-maid pkgs {
   file.home = {
     ".bash_profile".source = ./dotfiles/.bash_profile;
     ".config/emacs/init.el".source = ./dotfiles/.config/emacs/init.el;
-    ".config/git/config".source = ./dotfiles/.config/git/config;
+    ".config/git/config.vcs".source = ./dotfiles/.config/git/config.vcs;
     ".config/jj/config.toml".source = ./dotfiles/.config/jj/config.toml;
     ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
     ".config/opencode/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
