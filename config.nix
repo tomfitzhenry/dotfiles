@@ -69,6 +69,7 @@ nix-maid pkgs {
     wormhole-william
     xxd
     yt-dlp
+    zmx
 
     curl
     dig
