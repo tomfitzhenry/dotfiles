@@ -2,7 +2,11 @@
 let
   isDesktop = role == "desktop";
   sources = import ./npins;
-  pkgs = import sources.nixpkgs { };
+  pkgs = import sources.nixpkgs {
+    config = {
+      allowUnfreePredicate = pkg: (pkg.pname or pkg.name) == "antigravity-cli";
+    };
+  };
   multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
 in
@@ -112,6 +116,7 @@ nix-maid pkgs {
     (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
 
     # LLM
+    antigravity-cli
     ollama
     opencode
     pi-coding-agent
