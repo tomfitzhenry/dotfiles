@@ -3,12 +3,14 @@ Working style:
 * I work on my laptop, but you're typically on a remote machine.
 * Validate hypotheses before writing fixes.
 * Write tests: unit, integration, NixOS VM tests.
-* Read the source! Clone projects liberally to ~/src/
+* Read the source! Clone projects liberally with `ghq get`. See source in `ghq list` and ~/src/
 
 Key directories:
 
 * ~/src/fleet, my NixOS homelab.
 * ~/src/dotfiles, my dotfiles.
+* ~/src/nixpkgs
+* ~/src/linux
 * /mnt/share/, a shared NAS. Use this to share files (e.g. built firmware) with me.
 
 Accounts:
