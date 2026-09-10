@@ -163,6 +163,7 @@ nix-maid pkgs {
     signal-desktop
     telegram-desktop
     tor-browser
+    thunderbird
     foliate
     showtime
 
