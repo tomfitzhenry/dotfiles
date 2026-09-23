@@ -5,6 +5,13 @@ Working style:
 * Write tests: unit, integration, NixOS VM tests.
 * Read the source! Clone projects liberally with `ghq get`. See source in `ghq list` and ~/src/
 
+Delegation:
+
+* Prefer the task tool over doing exploration inline, so the main context stays small.
+* Codebase search/exploration: use @explore instead of reading and grepping yourself.
+* Multi-step or parallel research: use @general.
+* External or dependency docs: use @scout.
+
 Key directories:
 
 * ~/src/fleet, my NixOS homelab.
