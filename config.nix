@@ -10,6 +10,7 @@ let
   multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
   opencodeNtfy = pkgs.callPackage ./pkgs/opencode-ntfy.nix { };
+  opencodeNtfyNotifier = pkgs.callPackage ./pkgs/opencode-ntfy-notifier/package.nix { };
 in
 nix-maid pkgs {
   imports = [
@@ -162,6 +163,7 @@ nix-maid pkgs {
 
   ] ++ pkgs.lib.optionals isDesktop [
     niri
+    opencodeNtfyNotifier
     # noctalia-shell updates break my session, so let's control those.
     # TODO: patch noctalia's disk-usage poller so it doesn't `df` remote
     # mounts. When the NAS is down, its `df` blocks on the NFS mount
@@ -216,6 +218,22 @@ nix-maid pkgs {
       ListenStream = "%t/ssh-tpm-agent.sock";
       SocketMode = "0600";
       Service = "ssh-tpm-agent.service";
+    };
+  };
+
+  # Desktop-only: stream ntfy and focus the niri workspace named after the
+  # opencode session when its notification is clicked. Needs niri + noctalia.
+  systemd.services.opencode-ntfy-notifier = pkgs.lib.mkIf isDesktop {
+    unitConfig = {
+      Description = "opencode ntfy notifier";
+    };
+    wantedBy = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = pkgs.lib.getExe opencodeNtfyNotifier;
+      Restart = "always";
+      RestartSec = 5;
     };
   };
 
