@@ -9,6 +9,7 @@ let
   };
   multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
+  opencodeNtfy = pkgs.callPackage ./pkgs/opencode-ntfy.nix { };
 in
 nix-maid pkgs {
   imports = [
@@ -25,6 +26,14 @@ nix-maid pkgs {
     ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
     ".config/opencode/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".config/opencode/agents".source = ./dotfiles/.config/opencode/agents;
+    ".config/opencode/opencode.jsonc".source = pkgs.writeText "opencode.jsonc" ''
+      {
+        "$schema": "https://opencode.ai/config.json",
+        "plugin": ["file://${opencodeNtfy}/lib/opencode-ntfy"]
+      }
+    '';
+    # ntfy plugin config is unmanaged; create ~/.config/opencode/notification-ntfy.json:
+    # {"backend":{"topic":"<topic>"}}
     ".gemini/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".mg".source = ./dotfiles/.mg;
     ".pi/agent/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
