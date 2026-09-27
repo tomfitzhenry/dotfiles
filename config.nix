@@ -16,7 +16,6 @@ nix-maid pkgs {
   imports = [
     ./modules/bashrc.nix
     ./modules/git-maintenance.nix
-    ./modules/radicle.nix
   ];
 
   file.home = {
