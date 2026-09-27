@@ -9,8 +9,7 @@ Delegation:
 
 * Prefer the task tool over doing exploration inline, so the main context stays small.
 * Codebase search/exploration: use @explore instead of reading and grepping yourself.
-* Multi-step or parallel research: use @general.
-* External or dependency docs: use @scout.
+* Multi-step, parallel, or external/dependency research: use @general.
 
 Key directories:
 
