@@ -16,15 +16,16 @@
     "nix-maid": {
       "type": "Git",
       "repository": {
-        "type": "GitHub",
+        "type": "Forgejo",
+        "server": "https://codeberg.org/",
         "owner": "viperML",
         "repo": "nix-maid"
       },
       "branch": "master",
       "submodules": false,
-      "revision": "92f983d34e183c32703aefd63d0884535988a53a",
-      "url": "https://github.com/viperML/nix-maid/archive/92f983d34e183c32703aefd63d0884535988a53a.tar.gz",
-      "hash": "sha256-mhjKZ+PqNInkCO9SFCQo0JO6H8FPosdokT1wePFvhxI="
+      "revision": "13d29cdde641216c0bb7ee8ec3229f865c7dc51a",
+      "url": "https://codeberg.org/viperML/nix-maid/archive/13d29cdde641216c0bb7ee8ec3229f865c7dc51a.tar.gz",
+      "hash": "sha256-9OEVMURNKXNBqXxlCXmJ0jv0QHR8CR7A0n7pJKRbOik="
     },
     "nixpkgs": {
       "type": "Channel",
