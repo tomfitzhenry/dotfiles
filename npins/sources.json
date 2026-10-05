@@ -33,19 +33,6 @@
       "artifact": "nixexprs.tar.xz",
       "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1085518.9013764fcc0e/nixexprs.tar.xz",
       "hash": "sha256-NCFqY2YC3/5pwakzk7tXNUj3sG+VImjU4EkZMacxF1w="
-    },
-    "nixpkgs-multiverse": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "fzakaria",
-        "repo": "nixpkgs-multiverse"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "f97ec68b6acf34f7534506e59597f371b7d85579",
-      "url": "https://github.com/fzakaria/nixpkgs-multiverse/archive/f97ec68b6acf34f7534506e59597f371b7d85579.tar.gz",
-      "hash": "sha256-s6KyeKdvqevM2Yc+2th/QcehIrl6uhPePGXHx9GfglI="
     }
   },
   "version": 8

@@ -7,7 +7,6 @@ let
       allowUnfreePredicate = pkg: (pkg.pname or pkg.name) == "antigravity-cli";
     };
   };
-  multiverse = import sources.nixpkgs-multiverse { };
   nix-maid = import sources.nix-maid;
   opencodeNtfy = pkgs.callPackage ./pkgs/opencode-ntfy.nix { };
   opencodeNtfyNotifier = pkgs.callPackage ./pkgs/opencode-ntfy-notifier/package.nix { };
@@ -163,13 +162,12 @@ nix-maid pkgs {
   ] ++ pkgs.lib.optionals isDesktop [
     niri
     opencodeNtfyNotifier
-    # noctalia-shell updates break my session, so let's control those.
     # TODO: patch noctalia's disk-usage poller so it doesn't `df` remote
     # mounts. When the NAS is down, its `df` blocks on the NFS mount
     # (/mnt/share) for the full timeo, flooding the log with
     # "nfs: server <host> not responding" and spiking iowait. Likely fix:
     # pass `-l` (local filesystems only) to the poller's df invocation.
-    (multiverse.fast.version "noctalia-shell" "4.7.7")
+    noctalia
     
     opensc
 
