@@ -9,9 +9,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f5df0b4ad1aea4a435dfdd65b616c64cadcd2725",
-      "url": "https://github.com/hercules-ci/hercules-ci-effects/archive/f5df0b4ad1aea4a435dfdd65b616c64cadcd2725.tar.gz",
-      "hash": "sha256-7eSczkh1DyJg6u3s4ql373SHtAQTBqYwKdJKOk87Mpk="
+      "revision": "6c58de7236d1cd634deea07bd15d52c7ce470bd3",
+      "url": "https://github.com/hercules-ci/hercules-ci-effects/archive/6c58de7236d1cd634deea07bd15d52c7ce470bd3.tar.gz",
+      "hash": "sha256-fknJsE4XnFjUfo87T9jyZ15ivJZB/varWvsJMYk0BNY="
     },
     "nix-maid": {
       "type": "Git",
@@ -22,16 +22,16 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0e0feba21016c1285382e32ea894ace731f49d3b",
-      "url": "https://github.com/viperML/nix-maid/archive/0e0feba21016c1285382e32ea894ace731f49d3b.tar.gz",
-      "hash": "sha256-SxgdtD4DBslk8u5MIzh4Hs/7vcuPHn4cD2h5I3Mufz4="
+      "revision": "92f983d34e183c32703aefd63d0884535988a53a",
+      "url": "https://github.com/viperML/nix-maid/archive/92f983d34e183c32703aefd63d0884535988a53a.tar.gz",
+      "hash": "sha256-mhjKZ+PqNInkCO9SFCQo0JO6H8FPosdokT1wePFvhxI="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1059574.a831408e6378/nixexprs.tar.xz",
-      "hash": "sha256-YfYkbkJcUQ1wzXVX4BcIsLJ+xvB2yHdEbkRl7nPUXA4="
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1085518.9013764fcc0e/nixexprs.tar.xz",
+      "hash": "sha256-NCFqY2YC3/5pwakzk7tXNUj3sG+VImjU4EkZMacxF1w="
     },
     "nixpkgs-multiverse": {
       "type": "Git",
@@ -42,9 +42,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "83a703cda645262d46f27b10a5392baf15355ec4",
-      "url": "https://github.com/fzakaria/nixpkgs-multiverse/archive/83a703cda645262d46f27b10a5392baf15355ec4.tar.gz",
-      "hash": "sha256-4qXD9govwRkbfP8CEYDqfDGFWEefCbBMc7/ZUMK4FS0="
+      "revision": "f97ec68b6acf34f7534506e59597f371b7d85579",
+      "url": "https://github.com/fzakaria/nixpkgs-multiverse/archive/f97ec68b6acf34f7534506e59597f371b7d85579.tar.gz",
+      "hash": "sha256-s6KyeKdvqevM2Yc+2th/QcehIrl6uhPePGXHx9GfglI="
     }
   },
   "version": 8
