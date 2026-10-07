@@ -8,8 +8,6 @@ let
     };
   };
   nix-maid = import sources.nix-maid;
-  opencodeNtfy = pkgs.callPackage ./pkgs/opencode-ntfy.nix { };
-  opencodeNtfyNotifier = pkgs.callPackage ./pkgs/opencode-ntfy-notifier/package.nix { };
 in
 nix-maid pkgs {
   imports = [
@@ -25,14 +23,6 @@ nix-maid pkgs {
     ".config/nix/nix.conf".source = ./dotfiles/.config/nix/nix.conf;
     ".config/opencode/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".config/opencode/agents".source = ./dotfiles/.config/opencode/agents;
-    ".config/opencode/opencode.jsonc".source = pkgs.writeText "opencode.jsonc" ''
-      {
-        "$schema": "https://opencode.ai/config.json",
-        "plugin": ["file://${opencodeNtfy}/lib/opencode-ntfy"]
-      }
-    '';
-    # ntfy plugin config is unmanaged; create ~/.config/opencode/notification-ntfy.json:
-    # {"backend":{"topic":"<topic>"}}
     ".gemini/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
     ".mg".source = ./dotfiles/.mg;
     ".pi/agent/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
@@ -161,7 +151,6 @@ nix-maid pkgs {
 
   ] ++ pkgs.lib.optionals isDesktop [
     niri
-    opencodeNtfyNotifier
     # TODO: patch noctalia's disk-usage poller so it doesn't `df` remote
     # mounts. When the NAS is down, its `df` blocks on the NFS mount
     # (/mnt/share) for the full timeo, flooding the log with
@@ -217,21 +206,4 @@ nix-maid pkgs {
       Service = "ssh-tpm-agent.service";
     };
   };
-
-  # Desktop-only: stream ntfy and focus the niri workspace named after the
-  # opencode session when its notification is clicked. Needs niri + noctalia.
-  systemd.services.opencode-ntfy-notifier = pkgs.lib.mkIf isDesktop {
-    unitConfig = {
-      Description = "opencode ntfy notifier";
-    };
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-    serviceConfig = {
-      ExecStart = pkgs.lib.getExe opencodeNtfyNotifier;
-      Restart = "always";
-      RestartSec = 5;
-    };
-  };
-
 }
