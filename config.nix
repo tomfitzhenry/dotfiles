@@ -174,6 +174,10 @@ nix-maid pkgs {
 
     # WM
     ghostty
+    # Ghostty's tab-bar "new tab" button uses the `tab-new-symbolic` icon,
+    # which ships only in Adwaita. Without an icon theme on XDG_DATA_DIRS
+    # GTK falls back to hicolor and the button renders blank.
+    adwaita-icon-theme
     font-awesome
     wl-clipboard
     xwayland-run
