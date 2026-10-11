@@ -27,6 +27,8 @@ nix-maid pkgs {
     ".mg".source = ./dotfiles/.mg;
     ".pi/agent/AGENTS.md".source = ./dotfiles/.config/opencode/AGENTS.md;
   } // (if isDesktop then {
+    ".config/niri/config.kdl".source = ./dotfiles/.config/niri/config.kdl;
+    ".config/noctalia/bar.toml".source = ./dotfiles/.config/noctalia/bar.toml;
     ".config/sway".source = ./dotfiles/.config/sway;
   } else {});
 

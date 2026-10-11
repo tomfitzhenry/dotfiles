@@ -1,0 +1,5 @@
+# Workspace labels: v4's labelMode "index+name" has no v5 equivalent, so show names.
+[widget.workspaces]
+show_labels = true
+label_source = "name"
+max_label_chars = 20
