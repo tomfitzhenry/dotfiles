@@ -47,5 +47,4 @@
   (keymap-set project-prefix-map "t" #'vterm-project)
   (add-to-list 'project-switch-commands '(vterm-project "Vterm" ?t)))
 
-(load (system-name))
 (provide 'init)
