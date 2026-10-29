@@ -118,8 +118,6 @@ nix-maid pkgs {
     (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
 
     # LLM
-    antigravity-cli
-    ollama
     opencode
     pi-coding-agent
     python3
