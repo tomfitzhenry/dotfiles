@@ -118,6 +118,7 @@ nix-maid pkgs {
     (pulumi.withPackages (pu: [ pu.pulumi-nodejs ]))
 
     # LLM
+    deepseek-harness
     opencode
     pi-coding-agent
     python3
