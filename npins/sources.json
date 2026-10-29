@@ -9,9 +9,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6c58de7236d1cd634deea07bd15d52c7ce470bd3",
-      "url": "https://github.com/hercules-ci/hercules-ci-effects/archive/6c58de7236d1cd634deea07bd15d52c7ce470bd3.tar.gz",
-      "hash": "sha256-fknJsE4XnFjUfo87T9jyZ15ivJZB/varWvsJMYk0BNY="
+      "revision": "9eecf40bc88648c7b5474b476a7b325fa78b5606",
+      "url": "https://github.com/hercules-ci/hercules-ci-effects/archive/9eecf40bc88648c7b5474b476a7b325fa78b5606.tar.gz",
+      "hash": "sha256-KFxHbC1136pwBOxdqRQzVSdY7rw+8clqcWysMLHqq88="
     },
     "nix-maid": {
       "type": "Git",
@@ -23,16 +23,16 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "13d29cdde641216c0bb7ee8ec3229f865c7dc51a",
-      "url": "https://codeberg.org/viperML/nix-maid/archive/13d29cdde641216c0bb7ee8ec3229f865c7dc51a.tar.gz",
-      "hash": "sha256-9OEVMURNKXNBqXxlCXmJ0jv0QHR8CR7A0n7pJKRbOik="
+      "revision": "35a7aa1d167c55c95849c500252ecb6bdc2daf1c",
+      "url": "https://codeberg.org/viperML/nix-maid/archive/35a7aa1d167c55c95849c500252ecb6bdc2daf1c.tar.gz",
+      "hash": "sha256-h0XoWnvPIeU0u8deg/Fg7mYTD6+hXJrupU0d7D+qvYU="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1085518.9013764fcc0e/nixexprs.tar.xz",
-      "hash": "sha256-NCFqY2YC3/5pwakzk7tXNUj3sG+VImjU4EkZMacxF1w="
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1106208.d357a2b54f0b/nixexprs.tar.xz",
+      "hash": "sha256-gh035dq/sQ/OwPltGyvjNl1zNWZgVnng2zug7xKqSu8="
     }
   },
   "version": 8
