@@ -17,20 +17,9 @@
 
 ;; Editing
 (setq column-number-mode t)
+(setq treesit-enabled-modes t)
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'text-mode-hook 'flymake-mode)
-
-;; Tree-sitter. Emacs 31 should remove the need for this list.
-(require 'json-ts-mode)
-(require 'go-ts-mode)
-(if (require 'markdown-ts-mode nil 'noerror)
-    (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-mode)))
-(if (require 'nix-ts-mode nil 'noerror)
-    (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-ts-mode)))
-(require 'nushell-ts-mode nil 'noerror)
-(require 'typescript-ts-mode)
-(require 'rust-ts-mode)
-(require 'yaml-ts-mode)
 
 ;; Shell-ish
 (add-hook 'vterm-mode-hook 'with-editor-export-editor)
