@@ -137,7 +137,6 @@ nix-maid pkgs {
 
     (emacs-pgtk.pkgs.withPackages (
       epkgs: with epkgs; [
-        casual
         pi-coding-agent
         vc-jj
         vterm
