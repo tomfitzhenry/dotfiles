@@ -137,14 +137,12 @@ nix-maid pkgs {
 
     (emacs-pgtk.pkgs.withPackages (
       epkgs: with epkgs; [
-        pi-coding-agent
         vc-jj
         vterm
         with-editor
 
         # tree-sitter
         treesit-grammars.with-all-grammars
-        markdown-ts-mode
         nix-ts-mode
         nushell-ts-mode
       ]
