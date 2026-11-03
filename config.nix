@@ -59,7 +59,6 @@ nix-maid pkgs {
     wrangler
     aria2
     forgejo-cli
-    gh
     ghq
     git
     git-lfs
